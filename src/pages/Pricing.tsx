@@ -1,4 +1,4 @@
-import Product from "../components/ProductComponent"
+import ProductComponent from "../components/ProductComponent"
 
 const Pricing: React.FC = () => {
     return (
@@ -8,7 +8,7 @@ const Pricing: React.FC = () => {
           Itt kezelheted a termékek árait, akciókat állíthatsz be, vagy frissítheted az árlistát.
         </p>
 
-        <Product></Product>
+        <ProductComponent></ProductComponent>
 
       </div>
     )

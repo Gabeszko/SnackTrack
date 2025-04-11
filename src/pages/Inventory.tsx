@@ -1,4 +1,4 @@
-import Machine from "../components/MachineComponent"
+import MachineComponent from "../components/MachineComponent"
 
 const Inventory: React.FC = () => {
     return (
@@ -8,7 +8,7 @@ const Inventory: React.FC = () => {
           Itt fogod tudni nyilvántartani az automaták készletét, hozzáadni vagy szerkeszteni a termékeket.
         </p>
 
-        <Machine></Machine>
+        <MachineComponent></MachineComponent>
 
       </div>
     )

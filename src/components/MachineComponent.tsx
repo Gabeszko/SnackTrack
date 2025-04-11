@@ -1,55 +1,72 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-//import Product from './ProductComponent.tsx'
+import { Card, Group, Stack, Text, Title } from '@mantine/core';
+//import Product from './ProductComponent';
 
-// TODO: Product handling
+/*
+// Interface definitions
+export interface Slot {
+  slotNumber: number;
+  product: string; // or Product, if populated
+  quantity: number;
+}*/
 
 export interface Slot {
   slotNumber: number;
-  product: string; // vagy Product, ha populate-olva van
+  product: {
+    _id: string;
+    name: string;
+    category: string;
+    price: number;
+    stock: number;
+    __v: number;
+  }; 
   quantity: number;
 }
 
-export interface Machine {
+export interface MachineType {
   _id?: string;
   name: string;
   location: string;
   slots: Slot[];
 }
 
-function Machine() {
-  const [machines, setMachines] = useState<Machine[]>([]);
+// Component renamed to avoid conflict with interface
+function MachineComponent() {
+  const [machines, setMachines] = useState<MachineType[]>([]);
 
   useEffect(() => {
     fetchMachines();
   }, []);
 
   const fetchMachines = async () => {
-    const res = await axios.get<Machine[]>('http://localhost:5000/api/machines');
-    setMachines(res.data);
+    try {
+      const res = await axios.get<MachineType[]>('http://localhost:5000/api/machines');
+      setMachines(res.data);
+    } catch (error) {
+      console.error('Error fetching machines:', error);
+    }
   };
 
   return (
-    <div style={{ padding: '2rem' }}>  
-
-    <h2>Automaták</h2>
-    <ul>
+    <Group mt="md" gap="md" grow>
       {machines.map((machine) => (
-        <li key={machine._id}>
-          <strong>{machine.name}</strong> – {machine.location}
-          <ul>
-            {machine.slots.map((slot, i) => (
-              <li key={i}>
-                Rekesz {slot.slotNumber}: {typeof /*slot.product ===  'object' ? slot.product.name :*/ slot.product} ({slot.quantity} db)
-              </li>
-            ))}
-          </ul>
-        </li>
+        <Card key={machine._id} shadow="sm" radius="md" withBorder padding="lg">
+          <Stack gap="xs">
+            <Title order={3} c="blue">{machine.name}</Title>
+            <Text size="sm" c="dimmed">{machine.location}</Text>
+            <Stack gap={4}>
+              {machine.slots.map((slot, i) => (
+                <Text key={i} size="sm">
+                  <strong>Rekesz {slot.slotNumber}:</strong> {slot.product.name} ({slot.quantity} db)
+                </Text>
+              ))}
+            </Stack>
+          </Stack>
+        </Card>
       ))}
-    </ul>
-
-    </div>
-    );
-  }
-    
-export default Machine;
+    </Group>
+  );
+}
+  
+export default MachineComponent;
