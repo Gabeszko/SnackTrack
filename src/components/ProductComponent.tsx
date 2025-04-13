@@ -26,7 +26,8 @@ export interface Product {
 
 function ProductComponent() {
   const [products, setProducts] = useState<Product[]>([]);
-  const [form, setForm] = useState<Product>({
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [productForm, setProductForm] = useState<Product>({
     name: '',
     category: '',
     price: 0,
@@ -48,41 +49,40 @@ function ProductComponent() {
   };
 
 /*
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleProductChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setForm({ ...form, [name]: name === 'price' || name === 'stock' ? Number(value) : value });
+    setProductForm({ ...form, [name]: name === 'price' || name === 'stock' ? Number(value) : value });
   };
 
-  const handleChange = (field: keyof Product, value: any) => {
-    setForm({ ...form, [field]: value });
+  const handleProductChange = (field: keyof Product, value: any) => {
+    setProductForm({ ...form, [field]: value });
   };
 */
 
-  const handleChange = (field: keyof Product, value: string | number | null) => {
+  const handleProductChange = (field: keyof Product, value: string | number | null) => {
     // Ha null érkezik (ami NumberInput esetén lehetséges), akkor 0-ra állítjuk
     const finalValue = value === null ? 0 : value;
-    setForm({ ...form, [field]: finalValue });
+    setProductForm({ ...productForm, [field]: finalValue });
   };
 
   // ADD
-  const [editingId, setEditingId] = useState<string | null>(null);
-
-  const startEdit = (product: Product) => {
-    setForm(product);
+ 
+  const startProductEdit = (product: Product) => {
+    setProductForm(product);
     setEditingId(product._id ?? null);
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleProductSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try { // SUBMIT
       if (editingId) {
-        await axios.put(`http://localhost:5000/api/products/${editingId}`, form);
+        await axios.put(`http://localhost:5000/api/products/${editingId}`, productForm);
         setEditingId(null);
       } else {
-        await axios.post('http://localhost:5000/api/products', form);
+        await axios.post('http://localhost:5000/api/products', productForm);
       }
       // EDIT
-      setForm({ name: '', category: '', price: 0, stock: 0 });
+      setProductForm({ name: '', category: '', price: 0, stock: 0 });
       fetchProducts();
     } catch (error) {
       console.error('Error saving product:', error);
@@ -105,21 +105,21 @@ function ProductComponent() {
       <Title order={2} mb="lg" c="blue">Automata termékek</Title>
       
       <Paper shadow="xs" p="md" mb="lg" withBorder>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleProductSubmit}>
           <Stack gap="md">
             <Group grow gap="md">
               <TextInput
                 label="Termék név"
                 placeholder="Termék név"
-                value={form.name}
-                onChange={(e) => handleChange('name', e.target.value)}
+                value={productForm.name}
+                onChange={(e) => handleProductChange('name', e.target.value)}
                 required
               />
               <TextInput
                 label="Kategória"
                 placeholder="Kategória"
-                value={form.category}
-                onChange={(e) => handleChange('category', e.target.value)}
+                value={productForm.category}
+                onChange={(e) => handleProductChange('category', e.target.value)}
                 required
               />
             </Group>
@@ -128,18 +128,20 @@ function ProductComponent() {
               <NumberInput
                 label="Ár (Ft)"
                 placeholder="Ár"
-                value={form.price}
-                onChange={(value) => handleChange('price', value)}
+                value={productForm.price}
+                onChange={(value) => handleProductChange('price', value)}
                 min={0}
+                max={999999}
                 required
                 rightSection={<Text size="sm">Ft</Text>}
               />
               <NumberInput
                 label="Készlet (Db)"
                 placeholder="Készlet"
-                value={form.stock}
-                onChange={(value) => handleChange('stock', value)}
+                value={productForm.stock}
+                onChange={(value) => handleProductChange('stock', value)}
                 min={0}
+                max={9999999}
                 required
                 rightSection={<Text size="sm">Db</Text>}
               />
@@ -180,7 +182,7 @@ function ProductComponent() {
                     <ActionIcon 
                       variant="outline" 
                       color="blue" 
-                      onClick={() => startEdit(product)}
+                      onClick={() => startProductEdit(product)}
                     >
                       <IconEdit size={16} />
                     </ActionIcon>
