@@ -9,7 +9,7 @@ interface MatrixSlotGridProps {
   onSave: () => void;
 }
 
-const MatrixSlotGrid = ({ machineId, slots, rows, cols, onSave }: MatrixSlotGridProps) => {
+const SelectedMachineView = ({ machineId, slots, rows, cols, onSave }: MatrixSlotGridProps) => {
   const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
   const getSlotByCode = (code: string): Slot | undefined =>
@@ -70,4 +70,4 @@ const MatrixSlotGrid = ({ machineId, slots, rows, cols, onSave }: MatrixSlotGrid
   );
 };
 
-export default MatrixSlotGrid;
+export default SelectedMachineView;

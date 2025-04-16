@@ -1,4 +1,4 @@
-import ProductComponent from "../components/ProductComponent"
+import ProductComponent from "../components/ProductDashboard/ProductComponent"
 
 const Pricing: React.FC = () => {
     return (

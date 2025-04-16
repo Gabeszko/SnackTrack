@@ -1,4 +1,4 @@
-import MachineComponent from "../components/MachineComponent"
+import MachineComponent from "../components/MachineDashboard/MachineDashboardComponent"
 
 const Inventory: React.FC = () => {
     return (
