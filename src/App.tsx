@@ -1,12 +1,14 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/NavbarComponent.tsx'
 import Home from './pages/Home'
-import Refill from './pages/Refill'
-import Inventory from './pages/Inventory'
-import Pricing from './pages/Pricing'
-import Stats from './pages/Stats'
+//import Refill from './pages/Refill'
+import Machines from './pages/Machines.tsx'
+import SelectedMachineView from './components/MachineDashboard/SelectedMachineViewComponent.tsx'
+import Products from './pages/Products.tsx'
+import Statistics from './pages/Statistics.tsx'
 
 function App() {
+//            <Route path="/refill" element={<Refill />} />
 
   return (
     <div style={{ padding: '2rem' }}>
@@ -15,10 +17,10 @@ function App() {
         <main className="p-4">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/refill" element={<Refill />} />
-            <Route path="/inventory" element={<Inventory />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/stats" element={<Stats />} />
+            <Route path="/machines" element={<Machines />} />
+            <Route path="/machines/:id" element={<SelectedMachineView />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/statistics" element={<Statistics />} />
           </Routes>
         </main>
       </>

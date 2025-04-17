@@ -1,4 +1,6 @@
-import { Grid, Paper, Badge, Text, Group, Center } from '@mantine/core';
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import axios from 'axios';import { Grid, Paper, Badge, Text, Group, Center } from '@mantine/core';
 import SlotEditor, { Slot } from './SlotEditorComponent';
 
 interface MatrixSlotGridProps {
@@ -11,7 +13,16 @@ interface MatrixSlotGridProps {
 
 const SelectedMachineView = ({ machineId, slots, rows, cols, onSave }: MatrixSlotGridProps) => {
   const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const { id } = useParams();
+  const [machine, setMachine] = useState(null);
 
+  useEffect(() => {
+    axios.get(`/api/machines/${id}`).then(res => {
+      setMachine(res.data);
+    });
+  }, [id]);
+
+  if (!machine) return <div>Betöltés...</div>;
   const getSlotByCode = (code: string): Slot | undefined =>
     slots.find((s) => s.slotCode === code);
 

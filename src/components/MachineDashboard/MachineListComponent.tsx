@@ -8,7 +8,7 @@ import SelectedMachineView from './SelectedMachineViewComponent';
 //Egyelőre ezt a machine type-ot használja
 export interface Slot {
     slotCode: string;
-    product: { //Populate-olni kéne aztmondjátok?
+    product: { //Populate-olni kéne aztmondjátok? De amúgy populate-olva van
       _id: string;
       name: string;
       category: string;
