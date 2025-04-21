@@ -11,8 +11,8 @@ function App() {
 //            <Route path="/refill" element={<Refill />} />
 
   return (
-    <div style={{ padding: '2rem' }}>
-      <>
+    <div style={{ padding: '2rem', paddingTop: '5%' }}>
+      <>    
         <Navbar />
         <main className="p-4">
           <Routes>

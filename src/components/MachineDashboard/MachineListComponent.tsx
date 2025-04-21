@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Card, Group, Stack, Text, Title } from '@mantine/core';
 import SelectedMachineView from './SelectedMachineViewComponent';
+import { Link } from 'react-router-dom';
+
 //import SlotEditor/*, { Slot, Product }*/ from './SlotEditorComponent';
 //import { MachineType } from '../types'
 
@@ -66,7 +68,11 @@ const MachineList = () => {
             <Title order={3} c="blue">{machine.name}</Title>
             <Text size="sm" c="dimmed">{machine.location}</Text>
             <Text size="sm" c="black">Size: {machine.rows}x{machine.cols}</Text>
-            <button onClick={() => setSelectedMachineId(machine._id!)}>📦 Slotnézet</button>
+            {"<button onClick={() => setSelectedMachineId(machine._id!)}>📦 Slotnézet</button>"}
+            <Link to={`/machines/${machine._id}`}>
+            <button>Megtekintés / szerkesztés</button>
+            </Link>
+
             <button onClick={() => deleteMachine(machine._id!)}>❌ Törlés</button>
  
         </Stack>
@@ -78,11 +84,13 @@ const MachineList = () => {
         <div style={{ marginTop: '2rem' }}>
           <h3>{selectedMachine.name} slotnézete</h3>
           <SelectedMachineView
+            /*
             machineId={selectedMachine._id!}
             slots={selectedMachine.slots}
             rows={selectedMachine.rows}
             cols={selectedMachine.cols}
             onSave={fetchMachines}
+            */
           />
         </div>
       )}

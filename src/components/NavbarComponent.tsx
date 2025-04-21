@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
   const [user] = useState("Felhasználó") // Ezt is
 
   return (
-    <nav className="bg-primary-500 text-white p-4 flex justify-between items-center shadow-md">
+    <nav className="fixed top-0 w-full z-10 bg-primary-500 text-white p-4 flex justify-between items-center shadow-md">
       <AppShell
       header={{ height: 80 }}
       padding={0}
