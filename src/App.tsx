@@ -3,7 +3,7 @@ import Navbar from './components/NavbarComponent.tsx'
 import Home from './pages/Home'
 //import Refill from './pages/Refill'
 import Machines from './pages/Machines.tsx'
-import SelectedMachineView from './components/MachineDashboard/SelectedMachineViewComponent.tsx'
+import SelectedMachineView from './components/MachineDashboard/SelectedMachineViewDashboard/SelectedMachineViewComponent.tsx'
 import Products from './pages/Products.tsx'
 import Statistics from './pages/Statistics.tsx'
 

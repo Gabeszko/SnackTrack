@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
 import axios from 'axios';
+import SelectedMachineView from './SelectedMachineViewDashboard/SelectedMachineViewComponent';
+import { useEffect, useState } from 'react';
 import { Card, Group, Stack, Text, Title } from '@mantine/core';
-import SelectedMachineView from './SelectedMachineViewComponent';
 import { Link } from 'react-router-dom';
 
 //import SlotEditor/*, { Slot, Product }*/ from './SlotEditorComponent';

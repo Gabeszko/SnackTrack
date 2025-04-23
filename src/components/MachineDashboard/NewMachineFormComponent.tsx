@@ -70,7 +70,7 @@ const NewMachineForm = () => {
             label="Cols"
             placeholder="Oszlopok száma"
             value={machineForm.cols}
-            onChange={(value) => handleMachineChange( 'cols', value )}
+            onChange={(value) => handleMachineChange('cols', value)}
             min={1}
             max={99}
             required
