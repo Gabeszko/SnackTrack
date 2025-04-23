@@ -45,10 +45,11 @@ const RefillableProducts = ({ slots, rows, cols, machineId }: RefillableProducts
       const slotCode = `${letters[rowIdx]}${colIdx + 1}`;
       const slot = slots.find(s => s.slotCode === slotCode);
       
-      if (!slot || slot.quantity < 5) { // Példa logika: kevés mennyiség is "hiány"
+      if (!slot || slot.product === null || slot.quantity < slot.capacity/2) { 
         return {
           slotCode,
           productName: getProductName(slot?.product),
+          capacity: slot?.capacity || 0,
           quantity: slot?.quantity || 0
         };
       }
@@ -107,7 +108,7 @@ const RefillableProducts = ({ slots, rows, cols, machineId }: RefillableProducts
                       }}
                     />
                     <Text>
-                      Slot {item.slotCode}: {item.productName} ({item.quantity})
+                      {item.slotCode}: {item.productName} {item.capacity - item.quantity}db ({item.capacity}/{item.quantity})
                     </Text>
                   </Group>
                 </List.Item>

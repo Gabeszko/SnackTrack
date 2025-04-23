@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { MachineType, Slot } from '../../types';
 import { 
   Grid, 
@@ -16,13 +16,14 @@ import RefillableProducts from './RefillableProductsComponent';
 import MachineGrid from './MachineGridComponent';
 
 const SelectedMachineView = () => {
-  const { id } = useParams();
+  const { id } = useParams<{ id: string }>();
   const [machine, setMachine] = useState<MachineType | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedSlot, setSelectedSlot] = useState<Slot | null>(null);
 
-  const fetchMachineData = async () => {
+  // A fetchMachineData függvényt useCallback-be csomagoljuk
+  const fetchMachineData = useCallback(async () => {
     if (!id) return;
     
     setLoading(true);
@@ -37,15 +38,16 @@ const SelectedMachineView = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [id]);
 
   useEffect(() => {
     console.log('Lekérdezett ID:', id);
     fetchMachineData();
-  }, [id]);
+  }, [fetchMachineData]);
 
-  // Slot kiválasztási kezelő
-  const handleSlotClick = (slot: Slot | null, slotCode: string) => {
+  // Slot kiválasztási kezelő - explicit típus meghatározás
+  const handleSlotClick = (slot: Slot | null, slotCode: string): void => {
+    console.log("Slot kiválasztva:", slot, slotCode);
     if (slot) {
       setSelectedSlot({ ...slot, slotCode });
     } else {
@@ -54,7 +56,7 @@ const SelectedMachineView = () => {
   };
 
   // Mentés utáni frissítés kezelő
-  const handleSaveSuccess = () => {
+  const handleSaveSuccess = (): void => {
     fetchMachineData();
     // Átmenetileg kitöröljük a kiválasztott slotot
     setSelectedSlot(null);

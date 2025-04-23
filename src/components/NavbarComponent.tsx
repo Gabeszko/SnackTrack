@@ -14,7 +14,7 @@ import {
   ThemeIcon,
   Flex*/
 } from '@mantine/core';
-import { IconTemperature, IconUser, IconHome/*, IconCash, IconChartBar, IconBox*/ } from '@tabler/icons-react';
+import {IconUser, IconHome/*, IconTemperature, IconCash, IconChartBar, IconBox*/ } from '@tabler/icons-react';
 
 /*type NavbarProps = {
   username: string
@@ -43,7 +43,7 @@ const Navbar: React.FC<NavbarProps> = ({ username }) => {
 
 const Navbar: React.FC = () => {
 
-  const [temperature] = useState(23); // Ezt majd valós adattal helyettesíteni kell
+//  const [temperature] = useState(23); // Ezt majd valós adattal helyettesíteni kell
   const [user] = useState("Felhasználó") // Ezt is
 
   return (
@@ -58,13 +58,6 @@ const Navbar: React.FC = () => {
             <Title order={2}>Logó</Title>
           </Box>
           
-          <Group>
-            <Group gap="xs">
-              <IconTemperature size={24} />
-              <Text fw={500}>Hőmérséklet: {temperature} Celsius</Text>
-            </Group>
-          </Group>
-
           <Group gap="xs">
             <Button 
               component={Link} 

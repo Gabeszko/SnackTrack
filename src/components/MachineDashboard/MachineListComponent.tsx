@@ -1,26 +1,21 @@
 import axios from 'axios';
-import SelectedMachineView from './SelectedMachineViewDashboard/SelectedMachineViewComponent';
 import { useEffect, useState } from 'react';
-import { Card, Group, Stack, Text, Title } from '@mantine/core';
+import {
+  Card,
+  Stack,
+  Text,
+  Title,
+  Button,
+  AppShell,
+  Box,
+  SimpleGrid,
+  Flex
+} from '@mantine/core';
 import { Link } from 'react-router-dom';
 
-//import SlotEditor/*, { Slot, Product }*/ from './SlotEditorComponent';
-//import { MachineType } from '../types'
+import { MachineType } from '../types';
 
-//Egyelőre ezt a machine type-ot használja
-export interface Slot {
-    slotCode: string;
-    product: { //Populate-olni kéne aztmondjátok? De amúgy populate-olva van
-      _id: string;
-      name: string;
-      category: string;
-      price: number;
-      stock: number;
-      __v: number;
-    }; 
-    quantity: number;
-  }
-
+/*
   export interface MachineType {
     _id?: string;
     name: string;
@@ -29,12 +24,12 @@ export interface Slot {
     cols: number;
     slots: Slot[];
   }
-  
+  */
 
 const MachineList = () => {
     const [machines, setMachines] = useState<MachineType[]>([]);
-    const [selectedMachineId, setSelectedMachineId] = useState<string | null>(null);
-    const selectedMachine = machines.find((m) => m._id === selectedMachineId);
+//    const [selectedMachineId, setSelectedMachineId] = useState<string | null>(null);
+//    const selectedMachine = machines.find((m) => m._id === selectedMachineId);
 
 
     useEffect(() => {
@@ -52,49 +47,35 @@ const MachineList = () => {
   
     const deleteMachine = async (id: string) => {
       await axios.delete(`http://localhost:5000/api/machines/${id}`);
-      setSelectedMachineId(null);
       fetchMachines();
     };  
     
-//Valami nem kerek
-//a Slotok mindegyik automatának ugyan azt mutatják for some reason
-
     return (
-    <div> 
-        <Group mt="md" gap="md" grow>
-        {machines.map((machine) => (
-        <Card key={machine._id} shadow="sm" radius="md" withBorder padding="lg">
-        <Stack gap="xs">
-            <Title order={3} c="blue">{machine.name}</Title>
-            <Text size="sm" c="dimmed">{machine.location}</Text>
-            <Text size="sm" c="black">Size: {machine.rows}x{machine.cols}</Text>
-            {"<button onClick={() => setSelectedMachineId(machine._id!)}>📦 Slotnézet</button>"}
-            <Link to={`/machines/${machine._id}`}>
-            <button>Megtekintés / szerkesztés</button>
-            </Link>
+    <AppShell>
+      <AppShell.Main>
+        <Flex style={{ minHeight: 'calc(100vh - 80px)' }}> 
+          <Box flex={1} py="xl" px="xl" bg="white">
+            <SimpleGrid cols={{ base: 1, sm: 4 }} spacing="xl">         
+              {machines.map((machine) => (
+              <Card key={machine._id} shadow="sm" radius="md" withBorder padding="lg">
+                <Stack gap="xs">
+                  <Title order={3} c="blue">{machine.name}</Title>
+                  <Text size="sm" c="dimmed">{machine.location}</Text>
+                  <Text size="sm" c="black">Size: {machine.rows}x{machine.cols}</Text>
 
-            <button onClick={() => deleteMachine(machine._id!)}>❌ Törlés</button>
- 
-        </Stack>
-        </Card>
-        ))}
-      </Group>
+                  <Link to={`/machines/${machine._id}`}>
+                  <Button w="100%" h="30">Megtekintés</Button>
+                  </Link>
 
-      {selectedMachine && (
-        <div style={{ marginTop: '2rem' }}>
-          <h3>{selectedMachine.name} slotnézete</h3>
-          <SelectedMachineView
-            /*
-            machineId={selectedMachine._id!}
-            slots={selectedMachine.slots}
-            rows={selectedMachine.rows}
-            cols={selectedMachine.cols}
-            onSave={fetchMachines}
-            */
-          />
-        </div>
-      )}
-    </div>
+                  <Button w="100%" h="30" onClick={() => deleteMachine(machine._id!)}>❌ Törlés</Button>
+                </Stack>
+              </Card>
+              ))}
+            </SimpleGrid>
+          </Box>
+        </Flex>
+      </AppShell.Main>
+    </AppShell>
     );
 };
 

@@ -1,7 +1,7 @@
 import { /*useEffect,*/ useState, FormEvent } from 'react';
 import axios from 'axios';
 //import SlotEditor/*, { Slot, Product }*/ from './SlotEditorComponent';
-import { Group, NumberInput, /* Stack, Text, Card, Title, */ TextInput, Button } from '@mantine/core';
+import { Group, NumberInput, /* Stack, Text, Card, Title, */ TextInput, Button, Card } from '@mantine/core';
 import { MachineType } from '../types'
 
 const NewMachineForm = () => {
@@ -39,7 +39,7 @@ const NewMachineForm = () => {
       
 
     return (
-    <div style={{ padding: '2rem' }}>
+    <Card shadow="sm" radius="md" withBorder padding="lg">
       <h2>Új automata</h2>
       <form onSubmit={handleMachineSubmit}>
         <Group grow gap="md">
@@ -82,7 +82,7 @@ const NewMachineForm = () => {
           </Button>
         </Group>
       </form>
-      </div>
+      </Card>
     );
 };
 

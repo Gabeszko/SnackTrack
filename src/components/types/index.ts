@@ -8,7 +8,7 @@ export interface Product {
 
 export interface Slot {
   slotCode: string;
-  product: Product /*| string*/ | null;
+  product: Product | string | null;
   quantity: number;
   capacity: number;
   price: number;

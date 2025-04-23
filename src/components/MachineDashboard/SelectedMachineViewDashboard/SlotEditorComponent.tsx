@@ -1,7 +1,7 @@
 import { Select } from '@mantine/core';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Slot as OriginalSlot, Product } from '../../types'; 
+import { Slot /*as OriginalSlot*/, Product } from '../../types'; 
 import {
   Paper,
   Title,
@@ -9,13 +9,15 @@ import {
   NumberInput,
   Group,
   Button,
-  Stack
+  Stack,
+  Text
 } from '@mantine/core';
 
 // Újra definiáljuk a Slot típust az eredeti alapján, de csak azokkal a mezőkkel amit használunk
-export type Slot = Pick<OriginalSlot, 'slotCode' | 'quantity' | 'capacity' | 'price' > & {
-  product?: Product | null;
+/*export type Slot = Pick<OriginalSlot, 'slotCode' | 'quantity' | 'capacity' | 'price' > & {
+  product: Product | null;
 };
+*/
 
 type SlotEditorProps = {
   selectedSlot: Slot | null;
@@ -29,6 +31,8 @@ const SlotEditor = ({ selectedSlot, machineId, onSaveSuccess }: SlotEditorProps)
   const [quantity, setQuantity] = useState<number | "">(0);
   const [capacity, setCapacity] = useState<number | "">(0);
   const [price, setPrice] = useState<number | "">(0);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   
   // Termékek betöltése
   useEffect(() => {
@@ -42,17 +46,29 @@ const SlotEditor = ({ selectedSlot, machineId, onSaveSuccess }: SlotEditorProps)
       })
       .catch(err => {
         console.error("Termékek betöltése sikertelen:", err);
+        setError("Termékek betöltése sikertelen");
       });
   }, []);
 
   // Slot változásakor frissítjük az adatokat
   useEffect(() => {
     if (selectedSlot) {
-      setProductId(
-        selectedSlot.product && typeof selectedSlot.product === 'object'
-          ? selectedSlot.product._id || ''
-          : ''
-      );
+      // Először reseteljük
+      setProductId("");
+      setQuantity(0);
+      setCapacity(0);
+      setPrice(0);
+      setError(null);
+      
+      // beállítjuk az értékeket
+      if (selectedSlot.product){
+        if(typeof selectedSlot.product === 'string'){
+          setProductId(selectedSlot.product)
+        } else if(typeof selectedSlot.product === 'object'){
+          setProductId(selectedSlot.product._id)
+        }
+      }
+
       setQuantity(selectedSlot.quantity || 0);
       setCapacity(selectedSlot.capacity || 0);
       setPrice(selectedSlot.price || 0);
@@ -61,6 +77,7 @@ const SlotEditor = ({ selectedSlot, machineId, onSaveSuccess }: SlotEditorProps)
       setQuantity(0);
       setCapacity(0);
       setPrice(0);
+      setError(null);
     }
   }, [selectedSlot]);
 
@@ -68,24 +85,33 @@ const SlotEditor = ({ selectedSlot, machineId, onSaveSuccess }: SlotEditorProps)
     if (!selectedSlot || !selectedSlot.slotCode) return;
   
     const slotData = {
-      product: productId,
-      quantity,
-      capacity,
-      price
+      product: productId || null, // Ha üres string, akkor null-t küldünk
+      quantity: quantity || 0,    // Ha üres, akkor 0-t küldünk
+      capacity: capacity || 0,    // Ha üres, akkor 0-t küldünk
+      price: price || 0           // Ha üres, akkor 0-t küldünk
     };
   
+    setSaving(true);
+    setError(null);
+    
     try {
       console.log("Mentési adatok:", slotData);
-      await axios.patch(
+      console.log("Mentési URL:", `http://localhost:5000/api/machines/${machineId}/slots/${selectedSlot.slotCode}`);
+      
+      const response = await axios.patch(
         `http://localhost:5000/api/machines/${machineId}/slots/${selectedSlot.slotCode}`,
         slotData
       );
-      console.log("Mentés sikeres!");
+      
+      console.log("Mentés sikeres! Válasz:", response.data);
+      
       if (onSaveSuccess) {
         onSaveSuccess();
       }
     } catch (err) {
       console.error("Mentés sikertelen:", err);
+    } finally {
+      setSaving(false);
     }
   };
   
@@ -94,14 +120,23 @@ const SlotEditor = ({ selectedSlot, machineId, onSaveSuccess }: SlotEditorProps)
       <Title order={4} mb="xs">Slot: {selectedSlot?.slotCode || "Nincs kiválasztva"}</Title>
       <Divider mb="md" />
 
+      {error && (
+        <Text c="red" mb="md">
+          {error}
+        </Text>
+      )}
+
       <Stack gap="md">
         <Select
           label="Termék"
-          placeholder="Válassz terméket"
+          placeholder={"válassz terméket"}
           data={productOptions}
           value={productId}
           onChange={(val) => setProductId(val || "")}
-          disabled={!selectedSlot}
+          disabled={!selectedSlot || saving /*|| selectedSlot.product.stock <= selectedSlot.capacity*/}
+          clearable
+          searchable
+          nothingFoundMessage="Nincs ilyen termék"
         />
 
         <Group grow>
@@ -110,7 +145,7 @@ const SlotEditor = ({ selectedSlot, machineId, onSaveSuccess }: SlotEditorProps)
             value={quantity}
             onChange={(value) => setQuantity(value as number | "")}
             min={0}
-            disabled={!selectedSlot}
+            disabled={!selectedSlot || saving}
           />
           
           <NumberInput
@@ -118,7 +153,7 @@ const SlotEditor = ({ selectedSlot, machineId, onSaveSuccess }: SlotEditorProps)
             value={capacity}
             onChange={(value) => setCapacity(value as number | "")}
             min={0}
-            disabled={!selectedSlot}
+            disabled={!selectedSlot || saving}
           />
 
           <NumberInput
@@ -126,12 +161,16 @@ const SlotEditor = ({ selectedSlot, machineId, onSaveSuccess }: SlotEditorProps)
             value={price}
             onChange={(value) => setPrice(value as number | "")}
             min={0}
-            disabled={!selectedSlot}
+            disabled={!selectedSlot || saving}
           />
         </Group>
 
         <Group justify="flex-end">
-          <Button onClick={handleSubmit} disabled={!selectedSlot}>
+          <Button 
+            onClick={handleSubmit} 
+            disabled={!selectedSlot} 
+            loading={saving}
+          >
             Mentés
           </Button>
         </Group>
