@@ -41,7 +41,6 @@ const SelectedMachineView = () => {
   }, [id]);
 
   useEffect(() => {
-    console.log('Lekérdezett ID:', id);
     fetchMachineData();
   }, [fetchMachineData]);
 
@@ -69,7 +68,7 @@ const SelectedMachineView = () => {
   const { slots, rows, cols, name } = machine;
 
   return (
-    <Container fluid>
+    <Container>
       <Paper p="md" mb="lg" withBorder>
         <Title order={2} ta="center" mb="md">{name} automata</Title>
         <Divider mb="md" />

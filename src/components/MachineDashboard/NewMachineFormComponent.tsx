@@ -1,10 +1,12 @@
-import { /*useEffect,*/ useState, FormEvent } from 'react';
+import { /*useEffect,*/ useState, FormEvent, FunctionComponent, Dispatch, SetStateAction } from 'react';
 import axios from 'axios';
 //import SlotEditor/*, { Slot, Product }*/ from './SlotEditorComponent';
 import { Group, NumberInput, /* Stack, Text, Card, Title, */ TextInput, Button, Card } from '@mantine/core';
 import { MachineType } from '../types'
 
-const NewMachineForm = () => {
+const NewMachineForm: FunctionComponent<{
+  setMachines: Dispatch<SetStateAction<MachineType[]>>
+}> = ({setMachines}) => {
 //    const [machines, setMachines] = useState<MachineType[]>([]);
     const [editingId, setEditingId] = useState<string | null>(null);
     const [machineForm, setMachineForm] = useState({
@@ -28,7 +30,9 @@ const NewMachineForm = () => {
             await axios.put(`http://localhost:5000/api/machines/${editingId}`, machineForm);
             setEditingId(null);
           } else {
-            await axios.post('http://localhost:5000/api/machines', machineForm);
+            await axios.post('http://localhost:5000/api/machines', machineForm).then((res) => {
+                setMachines((prev) => ([...prev, res.data]))
+            });
           }
           // EDIT
           setMachineForm({ name: '', location: '', rows: 0, cols: 0, slots: []});

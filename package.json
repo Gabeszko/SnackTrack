@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -15,6 +15,8 @@
     "@tabler/icons-react": "^3.31.0",
     "@tailwindcss/vite": "^4.1.3",
     "axios": "^1.8.4",
+    "lodash": "^4.17.21",
+    "lucide-react": "^0.503.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.5.0",
@@ -22,6 +24,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
+    "@types/lodash": "^4.17.16",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",

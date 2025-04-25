@@ -89,7 +89,7 @@ const MachineGrid = ({ rows, cols, slots, selectedSlot, onSlotClick }: MachineGr
               height: '40px',
               backgroundColor: isSelected 
                 ? '#e3f2fd' 
-                : (!slot || slot.product === null || slot.quantity < slot.capacity/2) 
+                : (!slot || slot.product === null || slot.quantity <= slot.capacity/2) 
                   ? '#ffebee' 
                   : 'white',
               display: 'flex',

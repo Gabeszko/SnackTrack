@@ -39,16 +39,31 @@ const RefillableProducts = ({ slots, rows, cols, machineId }: RefillableProducts
     return "Ismeretlen termék";
   };
 
+  const getProductId = (product: Product | string | null | undefined): string => {
+    if (!product) return "Nincs termék";
+    
+    if (typeof product === 'string') {
+      return product;
+    }
+    
+    if (typeof product === 'object' && 'name' in product) {
+      return product._id || "Ismeretlen termék";
+    }
+    
+    return "Ismeretlen termék";
+  };
+
   // Hiányzó slotok kiszámítása
   const missingSlots = Array.from({ length: rows }).flatMap((_, rowIdx) =>
     Array.from({ length: cols }).map((_, colIdx) => {
       const slotCode = `${letters[rowIdx]}${colIdx + 1}`;
       const slot = slots.find(s => s.slotCode === slotCode);
       
-      if (!slot || slot.product === null || slot.quantity < slot.capacity/2) { 
+      if (!slot || slot.product === null || slot.quantity <= slot.capacity/2) { 
         return {
           slotCode,
           productName: getProductName(slot?.product),
+          productId: getProductId(slot?.product),
           capacity: slot?.capacity || 0,
           quantity: slot?.quantity || 0
         };
@@ -71,6 +86,13 @@ const RefillableProducts = ({ slots, rows, cols, machineId }: RefillableProducts
       setLoading(false);
     }
   };
+
+  /*
+  const soldProducts = missingSlots.map(item => ({
+    productId: typeof item?.product === 'object' ? item.product.id : String(item?.product),
+    quantity: (item?.capacity ?? 0) - (item?.quantity ?? 0)
+  }));
+  */
 
   const handleMarkAsRefilled = async () => {
     setLoading(true);

@@ -28,9 +28,9 @@ type SlotEditorProps = {
 const SlotEditor = ({ selectedSlot, machineId, onSaveSuccess }: SlotEditorProps) => {
   const [productId, setProductId] = useState<string>("");
   const [productOptions, setProductOptions] = useState<{ label: string; value: string }[]>([]);
-  const [quantity, setQuantity] = useState<number | "">(0);
-  const [capacity, setCapacity] = useState<number | "">(0);
-  const [price, setPrice] = useState<number | "">(0);
+  const [quantity, setQuantity] = useState<number | 0>(0);
+  const [capacity, setCapacity] = useState<number | 0>(0);
+  const [price, setPrice] = useState<number | 0>(0);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   
@@ -143,24 +143,27 @@ const SlotEditor = ({ selectedSlot, machineId, onSaveSuccess }: SlotEditorProps)
           <NumberInput
             label="Mennyiség:"
             value={quantity}
-            onChange={(value) => setQuantity(value as number | "")}
+            onChange={(value) => setQuantity(value as number | 0)}
             min={0}
+            max={capacity}
             disabled={!selectedSlot || saving}
           />
           
           <NumberInput
             label="Kapacitás:"
             value={capacity}
-            onChange={(value) => setCapacity(value as number | "")}
-            min={0}
+            onChange={(value) => setCapacity(value as number | 0)}
+            min={quantity}
+            max={10}
             disabled={!selectedSlot || saving}
           />
 
           <NumberInput
             label="Eladási ár:"
             value={price}
-            onChange={(value) => setPrice(value as number | "")}
+            onChange={(value) => setPrice(value as number | 0)}
             min={0}
+            max={10000}
             disabled={!selectedSlot || saving}
           />
         </Group>
