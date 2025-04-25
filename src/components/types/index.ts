@@ -23,3 +23,15 @@ export interface MachineType {
   cols: number;
   slots: Slot[];
 }
+
+export interface Sale {
+  _id: string;
+  machineId?: string;
+  date: string;
+  products: Array<{
+    productId: string;
+    quantity: number;
+    productProfit: number;
+  }>;
+  allProfit: number;
+}

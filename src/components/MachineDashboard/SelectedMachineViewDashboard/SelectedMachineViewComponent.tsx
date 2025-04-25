@@ -100,6 +100,7 @@ const SelectedMachineView = () => {
               rows={rows as number} 
               cols={cols as number} 
               machineId={machine._id!}
+              onRefill={fetchMachineData}
             />
           </Grid.Col>
         </Grid>

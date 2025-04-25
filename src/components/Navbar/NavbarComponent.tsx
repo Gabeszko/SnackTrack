@@ -28,7 +28,7 @@ export default function Navbar() {
         isSticky ? "sticky top-0 z-50 shadow-md" : ""
       }`}
     >
-      <div className="font-bold text-xl">Logó</div>
+      <div className="font-bold text-xl">SnackTrack</div>
 
       <button
         onClick={() => {

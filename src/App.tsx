@@ -4,7 +4,7 @@ import Machines from "./pages/Machines.tsx";
 import SelectedMachineView from "./components/MachineDashboard/SelectedMachineViewDashboard/SelectedMachineViewComponent.tsx";
 import Products from "./pages/Products.tsx";
 import Statistics from "./pages/Statistics.tsx";
-import NavbarNew from "./components/NavbarComponent.tsx";
+import NavbarNew from "./components/Navbar/NavbarComponent.tsx";
 
 function App() {
   return (
