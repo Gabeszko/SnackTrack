@@ -67,14 +67,23 @@ const NewMachineForm: FunctionComponent<{
     e.preventDefault();
     try {
       if (editingMachine && editingMachine._id) {
-        // ✅ Ha szerkesztünk: PUT kérés
-        await axios.put(
-          `http://localhost:5000/api/machines/${editingMachine._id}`,
-          machineForm
-        );
-        clearEditingMachine();
+        // PUT
+        if (editingMachine && editingMachine._id) {
+          await axios.put(
+            `http://localhost:5000/api/machines/${editingMachine._id}`,
+            machineForm
+          );
+
+          // Frissítjük az összes gépet új lekéréssel
+          const res = await axios.get<MachineType[]>(
+            "http://localhost:5000/api/machines"
+          );
+          setMachines(res.data);
+
+          clearEditingMachine();
+        }
       } else {
-        // ✅ Ha új: POST kérés
+        // POST
         const res = await axios.post(
           "http://localhost:5000/api/machines",
           machineForm

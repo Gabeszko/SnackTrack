@@ -2,16 +2,17 @@ import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+//import { MachineType } from "./types";
 
-interface VendingMachine {
+interface MachineType {
   id: number;
   name: string;
   location: [number, number]; // [latitude, longitude]
-  //  status: "Active" | "Maintenance" | "Offline";
+  status: "Active" | "Maintenance" | "Offline";
 }
 
 interface VendingMachineMapProps {
-  machines?: VendingMachine[];
+  machines?: MachineType[];
   center?: [number, number];
   zoom?: number;
 }
@@ -67,7 +68,7 @@ const VendingMachineMap: React.FC<VendingMachineMapProps> = ({
   center = [37.7749, -122.4194], // Default to San Francisco
   zoom = 13,
 }) => {
-  const [sampleMachines, setSampleMachines] = useState<VendingMachine[]>([]);
+  const [sampleMachines, setSampleMachines] = useState<MachineType[]>([]);
 
   // Initialize with sample data if no machines are provided
   useEffect(() => {
@@ -79,25 +80,25 @@ const VendingMachineMap: React.FC<VendingMachineMapProps> = ({
           id: 1,
           name: "VM-001",
           location: [37.7749, -122.4194],
-          //status: "Active",
+          status: "Active",
         },
         {
           id: 2,
           name: "VM-002",
           location: [37.7695, -122.4143],
-          //status: "Active",
+          status: "Active",
         },
         {
           id: 3,
           name: "VM-003",
           location: [37.784, -122.4076],
-          //status: "Maintenance",
+          status: "Maintenance",
         },
         {
           id: 4,
           name: "VM-004",
           location: [37.7699, -122.436],
-          //status: "Active",
+          status: "Active",
         },
       ]);
     }

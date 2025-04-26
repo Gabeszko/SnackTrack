@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState, useCallback } from "react";
 import { MachineType, Slot } from "../../types";
 import {
@@ -10,12 +10,14 @@ import {
   Container,
   Title,
   Divider,
+  Button,
 } from "@mantine/core";
 import SlotEditor from "./SlotEditorComponent";
 import RefillableProducts from "./RefillableProductsComponent";
 import MachineGrid from "./MachineGridComponent";
 
 const SelectedMachineView = () => {
+  const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   const [machine, setMachine] = useState<MachineType | null>(null);
   const [loading, setLoading] = useState(true);
@@ -92,6 +94,15 @@ const SelectedMachineView = () => {
   return (
     <Container>
       <Paper p="md" mb="lg" withBorder>
+        <Button
+          variant="light"
+          color="gray"
+          size="xs"
+          onClick={() => navigate("/machines")}
+        >
+          Vissza
+        </Button>
+
         <Title order={2} ta="center" mb="md">
           {name} automata
         </Title>

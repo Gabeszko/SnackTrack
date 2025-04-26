@@ -1,13 +1,23 @@
 import axios from "axios";
 import { Dispatch, FunctionComponent, SetStateAction, useEffect } from "react";
-import { Card, Stack, Text, Title, Button, Box } from "@mantine/core";
+import {
+  Card,
+  Stack,
+  Text,
+  Title,
+  Button,
+  Box,
+  Badge,
+  Group,
+  Progress,
+} from "@mantine/core";
 import { Link } from "react-router-dom";
 import { MachineType } from "../types";
 
 const MachineList: FunctionComponent<{
   machines: MachineType[];
   setMachines: Dispatch<SetStateAction<MachineType[]>>;
-  onEditMachine: (machine: MachineType) => void; // <-- Új prop!
+  onEditMachine: (machine: MachineType) => void;
 }> = ({ machines, setMachines, onEditMachine }) => {
   const fetchMachines = async () => {
     try {
@@ -24,13 +34,24 @@ const MachineList: FunctionComponent<{
     fetchMachines();
   }, []);
 
-
-  /*
-  const deleteMachine = async (id: string) => {
-    await axios.delete(`http://localhost:5000/api/machines/${id}`);
-    fetchMachines();
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case "Active":
+        return "green";
+      case "Maintenance":
+        return "yellow";
+      case "Offline":
+        return "red";
+      default:
+        return "gray";
+    }
   };
-*/
+
+  const getFullnessColor = (fullness: number) => {
+    if (fullness >= 70) return "green";
+    if (fullness >= 40) return "orange";
+    return "red";
+  };
 
   return (
     <Box py="xl" px="xl" bg="white">
@@ -42,28 +63,55 @@ const MachineList: FunctionComponent<{
             radius="md"
             withBorder
             padding="lg"
-            className="min-w-[260px]"
+            className="min-w-[260px] max-w-[320px]"
           >
-            <Stack gap="xs">
-              <Title order={3} c="blue">
+            <Stack gap="xs" align="center">
+              <Title order={3} c="blue" ta="center">
                 {machine.name}
               </Title>
-              <Text size="sm" c="dimmed">
+
+              <Badge
+                color={getStatusColor(machine.status)}
+                variant="filled"
+                size="sm"
+              >
+                {machine.status}
+              </Badge>
+
+              <Text size="sm" c="dimmed" ta="center">
                 {machine.location}
               </Text>
-              <Text size="sm" c="black">
-                Size: {machine.rows}x{machine.cols}
+              <Text size="sm" c="black" ta="center">
+                Méret: {machine.rows}x{machine.cols}
               </Text>
 
-              <Link to={`/machines/${machine._id}`}>
-                <Button w="100%" h="30">
-                  Megtekintés
-                </Button>
-              </Link>
+              {/* Progress Bar for fullness */}
+              <Box w="100%" mt="sm">
+                <Text size="xs" c="dimmed" mb={4}>
+                  Töltöttség: {machine.fullness ?? 0}%
+                </Text>
+                <Progress
+                  value={machine.fullness ?? 0}
+                  color={getFullnessColor(machine.fullness ?? 0)}
+                  radius="xl"
+                  size="md"
+                />
+              </Box>
 
-              <Button w="100%" h="30" onClick={() => onEditMachine(machine)}>
-                ✏️ Szerkesztés
-              </Button>
+              <Group grow mt="md">
+                <Link to={`/machines/${machine._id}`}>
+                  <Button variant="light" fullWidth>
+                    Megtekintés
+                  </Button>
+                </Link>
+                <Button
+                  variant="light"
+                  color="blue"
+                  onClick={() => onEditMachine(machine)}
+                >
+                  ✏️ Szerkesztés
+                </Button>
+              </Group>
             </Stack>
           </Card>
         ))}
