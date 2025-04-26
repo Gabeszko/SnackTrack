@@ -1,16 +1,16 @@
+import { Center, Title } from "@mantine/core";
 import ProductComponent from "../components/ProductDashboard/ProductComponent";
 
 const Pricing: React.FC = () => {
   return (
-    <div className="bg-blue-400/20 p-6">
+    <div className="bg-blue-400/20 px-15 pb-10">
       <div className="bg-white rounded-lg p-4">
-        <h2 className="text-2xl font-semibold text-primary-400 ">Árkezelés</h2>
-        <p className="mt-2 text-gray-700">
-          Itt kezelheted a termékek árait, akciókat állíthatsz be, vagy
-          frissítheted az árlistát.
-        </p>
-
-        <ProductComponent></ProductComponent>
+        <Center>
+          <Title order={2} c="blue">
+            Termékek
+          </Title>
+        </Center>
+        <ProductComponent />
       </div>
     </div>
   );

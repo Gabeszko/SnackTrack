@@ -16,6 +16,7 @@ import {
   Container,
   Paper,
   Text,
+  Select,
 } from "@mantine/core";
 import {
   IconTrash,
@@ -67,11 +68,14 @@ function ProductComponent() {
     setProductForm({ ...productForm, [field]: finalValue });
   };
 
-  // ADD
+  // EDIT
   const startProductEdit = (product: Product) => {
     setProductForm(product);
     setEditingId(product._id ?? null);
   };
+
+  const clearEditingProduct = () => {setEditingId(null)};
+
 
   const handleProductSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -111,37 +115,39 @@ function ProductComponent() {
       handleProductChange(field, value);
     }, 300), // 300ms várakozás, állíthatod
     []
-  );
+  );*/
 
-  */
   return (
     <Container size="lg" mt="md" px={4}>
-      <Title order={2} mb="lg" c="blue">
-        Automata termékek
-      </Title>
-
       <Paper shadow="xs" p="md" mb="lg" withBorder>
+        <Title order={4} mb={"md"} c="black">
+          Új termék Hozzáadása:
+        </Title>
+
         <form onSubmit={handleProductSubmit}>
           <Stack gap="md">
             <Group grow gap="md">
               <TextInput
                 label="Termék név"
                 placeholder="Termék név"
+                value={productForm.name}
                 onChange={(e) => handleProductChange("name", e.target.value)}
                 required
               />
-              <TextInput
+              <Select
                 label="Kategória"
-                placeholder="Kategória"
+                placeholder="Válassz kategóriát"
+                data={[
+                  { value: "Ital", label: "Ital" },
+                  { value: "Étel", label: "Étel" },
+                  { value: "Egyéb", label: "Egyéb" },
+                ]}
                 value={productForm.category}
-                onChange={(e) =>
-                  handleProductChange("category", e.target.value)
+                onChange={(value) =>
+                  handleProductChange("category", value || "")
                 }
                 required
               />
-            </Group>
-
-            <Group grow gap="md">
               <NumberInput
                 label="Vétel ár (Ft)"
                 placeholder="Ár"
@@ -152,6 +158,7 @@ function ProductComponent() {
                 required
                 rightSection={<Text size="sm">Ft</Text>}
               />
+
               <NumberInput
                 label="Készlet (Db)"
                 placeholder="Készlet"
@@ -165,6 +172,15 @@ function ProductComponent() {
             </Group>
 
             <Group justify="flex-end">
+              {editingId && (
+                <Button
+                  variant="light"
+                  color="gray"
+                  onClick={clearEditingProduct}
+                >
+                  Megszakítás
+                </Button>
+              )}
               <Button
                 type="submit"
                 leftSection={
@@ -188,7 +204,7 @@ function ProductComponent() {
             <Table.Tr>
               <Table.Th>Termék név</Table.Th>
               <Table.Th>Kategória</Table.Th>
-              <Table.Th>Ár</Table.Th>
+              <Table.Th>Vétel ár</Table.Th>
               <Table.Th>Készlet</Table.Th>
               <Table.Th>Műveletek</Table.Th>
             </Table.Tr>

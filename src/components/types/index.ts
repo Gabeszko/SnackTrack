@@ -22,6 +22,9 @@ export interface MachineType {
   rows: number;
   cols: number;
   slots: Slot[];
+  status: "Active" | "Maintenance" | "Offline";
+  fullnes: number;
+  //  Assigned: {String, default: null}
 }
 
 export interface Sale {

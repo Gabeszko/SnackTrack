@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const menuItems = [
   {
-    title: "Autómaták",
+    title: "Automaták",
     icon: <IconBox size={48} />,
     color: "blue",
     path: "/machines",

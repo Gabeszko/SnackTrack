@@ -1,12 +1,7 @@
-import MenuDashboard from '../components/MenuDashboard/MenuDashboardComponent'
+import MenuDashboard from "../components/MenuDashboard/MenuDashboardComponent";
 
 const Home: React.FC = () => {
+  return <MenuDashboard />;
+};
 
-  return (
-
-      <MenuDashboard/>
-  
-  )
-}
-
-export default Home
+export default Home;

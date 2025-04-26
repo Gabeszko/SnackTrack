@@ -1,33 +1,14 @@
 import axios from "axios";
-import {
-  Dispatch,
-  FunctionComponent,
-  SetStateAction,
-  useEffect /*, useState*/,
-} from "react";
+import { Dispatch, FunctionComponent, SetStateAction, useEffect } from "react";
 import { Card, Stack, Text, Title, Button, Box } from "@mantine/core";
 import { Link } from "react-router-dom";
-
 import { MachineType } from "../types";
-
-/*
-  export interface MachineType {
-    _id?: string;
-    name: string;
-    location: string;
-    rows: number;
-    cols: number;
-    slots: Slot[];
-  }
-  */
 
 const MachineList: FunctionComponent<{
   machines: MachineType[];
   setMachines: Dispatch<SetStateAction<MachineType[]>>;
-}> = ({ machines, setMachines }) => {
-  //    const [selectedMachineId, setSelectedMachineId] = useState<string | null>(null);
-  //    const selectedMachine = machines.find((m) => m._id === selectedMachineId);
-
+  onEditMachine: (machine: MachineType) => void; // <-- Új prop!
+}> = ({ machines, setMachines, onEditMachine }) => {
   const fetchMachines = async () => {
     try {
       const res = await axios.get<MachineType[]>(
@@ -43,10 +24,13 @@ const MachineList: FunctionComponent<{
     fetchMachines();
   }, []);
 
+
+  /*
   const deleteMachine = async (id: string) => {
     await axios.delete(`http://localhost:5000/api/machines/${id}`);
     fetchMachines();
   };
+*/
 
   return (
     <Box py="xl" px="xl" bg="white">
@@ -77,12 +61,8 @@ const MachineList: FunctionComponent<{
                 </Button>
               </Link>
 
-              <Button
-                w="100%"
-                h="30"
-                onClick={() => deleteMachine(machine._id!)}
-              >
-                ❌ Törlés
+              <Button w="100%" h="30" onClick={() => onEditMachine(machine)}>
+                ✏️ Szerkesztés
               </Button>
             </Stack>
           </Card>

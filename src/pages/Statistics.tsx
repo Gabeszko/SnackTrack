@@ -2,14 +2,10 @@ import StatisticsDashboard from "../components/StatisticsDashboard/StatisticsDas
 
 const Stats: React.FC = () => {
   return (
-    <div>
-      <h2 className="text-2xl font-semibold text-primary-400">Statisztikák</h2>
-      <p className="mt-2 text-gray-700">
-        Itt fogod látni a forgalmi adatokat, top termékeket és automata
-        kihasználtságot.
-      </p>
-
-      <StatisticsDashboard />
+    <div className="bg-blue-400/20 px-15">
+      <div className="bg-white rounded-lg p-4">
+        <StatisticsDashboard />
+      </div>
     </div>
   );
 };
