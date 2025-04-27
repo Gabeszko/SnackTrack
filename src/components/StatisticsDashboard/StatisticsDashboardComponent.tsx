@@ -11,7 +11,7 @@ import {
   Legend,
 } from "chart.js";
 import axios from "axios";
-import { Sale } from "../types";
+import { Sale, CHART_COLORS } from "../types";
 import {
   Card,
   Title,
@@ -23,11 +23,17 @@ import {
   Divider,
   Paper,
   Badge,
+  Button,
+  Tabs,
+  Grid,
 } from "@mantine/core";
 import {
   IconAlertCircle,
   IconChartBar,
   IconChartPie,
+  IconDownload,
+  IconCoffee,
+  IconDeviceAnalytics,
 } from "@tabler/icons-react";
 
 ChartJS.register(
@@ -40,29 +46,17 @@ ChartJS.register(
   Legend
 );
 
-// Modern színpaletta a grafikonokhoz
-const CHART_COLORS = [
-  "#228be6", // kék
-  "#40c057", // zöld
-  "#fa5252", // piros
-  "#7950f2", // lila
-  "#fd7e14", // narancs
-  "#1c7ed6", // sötétkék
-  "#12b886", // türkiz
-  "#7048e8", // indigó
-  "#f76707", // sötét narancs
-  "#be4bdb", // rózsaszín
-];
-
 export default function StatisticsDashboardComponent() {
   const [sales, setSales] = useState<Sale[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [selectedProductId, setSelectedProductId] = useState<string | "all">(
+    "all"
+  );
   const [selectedMachineId, setSelectedMachineId] = useState<string | "all">(
     "all"
   );
-  const [totalRevenue, setTotalRevenue] = useState<number>(0);
-  const [totalSales, setTotalSales] = useState<number>(0);
+  const [activeTab, setActiveTab] = useState<string | null>("machines");
 
   useEffect(() => {
     const apiUrl = "/api/sales";
@@ -78,10 +72,12 @@ export default function StatisticsDashboardComponent() {
 
         const salesData = res.data.map((sale) => ({
           _id: sale._id,
-          machineId: sale.machineId,
+          machineId: sale.machineId?._id || "",
+          machineName: sale.machineId?.name || "Ismeretlen gép",
           date: sale.date,
           products: sale.products.map((p) => ({
-            productId: String(p.productId),
+            productId: p.productId?._id || "",
+            productName: p.productId?.name || "Ismeretlen termék",
             quantity: Number(p.quantity),
             productProfit: Number(p.productProfit),
           })),
@@ -89,21 +85,6 @@ export default function StatisticsDashboardComponent() {
         }));
 
         setSales(salesData);
-
-        // Számítsuk ki az összesített adatokat
-        const revenue = salesData.reduce(
-          (sum, sale) => sum + sale.allProfit,
-          0
-        );
-        const salesCount = salesData.reduce(
-          (sum, sale) =>
-            sum +
-            sale.products.reduce((pSum, product) => pSum + product.quantity, 0),
-          0
-        );
-
-        setTotalRevenue(revenue);
-        setTotalSales(salesCount);
         setLoading(false);
       })
       .catch((err) => {
@@ -113,13 +94,59 @@ export default function StatisticsDashboardComponent() {
       });
   }, []);
 
-  // Gépenkénti szűrés
-  const filteredSales =
-    selectedMachineId === "all"
-      ? sales
-      : sales.filter((sale) => sale.machineId === selectedMachineId);
+  // Filter sales based on the active tab and selections
+  const filteredSales = sales.filter((sale) => {
+    if (activeTab === "machines") {
+      return (
+        selectedMachineId === "all" || sale.machineId === selectedMachineId
+      );
+    } else {
+      // Products tab
+      return (
+        selectedProductId === "all" ||
+        sale.products.some((product) => product.productId === selectedProductId)
+      );
+    }
+  });
 
-  // Profit aggregálás napok szerint
+  // Machine options for dropdown - ensure uniqueness
+  const machineOptions = [
+    { value: "all", label: "Összes gép" },
+    ...Object.values(
+      sales.reduce((acc, sale) => {
+        if (sale.machineId && !acc[sale.machineId]) {
+          acc[sale.machineId] = {
+            value: sale.machineId,
+            label:
+              sale.machineName || `Gép ${sale.machineId.substring(0, 6)}...`,
+          };
+        }
+        return acc;
+      }, {} as Record<string, { value: string; label: string }>)
+    ),
+  ];
+
+  // Product options for dropdown - ensure uniqueness
+  const productOptions = [
+    { value: "all", label: "Összes termék" },
+    ...Object.values(
+      sales
+        .flatMap((sale) => sale.products)
+        .reduce((acc, product) => {
+          if (product.productId && !acc[product.productId]) {
+            acc[product.productId] = {
+              value: product.productId,
+              label:
+                product.productName ||
+                `Termék ${product.productId.substring(0, 6)}...`,
+            };
+          }
+          return acc;
+        }, {} as Record<string, { value: string; label: string }>)
+    ),
+  ];
+
+  // Profit aggregation by day
   const tempProfitPerDay: { [date: string]: number } = {};
   filteredSales.forEach((sale) => {
     const dateOnly = sale.date.split("T")[0];
@@ -128,12 +155,29 @@ export default function StatisticsDashboardComponent() {
   });
   const sortedDates = Object.keys(tempProfitPerDay).sort();
 
-  // Dátumok szebb formázása a grafikonhoz
+  // Format dates for chart display
   const formattedDates = sortedDates.map((date) => {
     const [year, month, day] = date.split("-");
     return `${year}.${month}.${day}`;
   });
 
+  // Stats calculations
+  const totalSales = filteredSales.reduce(
+    (sum, sale) =>
+      sum + sale.products.reduce((pSum, product) => pSum + product.quantity, 0),
+    0
+  );
+
+  const totalRevenue = filteredSales.reduce(
+    (sum, sale) => sum + sale.allProfit,
+    0
+  );
+
+  const salesDays = Object.keys(tempProfitPerDay).length;
+
+  const averageDailyRevenue = salesDays > 0 ? totalRevenue / salesDays : 0;
+
+  // Line chart data for daily profit
   const lineChartData = {
     labels: formattedDates,
     datasets: [
@@ -214,58 +258,135 @@ export default function StatisticsDashboardComponent() {
     },
   };
 
-  // Termékek százalékos eloszlása
-  const productCounts: { [productId: string]: number } = {};
-
-  filteredSales.forEach((sale) => {
-    sale.products.forEach((product) => {
-      productCounts[product.productId] =
-        (productCounts[product.productId] || 0) + product.quantity;
-    });
-  });
-
-  const totalProductsSold = Object.values(productCounts).reduce(
-    (acc, val) => acc + val,
-    0
-  );
-
-  // Az adatok jobb rendezése
-  const productEntries = Object.entries(productCounts)
-    .map(([id, count]) => ({
-      id,
-      count,
-      percentage: (count / totalProductsSold) * 100,
-    }))
-    .sort((a, b) => b.count - a.count);
-
-  const pieChartLabels: string[] = [];
-  const pieChartDataValues: number[] = [];
-  let otherProductsCount = 0;
-
-  // A top termékek beillesztése, a kis százalékúakat összevonjuk
-  productEntries.forEach((entry) => {
-    if (entry.percentage >= 3) {
-      pieChartLabels.push(
-        `Termék ${entry.id} (${entry.percentage.toFixed(1)}%)`
+  // Prepare pie chart data
+  const getProductDistributionData = () => {
+    // For products tab
+    if (activeTab === "products") {
+      // Get sales with the selected product
+      const salesWithSelectedProduct = sales.filter((sale) =>
+        sale.products.some(
+          (p) =>
+            selectedProductId === "all" || p.productId === selectedProductId
+        )
       );
-      pieChartDataValues.push(entry.count);
-    } else {
-      otherProductsCount += entry.count;
-    }
-  });
 
-  if (otherProductsCount > 0) {
-    const otherPercentage = (otherProductsCount / totalProductsSold) * 100;
-    pieChartLabels.push(`Egyéb (${otherPercentage.toFixed(1)}%)`);
-    pieChartDataValues.push(otherProductsCount);
-  }
+      // Aggregate by machine
+      const machineDistribution: {
+        [machineId: string]: { name: string; count: number };
+      } = {};
+
+      salesWithSelectedProduct.forEach((sale) => {
+        const relevantProducts = sale.products.filter(
+          (p) =>
+            selectedProductId === "all" || p.productId === selectedProductId
+        );
+
+        const quantity = relevantProducts.reduce(
+          (sum, p) => sum + p.quantity,
+          0
+        );
+
+        if (quantity > 0) {
+          if (!machineDistribution[sale.machineId]) {
+            machineDistribution[sale.machineId] = {
+              name: sale.machineName,
+              count: 0,
+            };
+          }
+          machineDistribution[sale.machineId].count += quantity;
+        }
+      });
+
+      const totalCount = Object.values(machineDistribution).reduce(
+        (sum, m) => sum + m.count,
+        0
+      );
+
+      // Format data for chart
+      const labels: string[] = [];
+      const values: number[] = [];
+      let otherCount = 0;
+
+      Object.entries(machineDistribution)
+        .sort((a, b) => b[1].count - a[1].count)
+        .forEach(([machineId, data]) => {
+          const percentage = (data.count / totalCount) * 100;
+          if (percentage >= 3) {
+            labels.push(`${data.name} (${percentage.toFixed(1)}%)`);
+            values.push(data.count);
+          } else {
+            otherCount += data.count;
+          }
+        });
+
+      if (otherCount > 0) {
+        const otherPercentage = (otherCount / totalCount) * 100;
+        labels.push(`Egyéb (${otherPercentage.toFixed(1)}%)`);
+        values.push(otherCount);
+      }
+
+      return { labels, values };
+    }
+    // For machines tab
+    else {
+      const productDistribution: {
+        [productId: string]: { name: string; count: number };
+      } = {};
+
+      filteredSales.forEach((sale) => {
+        sale.products.forEach((product) => {
+          if (!productDistribution[product.productId]) {
+            productDistribution[product.productId] = {
+              name: product.productName,
+              count: 0,
+            };
+          }
+          productDistribution[product.productId].count += product.quantity;
+        });
+      });
+
+      const totalCount = Object.values(productDistribution).reduce(
+        (sum, p) => sum + p.count,
+        0
+      );
+
+      // Format data for chart
+      const labels: string[] = [];
+      const values: number[] = [];
+      let otherCount = 0;
+
+      Object.entries(productDistribution)
+        .sort((a, b) => b[1].count - a[1].count)
+        .forEach(([productId, data]) => {
+          const percentage = (data.count / totalCount) * 100;
+          if (percentage >= 3) {
+            labels.push(`${data.name} (${percentage.toFixed(1)}%)`);
+            values.push(data.count);
+          } else {
+            otherCount += data.count;
+          }
+        });
+
+      if (otherCount > 0) {
+        const otherPercentage = (otherCount / totalCount) * 100;
+        labels.push(`Egyéb (${otherPercentage.toFixed(1)}%)`);
+        values.push(otherCount);
+      }
+
+      return { labels, values };
+    }
+  };
+
+  const { labels: pieChartLabels, values: pieChartValues } =
+    getProductDistributionData();
 
   const pieChartData = {
     labels: pieChartLabels,
     datasets: [
       {
-        label: "Eladások megoszlása",
-        data: pieChartDataValues,
+        label:
+          activeTab === "machines" ? "Termékek megoszlása" : "Gépek megoszlása",
+        data: pieChartValues,
         backgroundColor: CHART_COLORS,
         borderColor: Array(pieChartLabels.length).fill("#ffffff"),
         borderWidth: 2,
@@ -303,33 +424,80 @@ export default function StatisticsDashboardComponent() {
     },
   };
 
-  // MachineID-k listája a dropdownhoz
-  const machineIds = Array.from(
-    new Set(sales.map((sale) => sale.machineId))
-  ).filter((id) => id);
+  // Export current view to CSV
+  function exportToCSV() {
+    let header = "";
+    let rows: string[] = [];
+    let filename = "";
 
-  // Select opciók formázása Mantine számára
-  const machineOptions = [
-    { value: "all", label: "Összes gép" },
-    ...machineIds.map((id) => ({ value: id, label: `Gép ${id}` })),
-  ];
+    if (activeTab === "machines") {
+      header = "Dátum,Gép,Termék,Mennyiség,Profit (Ft)\n";
 
-  // A kiválasztott gép adatai
-  const selectedMachineData = {
-    totalProfit: filteredSales.reduce((sum, sale) => sum + sale.allProfit, 0),
-    salesCount: filteredSales.reduce(
-      (sum, sale) =>
-        sum +
-        sale.products.reduce((pSum, product) => pSum + product.quantity, 0),
-      0
-    ),
-    salesDays: Object.keys(tempProfitPerDay).length,
-    averageDailyProfit:
-      Object.keys(tempProfitPerDay).length > 0
-        ? filteredSales.reduce((sum, sale) => sum + sale.allProfit, 0) /
-          Object.keys(tempProfitPerDay).length
-        : 0,
-  };
+      rows = filteredSales.flatMap((sale) =>
+        sale.products.map(
+          (product) =>
+            `${sale.date.split("T")[0]},${sale.machineName},${
+              product.productName
+            },${product.quantity},${product.productProfit}`
+        )
+      );
+
+      filename =
+        selectedMachineId === "all"
+          ? "osszes_gep_statisztika.csv"
+          : `gep_${
+              machineOptions.find((m) => m.value === selectedMachineId)?.label
+            }_statisztika.csv`;
+    } else {
+      // Products tab export
+      header = "Dátum,Gép,Termék,Mennyiség,Profit (Ft)\n";
+
+      const relevantSales = sales.filter((sale) =>
+        sale.products.some(
+          (p) =>
+            selectedProductId === "all" || p.productId === selectedProductId
+        )
+      );
+
+      rows = relevantSales.flatMap((sale) => {
+        const relevantProducts = sale.products.filter(
+          (p) =>
+            selectedProductId === "all" || p.productId === selectedProductId
+        );
+
+        return relevantProducts.map(
+          (product) =>
+            `${sale.date.split("T")[0]},${sale.machineName},${
+              product.productName
+            },${product.quantity},${product.productProfit}`
+        );
+      });
+
+      filename =
+        selectedProductId === "all"
+          ? "osszes_termek_statisztika.csv"
+          : `termek_${
+              productOptions.find((p) => p.value === selectedProductId)?.label
+            }_statisztika.csv`;
+    }
+
+    // Replace any commas in fields to prevent CSV errors
+    const sanitizedRows = rows.map((row) =>
+      row
+        .split(",")
+        .map((field) => (field.includes(",") ? `"${field}"` : field))
+        .join(",")
+    );
+
+    const csvContent = header + sanitizedRows.join("\n");
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.setAttribute("download", filename);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 
   return (
     <div className="w-full space-y-6 p-4">
@@ -338,17 +506,14 @@ export default function StatisticsDashboardComponent() {
           Értékesítési Statisztikák
         </Title>
 
-        <Select
-          label="Automata kiválasztása"
-          placeholder="Válassz gépet"
-          value={selectedMachineId}
-          onChange={(value) => setSelectedMachineId(value || "all")}
-          data={machineOptions}
-          className="w-64"
-          clearable={false}
-          size="md"
-          radius="md"
-        />
+        <Button
+          onClick={exportToCSV}
+          variant="outline"
+          color="blue"
+          leftIcon={<IconDownload size={16} />}
+        >
+          Exportálás CSV-be
+        </Button>
       </div>
 
       {loading ? (
@@ -366,133 +531,235 @@ export default function StatisticsDashboardComponent() {
         </Alert>
       ) : (
         <>
-          {/* Összesítő kártyák */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-            <Card
-              shadow="sm"
-              padding="lg"
-              radius="md"
-              withBorder
-              className="bg-blue-50"
-            >
-              <Text size="md" color="dimmed" className="mb-1">
-                Összes bevétel
-              </Text>
-              <Title order={3} className="text-blue-600">
-                {selectedMachineData.totalProfit.toLocaleString("hu-HU")} Ft
-              </Title>
-            </Card>
+          {/* Tab interface */}
+          <Tabs
+            value={activeTab}
+            onChange={setActiveTab}
+            color="blue"
+            radius="md"
+          >
+            <Tabs.List>
+              <Tabs.Tab value="machines" icon={<IconCoffee size={16} />}>
+                Automata statisztikák
+              </Tabs.Tab>
+              <Tabs.Tab
+                value="products"
+                icon={<IconDeviceAnalytics size={16} />}
+              >
+                Termék statisztikák
+              </Tabs.Tab>
+            </Tabs.List>
 
-            <Card
-              shadow="sm"
-              padding="lg"
-              radius="md"
-              withBorder
-              className="bg-green-50"
-            >
-              <Text size="md" color="dimmed" className="mb-1">
-                Értékesítések száma
-              </Text>
-              <Title order={3} className="text-green-600">
-                {selectedMachineData.salesCount} db
-              </Title>
-            </Card>
-
-            <Card
-              shadow="sm"
-              padding="lg"
-              radius="md"
-              withBorder
-              className="bg-purple-50"
-            >
-              <Text size="md" color="dimmed" className="mb-1">
-                Értékesítési napok
-              </Text>
-              <Title order={3} className="text-purple-600">
-                {selectedMachineData.salesDays} nap
-              </Title>
-            </Card>
-
-            <Card
-              shadow="sm"
-              padding="lg"
-              radius="md"
-              withBorder
-              className="bg-orange-50"
-            >
-              <Text size="md" color="dimmed" className="mb-1">
-                Átlagos napi bevétel
-              </Text>
-              <Title order={3} className="text-orange-600">
-                {selectedMachineData.averageDailyProfit.toLocaleString("hu-HU")}{" "}
-                Ft
-              </Title>
-            </Card>
-          </div>
-
-          {/* Grafikonok */}
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-            <Paper
-              shadow="sm"
-              radius="md"
-              withBorder
-              p="md"
-              className="bg-white"
-            >
+            <Tabs.Panel value="machines" pt="lg">
               <Group position="apart" mb="md">
-                <div>
-                  <Title order={4} className="flex items-center">
-                    <IconChartBar size={20} className="mr-2 text-blue-500" />
-                    Napi Bevétel Alakulása
-                  </Title>
-                  <Text size="sm" color="dimmed">
-                    Időszak: {formattedDates[0]} -{" "}
-                    {formattedDates[formattedDates.length - 1]}
-                  </Text>
-                </div>
-                <Badge size="lg" radius="sm" variant="outline" color="blue">
-                  {selectedMachineId === "all"
-                    ? "Összes gép"
-                    : `Gép ${selectedMachineId}`}
-                </Badge>
+                <Text>
+                  Válasszon egy automatát a részletes statisztikákhoz:
+                </Text>
+                <Select
+                  label="Automata kiválasztása"
+                  placeholder="Válassz automatát"
+                  value={selectedMachineId}
+                  onChange={(value) => setSelectedMachineId(value || "all")}
+                  data={machineOptions}
+                  className="w-64"
+                  clearable={false}
+                  size="md"
+                  radius="md"
+                  searchable
+                />
               </Group>
-              <Divider mb="md" />
-              <div className="h-96">
-                <Line data={lineChartData} options={lineChartOptions} />
-              </div>
-            </Paper>
+            </Tabs.Panel>
 
-            <Paper
-              shadow="sm"
-              radius="md"
-              withBorder
-              p="md"
-              className="bg-white"
-            >
+            <Tabs.Panel value="products" pt="lg">
               <Group position="apart" mb="md">
-                <div>
-                  <Title order={4} className="flex items-center">
-                    <IconChartPie size={20} className="mr-2 text-blue-500" />
-                    Termékek Eladási Megoszlása
-                  </Title>
-                  <Text size="sm" color="dimmed">
-                    Összesen {totalProductsSold} eladott termék
-                  </Text>
-                </div>
-                <Badge size="lg" radius="sm" variant="outline" color="blue">
-                  {selectedMachineId === "all"
-                    ? "Összes gép"
-                    : `Gép ${selectedMachineId}`}
-                </Badge>
+                <Text>Válasszon egy terméket a részletes statisztikákhoz:</Text>
+                <Select
+                  label="Termék kiválasztása"
+                  placeholder="Válassz terméket"
+                  value={selectedProductId}
+                  onChange={(value) => setSelectedProductId(value || "all")}
+                  data={productOptions}
+                  className="w-64"
+                  clearable={false}
+                  size="md"
+                  radius="md"
+                  searchable
+                />
               </Group>
-              <Divider mb="md" />
-              <div className="h-96">
-                <Pie data={pieChartData} options={pieChartOptions} />
-              </div>
-            </Paper>
-          </div>
+            </Tabs.Panel>
+          </Tabs>
 
-          {/* Ha nincs adat, mutassunk erre figyelmeztetést */}
+          {/* Summary cards */}
+          <Grid mb={20}>
+            <Grid.Col span={3}>
+              <Card
+                shadow="sm"
+                padding="lg"
+                radius="md"
+                withBorder
+                className="bg-blue-50"
+              >
+                <Text size="md" color="dimmed" className="mb-1">
+                  Összes bevétel
+                </Text>
+                <Title order={3} className="text-blue-600">
+                  {totalRevenue.toLocaleString("hu-HU")} Ft
+                </Title>
+              </Card>
+            </Grid.Col>
+
+            <Grid.Col span={3}>
+              <Card
+                shadow="sm"
+                padding="lg"
+                radius="md"
+                withBorder
+                className="bg-green-50"
+              >
+                <Text size="md" color="dimmed" className="mb-1">
+                  Értékesítések száma
+                </Text>
+                <Title order={3} className="text-green-600">
+                  {totalSales} db
+                </Title>
+              </Card>
+            </Grid.Col>
+
+            <Grid.Col span={3}>
+              <Card
+                shadow="sm"
+                padding="lg"
+                radius="md"
+                withBorder
+                className="bg-purple-50"
+              >
+                <Text size="md" color="dimmed" className="mb-1">
+                  Értékesítési napok
+                </Text>
+                <Title order={3} className="text-purple-600">
+                  {salesDays} nap
+                </Title>
+              </Card>
+            </Grid.Col>
+
+            <Grid.Col span={3}>
+              <Card
+                shadow="sm"
+                padding="lg"
+                radius="md"
+                withBorder
+                className="bg-orange-50"
+              >
+                <Text size="md" color="dimmed" className="mb-1">
+                  Átlagos napi bevétel
+                </Text>
+                <Title order={3} className="text-orange-600">
+                  {averageDailyRevenue.toLocaleString("hu-HU")} Ft
+                </Title>
+              </Card>
+            </Grid.Col>
+          </Grid>
+
+          {/* Charts */}
+          <Grid>
+            <Grid.Col span={6}>
+              <Paper
+                shadow="sm"
+                radius="md"
+                withBorder
+                p="md"
+                className="bg-white"
+              >
+                <Group justify="space-around" mb="md">
+                  <div>
+                    <Title order={4} className="flex items-center">
+                      <IconChartBar size={20} className="mr-2 text-blue-500" />
+                      Napi Bevétel Alakulása
+                    </Title>
+                    <Text size="sm" color="dimmed">
+                      {formattedDates.length > 0
+                        ? `Időszak: ${formattedDates[0]} - ${
+                            formattedDates[formattedDates.length - 1]
+                          }`
+                        : "Nincs elérhető adat"}
+                    </Text>
+                  </div>
+                  <Badge size="lg" radius="sm" variant="outline" color="blue">
+                    {activeTab === "machines"
+                      ? selectedMachineId === "all"
+                        ? "Összes gép"
+                        : machineOptions.find(
+                            (m) => m.value === selectedMachineId
+                          )?.label
+                      : selectedProductId === "all"
+                      ? "Összes termék"
+                      : productOptions.find(
+                          (p) => p.value === selectedProductId
+                        )?.label}
+                  </Badge>
+                </Group>
+                <Divider mb="md" />
+                <div className="h-96">
+                  {formattedDates.length > 0 ? (
+                    <Line data={lineChartData} options={lineChartOptions} />
+                  ) : (
+                    <div className="flex items-center justify-center h-full">
+                      <Text color="dimmed">Nincs megjeleníthető adat</Text>
+                    </div>
+                  )}
+                </div>
+              </Paper>
+            </Grid.Col>
+
+            <Grid.Col span={6}>
+              <Paper
+                shadow="sm"
+                radius="md"
+                withBorder
+                p="md"
+                className="bg-white"
+              >
+                <Group justify="space-around" mb="md">
+                  <div>
+                    <Title order={4} className="flex items-center">
+                      <IconChartPie size={20} className="mr-2 text-blue-500" />
+                      {activeTab === "machines"
+                        ? "Termékek Megoszlása"
+                        : "Gépek Megoszlása"}
+                    </Title>
+                    <Text size="sm" color="dimmed">
+                      Összesen {totalSales} eladott termék
+                    </Text>
+                  </div>
+                  <Badge size="lg" radius="sm" variant="outline" color="blue">
+                    {activeTab === "machines"
+                      ? selectedMachineId === "all"
+                        ? "Összes gép"
+                        : machineOptions.find(
+                            (m) => m.value === selectedMachineId
+                          )?.label
+                      : selectedProductId === "all"
+                      ? "Összes termék"
+                      : productOptions.find(
+                          (p) => p.value === selectedProductId
+                        )?.label}
+                  </Badge>
+                </Group>
+                <Divider mb="md" />
+                <div className="h-96">
+                  {pieChartValues.length > 0 ? (
+                    <Pie data={pieChartData} options={pieChartOptions} />
+                  ) : (
+                    <div className="flex items-center justify-center h-full">
+                      <Text color="dimmed">Nincs megjeleníthető adat</Text>
+                    </div>
+                  )}
+                </div>
+              </Paper>
+            </Grid.Col>
+          </Grid>
+
+          {/* Empty data warning */}
           {filteredSales.length === 0 && (
             <Alert
               icon={<IconAlertCircle size={16} />}
@@ -501,8 +768,9 @@ export default function StatisticsDashboardComponent() {
               radius="md"
               className="mt-6"
             >
-              A kiválasztott automatához nem található értékesítési adat a
-              megadott időszakban.
+              {activeTab === "machines"
+                ? "A kiválasztott automatához nem található értékesítési adat."
+                : "A kiválasztott termékhez nem található értékesítési adat."}
             </Alert>
           )}
         </>

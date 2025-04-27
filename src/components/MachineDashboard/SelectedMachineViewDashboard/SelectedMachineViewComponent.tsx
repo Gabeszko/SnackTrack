@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState, useCallback } from "react";
-import { MachineType, Slot } from "../../types";
+import { MachineType, Slot, COLORS } from "../../types";
 import {
   Grid,
   Paper,
@@ -9,9 +9,14 @@ import {
   Center,
   Container,
   Title,
-  Divider,
   Button,
+  Group,
+  Loader,
+  Alert,
+  Card,
+  Stack,
 } from "@mantine/core";
+import { IconArrowLeft, IconAlertCircle } from "@tabler/icons-react";
 import SlotEditor from "./SlotEditorComponent";
 import RefillableProducts from "./RefillableProductsComponent";
 import MachineGrid from "./MachineGridComponent";
@@ -22,7 +27,7 @@ const SelectedMachineView = () => {
   const [machine, setMachine] = useState<MachineType | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [selectedSlots, setSelectedSlots] = useState<Slot[]>([]); // ⬅ Több slot kiválasztása
+  const [selectedSlots, setSelectedSlots] = useState<Slot[]>([]);
 
   const fetchMachineData = useCallback(async () => {
     if (!id) return;
@@ -30,7 +35,6 @@ const SelectedMachineView = () => {
     setLoading(true);
     try {
       const res = await axios.get(`http://localhost:5000/api/machines/${id}`);
-      console.log("Betöltött adat:", res.data);
       setMachine(res.data);
       setError(null);
     } catch (err) {
@@ -52,12 +56,12 @@ const SelectedMachineView = () => {
     const isSelected = selectedSlots.some((s) => s.slotCode === slot.slotCode);
 
     if (isSelected) {
-      // Ha már ki van jelölve ➔ vegyük ki
+      // Ha már ki van jelölve -> vegyük ki
       setSelectedSlots(
         selectedSlots.filter((s) => s.slotCode !== slot.slotCode)
       );
     } else {
-      // Ha nincs kijelölve ➔ adjuk hozzá
+      // Ha nincs kijelölve -> adjuk hozzá
       setSelectedSlots([...selectedSlots, slot]);
     }
   };
@@ -71,74 +75,109 @@ const SelectedMachineView = () => {
   if (loading)
     return (
       <Center h="80vh">
-        <Text size="xl">Betöltés...</Text>
+        <Stack align="center" mt="md">
+          <Loader size="xl" />
+          <Text size="lg">Automata adatok betöltése...</Text>
+        </Stack>
       </Center>
     );
+
   if (error)
     return (
       <Center h="80vh">
-        <Text c="red" size="xl">
-          Hiba: {error}
-        </Text>
+        <Alert
+          icon={<IconAlertCircle size={24} />}
+          title="Hiba történt!"
+          color={COLORS.danger}
+          variant="filled"
+          radius="md"
+          style={{ maxWidth: "500px" }}
+        >
+          <Text mb="md">{error}</Text>
+          <Button onClick={() => navigate("/machines")}>
+            Vissza az automatákhoz
+          </Button>
+        </Alert>
       </Center>
     );
+
   if (!machine)
     return (
       <Center h="80vh">
-        <Text size="xl">Nem található automata ezzel az azonosítóval.</Text>
+        <Alert
+          icon={<IconAlertCircle size={24} />}
+          title="Nem található automata"
+          color={COLORS.warning}
+          variant="filled"
+          radius="md"
+          style={{ maxWidth: "500px" }}
+        >
+          <Text mb="md">
+            Az automata nem található a megadott azonosítóval.
+          </Text>
+          <Button onClick={() => navigate("/machines")}>
+            Vissza az automatákhoz
+          </Button>
+        </Alert>
       </Center>
     );
 
   const { slots, rows, cols, name } = machine;
 
   return (
-    <Container>
-      <Paper p="md" mb="lg" withBorder>
-        <Button
-          variant="light"
-          color="gray"
-          size="xs"
-          onClick={() => navigate("/machines")}
-        >
-          Vissza
-        </Button>
+    <div className="bg-blue-400/20 px-15 pb-10">
+      <div className="bg-white rounded-lg p-4">
+        <Container size="xl" px="md">
+          <Paper p="lg" mb="lg" withBorder shadow="sm" radius="md">
+            <Group justify="flex-start" mb="md">
+              <Button component="button" onClick={() => navigate("/machines")}>
+                <IconArrowLeft size={14} />
+                <Text> Automaták</Text>
+              </Button>
+            </Group>
 
-        <Title order={2} ta="center" mb="md">
-          {name} automata
-        </Title>
-        <Divider mb="md" />
+            <Card p="lg" radius="md" withBorder mb="xl">
+              <Group>
+                <Title order={2}>{name}</Title>
+              </Group>
+            </Card>
 
-        <Grid>
-          {/* Bal oldali automata vizuális megjelenítés */}
-          <Grid.Col span={7}>
-            <MachineGrid
-              rows={rows as number}
-              cols={cols as number}
-              slots={slots}
-              selectedSlots={selectedSlots}
-              setSelectedSlots={setSelectedSlots}
-              onSlotClick={handleSlotClick}
-            />
-          </Grid.Col>
-          {/* Jobb oldali információs panel */}
-          <Grid.Col span={5}>
-            <SlotEditor
-              selectedSlots={selectedSlots}
-              machineId={machine._id!}
-              onSaveSuccess={handleSaveSuccess}
-            />
+            <Grid gutter="lg">
+              {/* Bal oldali automata vizuális megjelenítés */}
+              <Grid.Col span={7}>
+                <MachineGrid
+                  rows={rows as number}
+                  cols={cols as number}
+                  slots={slots}
+                  selectedSlots={selectedSlots}
+                  setSelectedSlots={setSelectedSlots}
+                  onSlotClick={handleSlotClick}
+                />
+              </Grid.Col>
 
-            <RefillableProducts
-              slots={slots}
-              rows={rows as number}
-              cols={cols as number}
-              machineId={machine._id!}
-              onRefill={fetchMachineData}
-            />
-          </Grid.Col>
-        </Grid>
-      </Paper>
-    </Container>
+              {/* Jobb oldali információs panel */}
+              <Grid.Col span={5}>
+                <Stack mt="lg">
+                  <SlotEditor
+                    selectedSlots={selectedSlots}
+                    machineId={machine._id!}
+                    onSaveSuccess={handleSaveSuccess}
+                  />
+
+                  <RefillableProducts
+                    slots={slots}
+                    rows={rows as number}
+                    cols={cols as number}
+                    machineId={machine._id!}
+                    onRefill={fetchMachineData}
+                  />
+                </Stack>
+              </Grid.Col>
+            </Grid>
+          </Paper>
+        </Container>
+      </div>
+    </div>
   );
 };
 

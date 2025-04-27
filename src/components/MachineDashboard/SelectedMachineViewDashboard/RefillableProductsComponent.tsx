@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Slot, Product } from "../../types";
+import { Slot, Product, letters } from "../../types";
 import {
   Paper,
   Text,
@@ -10,7 +10,10 @@ import {
   Button,
   List,
   Flex,
+  Badge,
+  Tooltip,
 } from "@mantine/core";
+import { IconClipboardCheck, IconTruckDelivery } from "@tabler/icons-react";
 import axios from "axios";
 
 interface RefillableProductsProps {
@@ -29,10 +32,8 @@ const RefillableProducts = ({
   onRefill,
 }: RefillableProductsProps) => {
   const [loading, setLoading] = useState(false);
+  const [assignedToMe, setAssignedToMe] = useState(false);
 
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-  // Javított típus-biztos getProductName függvény
   const getProductName = (
     product: Product | string | null | undefined
   ): string => {
@@ -72,7 +73,7 @@ const RefillableProducts = ({
         const slotCode = `${letters[rowIdx]}${colIdx + 1}`;
         const slot = slots.find((s) => s.slotCode === slotCode);
 
-        if (!slot || slot.product === null || slot.quantity != slot.capacity) {
+        if (!slot || slot.product === null || slot.quantity !== slot.capacity) {
           return {
             slotCode,
             productName: getProductName(slot?.product),
@@ -80,7 +81,7 @@ const RefillableProducts = ({
             capacity: slot?.capacity || 0,
             quantity: slot?.quantity || 0,
             price: slot?.price || 0,
-            //            critical: slot.capacity <= slot.quantity / 2,
+            critical: slot ? slot.quantity <= slot.capacity / 2 : true,
           };
         }
         return null;
@@ -95,58 +96,14 @@ const RefillableProducts = ({
       console.log("Feladat átvéve:", machineId);
       // Példa implementáció
       // await axios.post(`http://localhost:5000/api/machines/${machineId}/assign`);
-      alert("Feladat átvéve! (Backend integráció folyamatban)");
+      setAssignedToMe(true);
     } catch (error) {
       console.error("Hiba a feladat átvételekor:", error);
     } finally {
       setLoading(false);
     }
   };
-  /*
-  const handleMarkAsRefilled = async () => {
-    setLoading(true);
-    try {
-      const soldProducts = missingSlots.map((item) => ({
-        productId: item?.productId,
-        quantity: (item?.capacity ?? 0) - (item?.quantity ?? 0),
-        productProfit:
-          (item?.price ?? 0) * ((item?.capacity ?? 0) - (item?.quantity ?? 0)),
-      }));
 
-      const totalProfit = soldProducts.reduce(
-        (sum, product) => sum + product.productProfit,
-        0
-      );
-
-      await axios.post("http://localhost:5000/api/sales", {
-        machineId,
-        date: new Date().toISOString(),
-        products: soldProducts,
-        allProfit: totalProfit,
-      });
-
-      // Refill the machine
-      await axios.put(`http://localhost:5000/api/machines/${machineId}/refill`);
-
-      alert("Feltöltés sikeresen rögzítve!");
-
-      // This will refresh the machine data if you're using a callback from parent component
-      // You might need to add this prop to your component if it doesn't exist yet
-      if (typeof onRefill === "function") {
-        onRefill();
-      }
-    } catch (error) {
-      console.error("Hiba a feltöltés rögzítésekor:", error);
-      if (axios.isAxiosError(error) && error.response) {
-        alert(
-          `Hiba: ${error.response.data.error || "Ismeretlen hiba történt"}`
-        );
-      } else {
-        alert("Hiba történt a feltöltés során");
-      }
-    }
-  };
-*/
   const handleMarkAsRefilled = async () => {
     setLoading(true);
     try {
@@ -172,13 +129,6 @@ const RefillableProducts = ({
         0
       );
 
-      console.log("befor sale record", {
-        machineId,
-        date: new Date().toISOString(),
-        products: soldProducts,
-        allProfit: totalProfit,
-      });
-
       // Record the sale
       await axios.post("http://localhost:5000/api/sales", {
         machineId,
@@ -187,12 +137,11 @@ const RefillableProducts = ({
         allProfit: totalProfit,
       });
 
-      console.log("after sr and before machine refill");
-
       // Refill the machine
       await axios.put(`http://localhost:5000/api/machines/${machineId}/refill`);
 
-      alert("Feltöltés sikeresen rögzítve és készlet frissítve!");
+      // Reset assignment status
+      setAssignedToMe(false);
 
       // Refresh the machine data
       if (typeof onRefill === "function") {
@@ -207,60 +156,96 @@ const RefillableProducts = ({
       } else {
         alert("Hiba történt a feltöltés során");
       }
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <Paper p="md" withBorder radius="md" mt="lg">
-      <Title order={4} mb="xs">
-        Hiány:
-      </Title>
+    <Paper p="md" withBorder radius="md" mt="lg" shadow="sm">
+      <Group justify="space-between" mb="xs">
+        <Title order={4}>Feltöltendő termékek</Title>
+        <Badge color={missingSlots.length > 0 ? "red" : "green"} size="lg">
+          {missingSlots.length > 0
+            ? `${missingSlots.length} hiány`
+            : "Feltöltve"}
+        </Badge>
+      </Group>
       <Divider mb="md" />
 
-      <Box mb="md" style={{ maxHeight: "200px", overflowY: "auto" }}>
-        <List spacing="xs" size="sm">
-          {missingSlots.length > 0 ? (
-            missingSlots.map(
+      <Box mb="md" style={{ maxHeight: "300px", overflowY: "auto" }}>
+        {missingSlots.length > 0 ? (
+          <List mt="xs" size="sm">
+            {missingSlots.map(
               (item, index) =>
                 item && (
-                  <List.Item key={index} className="">
-                    <Group gap="xs">
+                  <List.Item
+                    key={index}
+                    icon={
                       <Box
                         style={{
-                          width: "8px",
-                          height: "8px",
+                          width: "10px",
+                          height: "10px",
                           borderRadius: "50%",
-                          backgroundColor: "red",
+                          backgroundColor: item.critical ? "red" : "orange",
                         }}
                       />
-                      <Text>
-                        {item.slotCode}: {item.productName}{" "}
-                        {item.capacity - item.quantity}db ({item.capacity}/
-                        {item.quantity})
+                    }
+                  >
+                    <Group justify="space-between" wrap="nowrap">
+                      <Text fw={500}>
+                        {item.slotCode}: {item.productName}
                       </Text>
+                      <Badge color={item.critical ? "red" : "orange"}>
+                        {item.capacity - item.quantity} db hiányzik
+                      </Badge>
                     </Group>
                   </List.Item>
                 )
-            )
-          ) : (
-            <Text ta="center" fs="italic">
-              Nincs hiány
+            )}
+          </List>
+        ) : (
+          <Flex align="center" justify="center" style={{ height: "100px" }}>
+            <Text c="dimmed" fs="italic" ta="center">
+              Nincs hiányzó termék, minden feltöltve!
             </Text>
-          )}
-        </List>
+          </Flex>
+        )}
       </Box>
 
-      <Flex gap="md" justify="center" mt="xl">
-        <Button variant="outline" onClick={handleAssignToMe} loading={loading}>
-          Assign To me!
-        </Button>
-        <Button
-          variant="outline"
-          onClick={handleMarkAsRefilled}
-          loading={loading}
+      <Divider my="md" />
+
+      <Flex gap="md" justify="center">
+        <Tooltip
+          label={
+            assignedToMe
+              ? "Már átvetted ezt a feladatot"
+              : "Jelentkezz a feltöltési feladatra"
+          }
         >
-          Mark As refilled
-        </Button>
+          <Button
+            leftSection={<IconTruckDelivery size={16} />}
+            variant={assignedToMe ? "filled" : "outline"}
+            color={assignedToMe ? "blue" : "gray"}
+            onClick={handleAssignToMe}
+            loading={loading}
+            disabled={assignedToMe || missingSlots.length === 0}
+          >
+            {assignedToMe ? "Feladat hozzám rendelve" : "Átveszem a feladatot"}
+          </Button>
+        </Tooltip>
+
+        <Tooltip label="Jelöld a gépet feltöltöttként">
+          <Button
+            leftSection={<IconClipboardCheck size={16} />}
+            variant="outline"
+            color="green"
+            onClick={handleMarkAsRefilled}
+            loading={loading}
+          >
+            Feltöltve
+          </Button>
+        </Tooltip>
       </Flex>
     </Paper>
   );

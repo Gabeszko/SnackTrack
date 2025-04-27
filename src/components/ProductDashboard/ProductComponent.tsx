@@ -34,6 +34,8 @@ import {
   IconChecks,
   IconAlertCircle,
 } from "@tabler/icons-react";
+//import { Product } from "../types";
+//importálás helyes kezelése
 
 export interface Product {
   _id?: string;
@@ -41,6 +43,7 @@ export interface Product {
   category: string;
   price: number;
   stock: number;
+  allocatedCapacity: number;
 }
 
 function ProductComponent() {
@@ -63,6 +66,7 @@ function ProductComponent() {
     category: "",
     price: 0,
     stock: 0,
+    allocatedCapacity: 0,
   });
 
   useEffect(() => {
@@ -158,7 +162,13 @@ function ProductComponent() {
 
   const clearEditingProduct = () => {
     setEditingId(null);
-    setProductForm({ name: "", category: "", price: 0, stock: 0 });
+    setProductForm({
+      name: "",
+      category: "",
+      price: 0,
+      stock: 0,
+      allocatedCapacity: 0,
+    });
   };
 
   const showNotification = (message: string, type: "success" | "error") => {
@@ -182,7 +192,13 @@ function ProductComponent() {
         await axios.post("http://localhost:5000/api/products", productForm);
         showNotification("Új termék sikeresen hozzáadva", "success");
       }
-      setProductForm({ name: "", category: "", price: 0, stock: 0 });
+      setProductForm({
+        name: "",
+        category: "",
+        price: 0,
+        stock: 0,
+        allocatedCapacity: 0,
+      });
       fetchProducts();
     } catch (error) {
       console.error("Error saving product:", error);
@@ -221,13 +237,28 @@ function ProductComponent() {
     }
   };
 
-  const renderStockStatus = (stock: number) => {
-    if (stock <= 0) {
-      return <Badge color="red">Nincs készleten</Badge>;
-    } else if (stock < 10) {
-      return <Badge color="orange">Alacsony készlet: {stock} db</Badge>;
+  const renderStockStatus = (stock: number, allocatedCapacity?: number) => {
+    if (allocatedCapacity !== undefined) {
+      if (stock < allocatedCapacity) {
+        return (
+          <Badge color="red">
+            Kevés: {stock} / {allocatedCapacity} db
+          </Badge>
+        );
+      }
+      return (
+        <Badge color="green">
+          Oké: {stock} / {allocatedCapacity} db
+        </Badge>
+      );
     } else {
-      return <Badge color="green">Készleten: {stock} db</Badge>;
+      if (stock <= 0) {
+        return <Badge color="red">Nincs készleten</Badge>;
+      } else if (stock < 10) {
+        return <Badge color="orange">Alacsony készlet: {stock} db</Badge>;
+      } else {
+        return <Badge color="green">Készleten: {stock} db</Badge>;
+      }
     }
   };
 
@@ -329,7 +360,7 @@ function ProductComponent() {
               />
             </Group>
 
-            <Group justify="space-between" mt="md">
+            <Group justify="flex-end" mt="md">
               {editingId && (
                 <Button
                   variant="light"
@@ -349,8 +380,7 @@ function ProductComponent() {
                     <IconPlus size={16} />
                   )
                 }
-                fullWidth={!editingId}
-                color={editingId ? "blue" : "green"}
+                color="blue"
               >
                 {editingId ? "Termék mentése" : "Termék hozzáadása"}
               </Button>
@@ -440,10 +470,11 @@ function ProductComponent() {
                     style={{ cursor: "pointer" }}
                   >
                     <Group gap="xs">
-                      Készlet
+                      Raktárkészlet
                       {getSortIcon("stock")}
                     </Group>
                   </Table.Th>
+                  <Table.Th>Feltöltéshez szükséges</Table.Th> {/* új oszlop */}
                   <Table.Th>Műveletek</Table.Th>
                 </Table.Tr>
               </Table.Thead>
@@ -451,7 +482,7 @@ function ProductComponent() {
               <Table.Tbody>
                 {loading ? (
                   <Table.Tr>
-                    <Table.Td colSpan={5}>
+                    <Table.Td colSpan={6}>
                       <Group justify="center" p="md">
                         <Loader />
                         <Text>Termékek betöltése...</Text>
@@ -460,7 +491,7 @@ function ProductComponent() {
                   </Table.Tr>
                 ) : filteredProducts.length === 0 ? (
                   <Table.Tr>
-                    <Table.Td colSpan={5}>
+                    <Table.Td colSpan={6}>
                       <Text ta="center" py="md" c="dimmed">
                         Nincs megjeleníthető termék
                         {searchTerm || filterCategory
@@ -486,6 +517,28 @@ function ProductComponent() {
                         </Text>
                       </Table.Td>
                       <Table.Td>{renderStockStatus(product.stock)}</Table.Td>
+                      <Table.Td>
+                        {product.allocatedCapacity !== undefined ? (
+                          <Group gap="xs">
+                            <Text size="sm">
+                              {product.allocatedCapacity} db
+                            </Text>
+                            {product.stock < product.allocatedCapacity ? (
+                              <Badge color="red" size="sm">
+                                Kevés
+                              </Badge>
+                            ) : (
+                              <Badge color="green" size="sm">
+                                Elég
+                              </Badge>
+                            )}
+                          </Group>
+                        ) : (
+                          <Text size="sm" c="dimmed">
+                            Nincs adat
+                          </Text>
+                        )}
+                      </Table.Td>
                       <Table.Td>
                         <Group gap="xs">
                           <Tooltip label="Szerkesztés">

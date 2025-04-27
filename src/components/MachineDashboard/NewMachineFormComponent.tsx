@@ -13,10 +13,23 @@ import {
   NumberInput,
   TextInput,
   Button,
-  Card,
   Title,
   Select,
+  Divider,
+  Container,
+  Paper,
+  Stack,
+  Grid,
+  ActionIcon,
 } from "@mantine/core";
+import {
+  IconDeviceFloppy,
+  IconTrash,
+  IconX,
+  IconPlus,
+} from "@tabler/icons-react";
+
+import { COLORS } from "../types";
 
 const NewMachineForm: FunctionComponent<{
   setMachines: Dispatch<SetStateAction<MachineType[]>>;
@@ -28,11 +41,10 @@ const NewMachineForm: FunctionComponent<{
     location: "",
     rows: 6,
     cols: 9,
-    slots: [] as any,
+    //    slots: [] as any,
     status: "Offline",
   });
 
-  // 🔥 Nagyon fontos: ha editingMachine változik, akkor frissítsük a form állapotot
   useEffect(() => {
     if (editingMachine) {
       setMachineForm({
@@ -40,7 +52,7 @@ const NewMachineForm: FunctionComponent<{
         location: editingMachine.location,
         rows: editingMachine.rows,
         cols: editingMachine.cols,
-        slots: editingMachine.slots || [],
+        //        slots: editingMachine.slots || [],
         status: editingMachine.status || "Offline",
       });
     } else {
@@ -49,7 +61,7 @@ const NewMachineForm: FunctionComponent<{
         location: "",
         rows: 6,
         cols: 9,
-        slots: [],
+        //        slots: [],
         status: "Offline",
       });
     }
@@ -68,20 +80,17 @@ const NewMachineForm: FunctionComponent<{
     try {
       if (editingMachine && editingMachine._id) {
         // PUT
-        if (editingMachine && editingMachine._id) {
-          await axios.put(
-            `http://localhost:5000/api/machines/${editingMachine._id}`,
-            machineForm
-          );
+        await axios.put(
+          `http://localhost:5000/api/machines/${editingMachine._id}`,
+          machineForm
+        );
 
-          // Frissítjük az összes gépet új lekéréssel
-          const res = await axios.get<MachineType[]>(
-            "http://localhost:5000/api/machines"
-          );
-          setMachines(res.data);
-
-          clearEditingMachine();
-        }
+        // Frissítjük az összes gépet új lekéréssel
+        const res = await axios.get<MachineType[]>(
+          "http://localhost:5000/api/machines"
+        );
+        setMachines(res.data);
+        clearEditingMachine();
       } else {
         // POST
         const res = await axios.post(
@@ -95,7 +104,7 @@ const NewMachineForm: FunctionComponent<{
         location: "",
         rows: 6,
         cols: 9,
-        slots: [],
+        //        slots: [],
         status: "Offline",
       });
     } catch (error) {
@@ -117,82 +126,188 @@ const NewMachineForm: FunctionComponent<{
   };
 
   return (
-    <Card shadow="sm" radius="md" withBorder padding="lg">
-      <Title order={4} mb={"md"} c="black">
-        {editingMachine ? "Automata szerkesztése" : "Új automata hozzáadása"}
-      </Title>
-      <form onSubmit={handleMachineSubmit}>
-        <Group grow gap="md">
-          <TextInput
-            label="Név"
-            placeholder="Név"
-            value={machineForm.name}
-            onChange={(e) => handleMachineChange("name", e.target.value)}
-            required
-          />
-          <TextInput
-            label="Helyszín"
-            placeholder="Helyszín"
-            value={machineForm.location}
-            onChange={(e) => handleMachineChange("location", e.target.value)}
-          />
-        </Group>
-        <Group>
-          <NumberInput
-            label="Sorok"
-            placeholder="Sorok száma"
-            value={machineForm.rows}
-            onChange={(value) => handleMachineChange("rows", value)}
-            min={1}
-            max={20}
-            required
-          />
-          <NumberInput
-            label="Oszlopok"
-            placeholder="Oszlopok száma"
-            value={machineForm.cols}
-            onChange={(value) => handleMachineChange("cols", value)}
-            min={1}
-            max={20}
-            required
-          />
-        </Group>
-        <Select
-          label="Állapot"
-          placeholder="Válassz állapotot"
-          value={machineForm.status}
-          onChange={(value) =>
-            handleMachineChange("status", value || "Offline")
-          }
-          data={[
-            { value: "Active", label: "Aktív" },
-            { value: "Maintenance", label: "Karbantartás" },
-            { value: "Offline", label: "Offline" },
-          ]}
-          required
-        />
-        <Group mt="md" justify="center">
+    <Container size="xl" mb="xl">
+      <Paper shadow="md" radius="md" p="xl" withBorder>
+        <Group justify="space-between" mb={20}>
+          <Title order={3} c={COLORS.primary}>
+            {editingMachine
+              ? "Automata szerkesztése"
+              : "Új automata hozzáadása"}
+          </Title>
           {editingMachine && (
-            <Button
-              className="px-5"
-              variant="filled"
-              color="red"
-              onClick={handleDeleteMachine}
+            <ActionIcon
+              variant="subtle"
+              color="gray"
+              onClick={clearEditingMachine}
+              size="lg"
             >
-              Automata törlése
-            </Button>
+              <IconX size={20} />
+            </ActionIcon>
           )}
-          {editingMachine && (
-            <Button variant="light" color="gray" onClick={clearEditingMachine}>
-              Szerkesztés megszakítása
-            </Button>
-          )}
-          <Button type="submit">
-            {editingMachine ? "Mentés" : "Hozzáadás"}
-          </Button>
         </Group>
-      </form>
-    </Card>
+
+        <form onSubmit={handleMachineSubmit}>
+          <Grid>
+            <Grid.Col span={6}>
+              <Stack gap="md">
+                <TextInput
+                  label="Automata neve"
+                  placeholder="Add meg az automata nevét"
+                  value={machineForm.name}
+                  onChange={(e) => handleMachineChange("name", e.target.value)}
+                  required
+                  size="md"
+                  styles={{
+                    label: {
+                      fontWeight: 600,
+                      marginBottom: 5,
+                      color: COLORS.dark,
+                    },
+                    input: { borderColor: COLORS.light },
+                  }}
+                />
+                <TextInput
+                  label="Helyszín"
+                  description="Adja meg az automata helyszínét (pl. 47.4979, 19.0402)"
+                  placeholder="Szélesség, hosszúság"
+                  value={machineForm.location}
+                  onChange={(e) =>
+                    handleMachineChange("location", e.target.value)
+                  }
+                  size="md"
+                  styles={{
+                    label: {
+                      fontWeight: 600,
+                      marginBottom: 5,
+                      color: COLORS.dark,
+                    },
+                    description: { marginBottom: 5 },
+                    input: { borderColor: COLORS.light },
+                  }}
+                />
+              </Stack>
+            </Grid.Col>
+
+            <Grid.Col span={6}>
+              <Stack gap="md">
+                <Group grow>
+                  <NumberInput
+                    label="Sorok száma"
+                    placeholder="Sorok"
+                    value={machineForm.rows}
+                    onChange={(value) => handleMachineChange("rows", value)}
+                    min={1}
+                    max={20}
+                    required
+                    size="md"
+                    styles={{
+                      label: {
+                        fontWeight: 600,
+                        marginBottom: 5,
+                        color: COLORS.dark,
+                      },
+                      input: { borderColor: COLORS.light },
+                    }}
+                  />
+                  <NumberInput
+                    label="Oszlopok száma"
+                    placeholder="Oszlopok"
+                    value={machineForm.cols}
+                    onChange={(value) => handleMachineChange("cols", value)}
+                    min={1}
+                    max={20}
+                    required
+                    size="md"
+                    styles={{
+                      label: {
+                        fontWeight: 600,
+                        marginBottom: 5,
+                        color: COLORS.dark,
+                      },
+                      input: { borderColor: COLORS.light },
+                    }}
+                  />
+                </Group>
+
+                <Select
+                  label="Állapot"
+                  placeholder="Válassz állapotot"
+                  value={machineForm.status}
+                  onChange={(value) =>
+                    handleMachineChange("status", value || "Offline")
+                  }
+                  data={[
+                    { value: "Active", label: "Aktív" },
+                    { value: "Maintenance", label: "Karbantartás" },
+                    { value: "Offline", label: "Offline" },
+                  ]}
+                  required
+                  size="md"
+                  styles={{
+                    label: {
+                      fontWeight: 600,
+                      marginBottom: 5,
+                      color: COLORS.dark,
+                    },
+                    input: { borderColor: COLORS.light },
+                  }}
+                />
+              </Stack>
+            </Grid.Col>
+          </Grid>
+
+          <Divider my="lg" />
+
+          <Group justify="flex-end" mt="xl" gap="md">
+            {editingMachine && (
+              <>
+                <Button
+                  variant="filled"
+                  color="red"
+                  size="md"
+                  leftSection={<IconTrash size={20} />}
+                  onClick={() => {
+                    if (
+                      window.confirm(
+                        `Biztosan törlöd a(z) "${editingMachine.name}" automatát?`
+                      )
+                    ) {
+                      handleDeleteMachine();
+                    }
+                  }}
+                >
+                  Automata törlése
+                </Button>
+                <Button
+                  variant="light"
+                  color="gray"
+                  size="md"
+                  onClick={clearEditingMachine}
+                  leftSection={<IconX size={16} />}
+                >
+                  Megszakítás
+                </Button>
+              </>
+            )}
+            <Button
+              type="submit"
+              leftSection={
+                editingMachine ? (
+                  <IconDeviceFloppy size={20} />
+                ) : (
+                  <IconPlus size={20} />
+                )
+              }
+              variant="filled"
+              color={COLORS.primary}
+              size="md"
+            >
+              {editingMachine ? "Mentés" : "Hozzáadás"}
+            </Button>
+          </Group>
+        </form>
+      </Paper>
+    </Container>
   );
 };
 
