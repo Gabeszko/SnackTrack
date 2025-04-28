@@ -6,7 +6,7 @@ const SaleSchema = new mongoose.Schema({
     ref: "Machine",
     default: null,
   },
-  date: { type: String, required: true }, //new Date().toISOString()
+  date: { type: String, required: true },
   products: [
     {
       productId: {

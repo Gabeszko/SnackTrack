@@ -13,7 +13,6 @@ export interface Slot {
   quantity: number;
   capacity: number;
   price: number;
-  //space: Normal | Wide
 }
 
 export interface MachineType {

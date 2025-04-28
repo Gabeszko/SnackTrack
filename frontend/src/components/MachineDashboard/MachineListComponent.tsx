@@ -31,7 +31,7 @@ const MachineList: FunctionComponent<{
   const fetchMachines = async () => {
     try {
       const res = await axios.get<MachineType[]>(
-        "http://localhost:5000/api/machines"
+        "http://localhost:5000/machine/all"
       );
       setMachines(res.data);
     } catch (error) {

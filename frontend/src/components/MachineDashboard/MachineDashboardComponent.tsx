@@ -102,7 +102,7 @@ function MachineDashboard() {
             tab: {
               fontWeight: 600,
               padding: "10px 20px",
-              "&[data-active]": {
+              "&[dataActive]": {
                 backgroundColor: COLORS.primary,
                 color: "white",
                 boxShadow: "0 2px 8px rgba(59, 130, 246, 0.4)",
