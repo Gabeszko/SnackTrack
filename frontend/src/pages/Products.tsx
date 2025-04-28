@@ -1,5 +1,5 @@
 import { Center, Title } from "@mantine/core";
-import ProductComponent from "../components/ProductDashboard/ProductComponent";
+import ProductDashboard from "../components/ProductDashboard/ProductDashboard";
 
 const Pricing: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const Pricing: React.FC = () => {
             Termékek
           </Title>
         </Center>
-        <ProductComponent />
+        <ProductDashboard />
       </div>
     </div>
   );

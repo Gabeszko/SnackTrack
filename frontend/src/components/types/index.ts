@@ -38,6 +38,21 @@ export interface Sale {
   allProfit: number;
 }
 
+export interface FormattedSale {
+  saleId: string;
+  machineId: string;
+  machineName: string;
+  date: string;
+  allProfit: number;
+  products: {
+    productId: string;
+    productName: string;
+    productCategory: string;
+    quantity: number;
+    productProfit: number;
+  }[];
+}
+
 export const COLORS = {
   primary: "#3b82f6", // blue
   primaryLight: "#93c5fd", // light blue

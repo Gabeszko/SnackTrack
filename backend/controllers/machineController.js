@@ -2,7 +2,7 @@ const machineService = require("../services/machineService");
 
 // Összes automata
 const getAllMachine = async (req, res) => {
-  const result = await machineService.getAll();
+  const result = await machineService.getAllMachine();
   if (result.status) {
     return res.status(200).json(result.data);
   } else {
@@ -13,7 +13,7 @@ const getAllMachine = async (req, res) => {
 // Egy automata ID alapján
 const getMachineById = async (req, res) => {
   const id = req.params.id;
-  const result = await machineService.getById(id);
+  const result = await machineService.getMachineById(id);
 
   if (result.status) {
     return res.status(200).json(result.data);

@@ -1,4 +1,4 @@
-import StatisticsDashboard from "../components/StatisticsDashboard/StatisticsDashboardComponent";
+import StatisticsDashboard from "../components/StatisticsDashboard/StatisticsDashboard";
 
 const Stats: React.FC = () => {
   return (

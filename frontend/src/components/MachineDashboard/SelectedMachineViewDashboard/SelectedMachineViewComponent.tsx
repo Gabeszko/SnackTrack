@@ -34,7 +34,7 @@ const SelectedMachineView = () => {
 
     setLoading(true);
     try {
-      const res = await axios.get(`http://localhost:5000/api/machines/${id}`);
+      const res = await axios.get(`http://localhost:5000/machine/${id}`);
       setMachine(res.data);
       setError(null);
     } catch (err) {

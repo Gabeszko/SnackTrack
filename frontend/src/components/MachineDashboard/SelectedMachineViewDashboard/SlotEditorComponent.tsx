@@ -42,7 +42,7 @@ const SlotEditor = ({
   // Termékek betöltése
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/products")
+      .get("http://localhost:5000/product/all")
       .then((res) => {
         const options = res.data.map((product: Product) => ({
           label: product.name,
@@ -102,7 +102,7 @@ const SlotEditor = ({
       // Egymás után PATCH-oljuk az összes kijelölt slotot
       for (const slot of selectedSlots) {
         await axios.patch(
-          `http://localhost:5000/api/machines/${machineId}/slots/${slot.slotCode}`,
+          `http://localhost:5000/machine/${machineId}/slots/${slot.slotCode}`,
           slotData
         );
       }

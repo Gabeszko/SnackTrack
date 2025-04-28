@@ -79,20 +79,20 @@ const NewMachineForm: FunctionComponent<{
       if (editingMachine && editingMachine._id) {
         // PUT
         await axios.put(
-          `http://localhost:5000/api/machines/${editingMachine._id}`,
+          `http://localhost:5000/machine/${editingMachine._id}`,
           machineForm
         );
 
         // Frissítjük az összes gépet új lekéréssel
         const res = await axios.get<MachineType[]>(
-          "http://localhost:5000/api/machines"
+          "http://localhost:5000/machine"
         );
         setMachines(res.data);
         clearEditingMachine();
       } else {
         // POST
         const res = await axios.post(
-          "http://localhost:5000/api/machines",
+          "http://localhost:5000/machine",
           machineForm
         );
         setMachines((prev) => [...prev, res.data]);
@@ -114,7 +114,7 @@ const NewMachineForm: FunctionComponent<{
     if (!editingMachine) return;
     try {
       await axios.delete(
-        `http://localhost:5000/api/machines/${editingMachine._id}`
+        `http://localhost:5000/machine/${editingMachine._id}`
       );
       setMachines((prev) => prev.filter((m) => m._id !== editingMachine._id));
       clearEditingMachine();

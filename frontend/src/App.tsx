@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
+import SelectedMachineView from "./components/MachineDashboard/SelectedMachineViewDashboard/SelectedMachineViewComponent.tsx";
 import Home from "./pages/Home";
 import Machines from "./pages/Machines.tsx";
-import SelectedMachineView from "./components/MachineDashboard/SelectedMachineViewDashboard/SelectedMachineViewComponent.tsx";
 import Products from "./pages/Products.tsx";
 import Statistics from "./pages/Statistics.tsx";
 import NavbarNew from "./components/Navbar/NavbarComponent.tsx";

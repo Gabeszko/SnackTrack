@@ -32,7 +32,6 @@ const RefillableProducts = ({
   onRefill,
 }: RefillableProductsProps) => {
   const [loading, setLoading] = useState(false);
-  //  const [assignedToMe, setAssignedToMe] = useState(false);
 
   const getProductName = (
     product: Product | string | null | undefined
@@ -89,44 +88,6 @@ const RefillableProducts = ({
       .filter(Boolean)
   );
 
-  /*
-  const handleAssignToMe = async () => {
-    setLoading(true);
-    try {
-      // Itt kell implementálni a backend hívást
-      console.log("Feladat átvéve:", machineId);
-      // Példa implementáció
-      // await axios.post(`http://localhost:5000/api/machines/${machineId}/assign`);
-      setAssignedToMe(true);
-    } catch (error) {
-      console.error("Hiba a feladat átvételekor:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-          <Tooltip
-          label={
-            assignedToMe
-              ? "Már átvetted ezt a feladatot"
-              : "Jelentkezz a feltöltési feladatra"
-          }
-        >
-          <Button
-            leftSection={<IconTruckDelivery size={16} />}
-            variant={assignedToMe ? "filled" : "outline"}
-            color={assignedToMe ? "blue" : "gray"}
-            onClick={handleAssignToMe}
-            loading={loading}
-            disabled={assignedToMe || missingSlots.length === 0}
-          >
-            {assignedToMe ? "Feladat hozzám rendelve" : "Átveszem a feladatot"}
-          </Button>
-        </Tooltip>
-
-
-  */
-
   const handleMarkAsRefilled = async () => {
     setLoading(true);
     try {
@@ -153,7 +114,7 @@ const RefillableProducts = ({
       );
 
       // Record the sale
-      await axios.post("http://localhost:5000/api/sales", {
+      await axios.post("http://localhost:5000/sales", {
         machineId,
         date: new Date().toISOString(),
         products: soldProducts,
@@ -161,10 +122,7 @@ const RefillableProducts = ({
       });
 
       // Refill the machine
-      await axios.put(`http://localhost:5000/api/machines/${machineId}/refill`);
-
-      // Reset assignment status
-//      setAssignedToMe(false);
+      await axios.put(`http://localhost:5000/machine/${machineId}/refill`);
 
       // Refresh the machine data
       if (typeof onRefill === "function") {
