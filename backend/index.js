@@ -17,7 +17,7 @@ const machineRoute = require("./routes/machine");
 app.use("/machine", machineRoute);
 
 app.get("/", (req, res) => {
-  res.send("SnackTrack API működik 🚀");
+  res.send("SnackTrack API működik");
 });
 
 mongoose

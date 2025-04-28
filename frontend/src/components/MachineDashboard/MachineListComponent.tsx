@@ -72,7 +72,7 @@ const MachineList: FunctionComponent<{
   const getStatusText = (status: string) => {
     switch (status) {
       case "Active":
-        return "Aktív";
+        return "Online";
       case "Maintenance":
         return "Karbantartás";
       case "Offline":

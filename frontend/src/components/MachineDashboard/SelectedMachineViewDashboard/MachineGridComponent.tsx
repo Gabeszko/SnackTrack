@@ -44,13 +44,13 @@ const MachineGrid = ({
 
   // Slot állapot számítások
   const emptyCount = slots.filter(
-    (s) => !s.product || s.product === null
+    (s) => !s.product || s.product === null || s.quantity === 0
   ).length;
   const BottomHalfCount = slots.filter((s) =>
-    s.product ? s.quantity <= s.capacity / 2 : 0
+    s.product ? s.quantity <= s.capacity / 2 && s.quantity != 0 : 0
   ).length;
   const UpperHalfCount = slots.filter((s) =>
-    s.product ? s.quantity <= s.capacity / 2 && s.quantity != s.capacity : 0
+    s.product ? s.quantity >= s.capacity / 2 && s.quantity != s.capacity : 0
   ).length;
   const fullCount = slots.filter((s) =>
     s.product ? s.quantity === s.capacity : 0

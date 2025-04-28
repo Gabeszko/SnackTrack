@@ -237,28 +237,13 @@ function ProductComponent() {
     }
   };
 
-  const renderStockStatus = (stock: number, allocatedCapacity?: number) => {
-    if (allocatedCapacity !== undefined) {
-      if (stock < allocatedCapacity) {
-        return (
-          <Badge color="red">
-            Kevés: {stock} / {allocatedCapacity} db
-          </Badge>
-        );
-      }
-      return (
-        <Badge color="green">
-          Oké: {stock} / {allocatedCapacity} db
-        </Badge>
-      );
+  const renderStockStatus = (stock: number, allocatedCapacity: number) => {
+    if (stock <= 0) {
+      return <Badge color="red">Nincs készleten</Badge>;
+    } else if (stock < allocatedCapacity) {
+      return <Badge color="orange">Kevés: {stock} db</Badge>;
     } else {
-      if (stock <= 0) {
-        return <Badge color="red">Nincs készleten</Badge>;
-      } else if (stock < 10) {
-        return <Badge color="orange">Alacsony készlet: {stock} db</Badge>;
-      } else {
-        return <Badge color="green">Készleten: {stock} db</Badge>;
-      }
+      return <Badge color="green">{stock} db</Badge>;
     }
   };
 
@@ -474,7 +459,15 @@ function ProductComponent() {
                       {getSortIcon("stock")}
                     </Group>
                   </Table.Th>
-                  <Table.Th>Feltöltéshez szükséges</Table.Th> {/* új oszlop */}
+                  <Table.Th
+                    onClick={() => handleSort("allocatedCapacity")}
+                    style={{ cursor: "pointer" }}
+                  >
+                    <Group gap="xs">
+                      Lefoglalt mennyiség
+                      {getSortIcon("allocatedCapacity")}
+                    </Group>
+                  </Table.Th>
                   <Table.Th>Műveletek</Table.Th>
                 </Table.Tr>
               </Table.Thead>
@@ -516,22 +509,18 @@ function ProductComponent() {
                           {product.price.toLocaleString("hu-HU")} Ft
                         </Text>
                       </Table.Td>
-                      <Table.Td>{renderStockStatus(product.stock)}</Table.Td>
+                      <Table.Td>
+                        {renderStockStatus(
+                          product.stock,
+                          product.allocatedCapacity
+                        )}
+                      </Table.Td>
                       <Table.Td>
                         {product.allocatedCapacity !== undefined ? (
                           <Group gap="xs">
                             <Text size="sm">
                               {product.allocatedCapacity} db
                             </Text>
-                            {product.stock < product.allocatedCapacity ? (
-                              <Badge color="red" size="sm">
-                                Kevés
-                              </Badge>
-                            ) : (
-                              <Badge color="green" size="sm">
-                                Elég
-                              </Badge>
-                            )}
                           </Group>
                         ) : (
                           <Text size="sm" c="dimmed">

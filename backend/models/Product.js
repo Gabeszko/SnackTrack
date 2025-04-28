@@ -9,5 +9,6 @@ const productSchema = new mongoose.Schema({
   },
   price: Number,
   stock: Number,
+  allocatedCapacity: Number,
 });
 module.exports = mongoose.model("Product", productSchema);

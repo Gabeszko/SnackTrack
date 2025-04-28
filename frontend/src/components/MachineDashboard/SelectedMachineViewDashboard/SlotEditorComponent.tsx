@@ -12,11 +12,10 @@ import {
   Stack,
   Text,
   Badge,
-  ActionIcon,
   Flex,
   Alert,
 } from "@mantine/core";
-import { IconDeviceFloppy, IconX } from "@tabler/icons-react";
+import { IconDeviceFloppy } from "@tabler/icons-react";
 
 type SlotEditorProps = {
   selectedSlots: Slot[];
@@ -121,10 +120,6 @@ const SlotEditor = ({
     }
   };
 
-  const handleClearProduct = () => {
-    setProductId("");
-  };
-
   const hasSelected = selectedSlots.length > 0;
 
   return (
@@ -179,7 +174,7 @@ const SlotEditor = ({
           )}
 
           <Stack gap="md">
-            <Group align="flex-end" grow>
+            <Group align="flex-start" grow>
               <Select
                 label="Termék"
                 placeholder="Válassz terméket"
@@ -192,33 +187,22 @@ const SlotEditor = ({
                 nothingFoundMessage="Nincs ilyen termék"
                 style={{ flexGrow: 1 }}
               />
-              {productId && (
-                <ActionIcon
-                  color="red"
-                  onClick={handleClearProduct}
-                  disabled={saving}
-                  variant="subtle"
-                  size="lg"
-                >
-                  <IconX size={16} />
-                </ActionIcon>
-              )}
-            </Group>
-
-            <Group grow>
               <NumberInput
-                label="Mennyiség"
-                value={quantity}
-                onChange={(value) => setQuantity(value as number)}
+                label="Eladási ár"
+                value={price}
+                onChange={(value) => setPrice(value as number)}
                 min={0}
-                max={capacity}
+                max={10000}
                 disabled={!hasSelected || saving}
                 rightSection={
                   <Text size="xs" color="dimmed">
-                    db
+                    Ft
                   </Text>
                 }
               />
+            </Group>
+
+            <Group grow>
               <NumberInput
                 label="Kapacitás"
                 value={capacity}
@@ -233,15 +217,15 @@ const SlotEditor = ({
                 }
               />
               <NumberInput
-                label="Eladási ár"
-                value={price}
-                onChange={(value) => setPrice(value as number)}
+                label="Mennyiség"
+                value={quantity}
+                onChange={(value) => setQuantity(value as number)}
                 min={0}
-                max={10000}
+                max={capacity}
                 disabled={!hasSelected || saving}
                 rightSection={
                   <Text size="xs" color="dimmed">
-                    Ft
+                    db
                   </Text>
                 }
               />

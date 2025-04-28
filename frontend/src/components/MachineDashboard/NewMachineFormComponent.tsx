@@ -6,7 +6,7 @@ import {
   Dispatch,
   SetStateAction,
 } from "react";
-import { MachineType } from "../types";
+import { MachineType, COLORS } from "../types";
 import axios from "axios";
 import {
   Group,
@@ -28,8 +28,6 @@ import {
   IconX,
   IconPlus,
 } from "@tabler/icons-react";
-
-import { COLORS } from "../types";
 
 const NewMachineForm: FunctionComponent<{
   setMachines: Dispatch<SetStateAction<MachineType[]>>;
@@ -163,7 +161,7 @@ const NewMachineForm: FunctionComponent<{
                       marginBottom: 5,
                       color: COLORS.dark,
                     },
-                    input: { borderColor: COLORS.light },
+                    input: { borderColor: COLORS.darkBorder },
                   }}
                 />
                 <TextInput
@@ -182,7 +180,7 @@ const NewMachineForm: FunctionComponent<{
                       color: COLORS.dark,
                     },
                     description: { marginBottom: 5 },
-                    input: { borderColor: COLORS.light },
+                    input: { borderColor: COLORS.darkBorder },
                   }}
                 />
               </Stack>
@@ -206,7 +204,7 @@ const NewMachineForm: FunctionComponent<{
                         marginBottom: 5,
                         color: COLORS.dark,
                       },
-                      input: { borderColor: COLORS.light },
+                      input: { borderColor: COLORS.darkBorder },
                     }}
                   />
                   <NumberInput
@@ -224,34 +222,35 @@ const NewMachineForm: FunctionComponent<{
                         marginBottom: 5,
                         color: COLORS.dark,
                       },
-                      input: { borderColor: COLORS.light },
+                      input: { borderColor: COLORS.darkBorder },
                     }}
                   />
                 </Group>
-
-                <Select
-                  label="Állapot"
-                  placeholder="Válassz állapotot"
-                  value={machineForm.status}
-                  onChange={(value) =>
-                    handleMachineChange("status", value || "Offline")
-                  }
-                  data={[
-                    { value: "Active", label: "Aktív" },
-                    { value: "Maintenance", label: "Karbantartás" },
-                    { value: "Offline", label: "Offline" },
-                  ]}
-                  required
-                  size="md"
-                  styles={{
-                    label: {
-                      fontWeight: 600,
-                      marginBottom: 5,
-                      color: COLORS.dark,
-                    },
-                    input: { borderColor: COLORS.light },
-                  }}
-                />
+                <Group>
+                  <Select
+                    label="Állapot"
+                    placeholder="Válassz állapotot"
+                    value={machineForm.status}
+                    onChange={(value) =>
+                      handleMachineChange("status", value || "Offline")
+                    }
+                    data={[
+                      { value: "Active", label: "Aktív" },
+                      { value: "Maintenance", label: "Karbantartás" },
+                      { value: "Offline", label: "Offline" },
+                    ]}
+                    required
+                    size="md"
+                    styles={{
+                      label: {
+                        fontWeight: 600,
+                        marginBottom: 5,
+                        color: COLORS.dark,
+                      },
+                      input: { borderColor: COLORS.darkBorder },
+                    }}
+                  />
+                </Group>
               </Stack>
             </Grid.Col>
           </Grid>

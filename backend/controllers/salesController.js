@@ -10,3 +10,5 @@ export const getAllSales = async (req, res) => {
     res.status(500).json({ message: "Hiba történt az adatok lekérésekor." });
   }
 };
+
+module.exports = { getAllSales };

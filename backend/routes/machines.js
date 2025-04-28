@@ -2,6 +2,7 @@ const generateSlots = require("../utils/generateSlots");
 const express = require("express");
 const router = express.Router();
 const Machine = require("../models/Machine");
+const Product = require("../models/Product");
 
 // Machine fullnes calculation
 function calculateFullness(slots) {
@@ -189,7 +190,7 @@ router.patch("/:machineId/slots/:slotCode", async (req, res) => {
     // Fullness újraszámolása
     machine.fullness = calculateFullness(machine.slots);
 
-    // Mentés előtt kezeld a productokat
+    // Mentés előtt productok kezelése
     await machine.save();
 
     // Régi termék allocatedCapacity csökkentése

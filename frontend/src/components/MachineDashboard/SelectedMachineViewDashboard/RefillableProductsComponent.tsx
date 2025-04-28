@@ -13,7 +13,7 @@ import {
   Badge,
   Tooltip,
 } from "@mantine/core";
-import { IconClipboardCheck, IconTruckDelivery } from "@tabler/icons-react";
+import { IconClipboardCheck } from "@tabler/icons-react";
 import axios from "axios";
 
 interface RefillableProductsProps {
@@ -32,7 +32,7 @@ const RefillableProducts = ({
   onRefill,
 }: RefillableProductsProps) => {
   const [loading, setLoading] = useState(false);
-  const [assignedToMe, setAssignedToMe] = useState(false);
+  //  const [assignedToMe, setAssignedToMe] = useState(false);
 
   const getProductName = (
     product: Product | string | null | undefined
@@ -89,6 +89,7 @@ const RefillableProducts = ({
       .filter(Boolean)
   );
 
+  /*
   const handleAssignToMe = async () => {
     setLoading(true);
     try {
@@ -103,6 +104,28 @@ const RefillableProducts = ({
       setLoading(false);
     }
   };
+
+          <Tooltip
+          label={
+            assignedToMe
+              ? "Már átvetted ezt a feladatot"
+              : "Jelentkezz a feltöltési feladatra"
+          }
+        >
+          <Button
+            leftSection={<IconTruckDelivery size={16} />}
+            variant={assignedToMe ? "filled" : "outline"}
+            color={assignedToMe ? "blue" : "gray"}
+            onClick={handleAssignToMe}
+            loading={loading}
+            disabled={assignedToMe || missingSlots.length === 0}
+          >
+            {assignedToMe ? "Feladat hozzám rendelve" : "Átveszem a feladatot"}
+          </Button>
+        </Tooltip>
+
+
+  */
 
   const handleMarkAsRefilled = async () => {
     setLoading(true);
@@ -141,7 +164,7 @@ const RefillableProducts = ({
       await axios.put(`http://localhost:5000/api/machines/${machineId}/refill`);
 
       // Reset assignment status
-      setAssignedToMe(false);
+//      setAssignedToMe(false);
 
       // Refresh the machine data
       if (typeof onRefill === "function") {
@@ -216,25 +239,6 @@ const RefillableProducts = ({
       <Divider my="md" />
 
       <Flex gap="md" justify="center">
-        <Tooltip
-          label={
-            assignedToMe
-              ? "Már átvetted ezt a feladatot"
-              : "Jelentkezz a feltöltési feladatra"
-          }
-        >
-          <Button
-            leftSection={<IconTruckDelivery size={16} />}
-            variant={assignedToMe ? "filled" : "outline"}
-            color={assignedToMe ? "blue" : "gray"}
-            onClick={handleAssignToMe}
-            loading={loading}
-            disabled={assignedToMe || missingSlots.length === 0}
-          >
-            {assignedToMe ? "Feladat hozzám rendelve" : "Átveszem a feladatot"}
-          </Button>
-        </Tooltip>
-
         <Tooltip label="Jelöld a gépet feltöltöttként">
           <Button
             leftSection={<IconClipboardCheck size={16} />}
@@ -243,7 +247,7 @@ const RefillableProducts = ({
             onClick={handleMarkAsRefilled}
             loading={loading}
           >
-            Feltöltve
+            Feltöltés!
           </Button>
         </Tooltip>
       </Flex>

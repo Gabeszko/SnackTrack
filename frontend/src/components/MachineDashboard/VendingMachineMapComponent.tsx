@@ -222,15 +222,6 @@ const VendingMachineMap: React.FC<VendingMachineMapProps> = ({
   // Use provided machines if available, otherwise use sample data
   const displayMachines = machines.length > 0 ? machines : sampleMachines;
 
-  // Function to handle service request
-  const handleServiceRequest = (machineId: string, machineName: string) => {
-    // Stop event propagation to prevent map interactions
-    event?.stopPropagation();
-
-    // In a real app, you would make an API call here
-    alert(`Szervizkérés elküldve a következő automatához: ${machineName}`);
-  };
-
   // Function to get status name in Hungarian
   const getStatusName = (status: string) => {
     switch (status) {
@@ -368,7 +359,7 @@ const VendingMachineMap: React.FC<VendingMachineMapProps> = ({
                           style={{
                             display: "flex",
                             alignItems: "center",
-                            marginBottom: "5px",
+                            marginTop: "5px",
                           }}
                         >
                           <strong style={{ marginRight: "10px" }}>
@@ -388,35 +379,12 @@ const VendingMachineMap: React.FC<VendingMachineMapProps> = ({
                           </span>
                         </div>
 
-                        <div>
+                        <div style={{ marginTop: "3px" }}>
                           <strong>Koordináták:</strong>{" "}
                           {machine.location[0].toFixed(4)},{" "}
                           {machine.location[1].toFixed(4)}
                         </div>
                       </div>
-
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleServiceRequest(machine.id, machine.name);
-                        }}
-                        style={{
-                          backgroundColor: COLORS.primary,
-                          color: "white",
-                          border: "none",
-                          padding: "8px 12px",
-                          borderRadius: "4px",
-                          cursor: "pointer",
-                          width: "100%",
-                          fontWeight: "bold",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                        }}
-                      >
-                        <span style={{ marginRight: "5px" }}>🔧</span>
-                        Szervizkérés
-                      </button>
                     </div>
                   </Popup>
                 </Marker>

@@ -4,7 +4,7 @@ export interface Product {
   category: string;
   price: number;
   stock: number;
-  allocatedCapacity: { type: number; default: 0 };
+  allocatedCapacity: number;
 }
 
 export interface Slot {
