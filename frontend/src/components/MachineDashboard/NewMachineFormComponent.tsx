@@ -33,7 +33,19 @@ const NewMachineForm: FunctionComponent<{
   setMachines: Dispatch<SetStateAction<MachineType[]>>;
   editingMachine: MachineType | null;
   clearEditingMachine: () => void;
-}> = ({ setMachines, editingMachine, clearEditingMachine }) => {
+  onSuccess: () => void;
+  onError: () => void;
+  onDeleteSuccess: () => void;
+  onDeleteError: () => void;
+}> = ({
+  setMachines,
+  editingMachine,
+  clearEditingMachine,
+  onSuccess,
+  onError,
+  onDeleteSuccess,
+  onDeleteError,
+}) => {
   const [machineForm, setMachineForm] = useState({
     name: "",
     location: "",
@@ -85,10 +97,11 @@ const NewMachineForm: FunctionComponent<{
 
         // Frissítjük az összes gépet új lekéréssel
         const res = await axios.get<MachineType[]>(
-          "http://localhost:5000/machine"
+          "http://localhost:5000/machine/all"
         );
         setMachines(res.data);
         clearEditingMachine();
+        onSuccess();
       } else {
         // POST
         const res = await axios.post(
@@ -96,6 +109,7 @@ const NewMachineForm: FunctionComponent<{
           machineForm
         );
         setMachines((prev) => [...prev, res.data]);
+        onSuccess();
       }
       setMachineForm({
         name: "",
@@ -106,6 +120,7 @@ const NewMachineForm: FunctionComponent<{
         status: "Offline",
       });
     } catch (error) {
+      onError();
       console.error("Error saving machine:", error);
     }
   };
@@ -113,13 +128,13 @@ const NewMachineForm: FunctionComponent<{
   const handleDeleteMachine = async () => {
     if (!editingMachine) return;
     try {
-      await axios.delete(
-        `http://localhost:5000/machine/${editingMachine._id}`
-      );
+      await axios.delete(`http://localhost:5000/machine/${editingMachine._id}`);
       setMachines((prev) => prev.filter((m) => m._id !== editingMachine._id));
       clearEditingMachine();
+      onDeleteSuccess();
     } catch (error) {
       console.error("Error deleting machine:", error);
+      onDeleteError();
     }
   };
 

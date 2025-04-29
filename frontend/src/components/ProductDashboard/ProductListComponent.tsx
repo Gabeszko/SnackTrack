@@ -13,6 +13,7 @@ import {
   Loader,
   ScrollArea,
   Tooltip,
+  Title,
 } from "@mantine/core";
 import {
   IconTrash,
@@ -23,7 +24,7 @@ import {
   IconArrowUp,
   IconArrowDown,
 } from "@tabler/icons-react";
-import { Product } from "./ProductDashboard";
+import { Product } from "./ProductDashboardComponent";
 
 interface ProductListProps {
   products: Product[];
@@ -332,8 +333,5 @@ function ProductList({
     </Card>
   );
 }
-
-// Add missing Title component import
-import { Title } from "@mantine/core";
 
 export default ProductList;

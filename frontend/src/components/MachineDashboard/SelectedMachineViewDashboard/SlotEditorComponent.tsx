@@ -20,13 +20,15 @@ import { IconDeviceFloppy } from "@tabler/icons-react";
 type SlotEditorProps = {
   selectedSlots: Slot[];
   machineId: string;
-  onSaveSuccess?: () => void;
+  onSaveSuccess: () => void;
+  onSaveError: () => void;
 };
 
 const SlotEditor = ({
   selectedSlots,
   machineId,
   onSaveSuccess,
+  onSaveError,
 }: SlotEditorProps) => {
   const [productId, setProductId] = useState<string>("");
   const [productOptions, setProductOptions] = useState<
@@ -115,6 +117,7 @@ const SlotEditor = ({
     } catch (err) {
       console.error("Mentés sikertelen:", err);
       setError("Hiba történt mentés közben.");
+      onSaveError();
     } finally {
       setSaving(false);
     }

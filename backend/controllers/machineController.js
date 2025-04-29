@@ -74,10 +74,45 @@ const refillMachine = async (req, res) => {
   }
 };
 
+// Automata szerkeztése
+const updateMachine = async (req, res) => {
+  const { id } = req.params;
+  const { name, location, rows, cols, status } = req.body;
+
+  const result = await machineService.updateMachine(id, {
+    name,
+    location,
+    rows,
+    cols,
+    status,
+  });
+
+  if (result.status) {
+    return res.status(200).json(result.data);
+  } else {
+    return res.status(400).json({ message: result.message });
+  }
+};
+
+// Automata törlése
+const deleteMachine = async (req, res) => {
+  const { id } = req.params;
+
+  const result = await machineService.deleteMachine(id);
+
+  if (result.status) {
+    return res.status(200).json({ message: result.message });
+  } else {
+    return res.status(400).json({ message: result.message });
+  }
+};
+
 module.exports = {
   getAllMachine,
   getMachineById,
   createMachine,
   updateSlot,
   refillMachine,
+  updateMachine,
+  deleteMachine,
 };

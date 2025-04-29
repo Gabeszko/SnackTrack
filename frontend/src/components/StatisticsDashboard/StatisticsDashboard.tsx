@@ -210,7 +210,7 @@ export default function StatisticsDashboard() {
                 data={lineChartData}
                 options={lineChartOptions}
                 badgeText={getBadgeText()}
-                hasDates={formattedDates.length === 0}
+                hasDates={formattedDates.length > 0}
               />
             </Grid.Col>
 
@@ -225,7 +225,7 @@ export default function StatisticsDashboard() {
                 }
                 subtitle={`Összesen ${totalSales} eladott termék`}
                 badgeText={getBadgeText()}
-                hasValues={pieChartValues.length === 0}
+                hasValues={pieChartValues.length > 0}
               />
             </Grid.Col>
           </Grid>

@@ -153,10 +153,88 @@ const refillMachine = async (id) => {
   }
 };
 
+// Automata adatainak szerkeztése
+const updateMachine = async (id, { name, location, rows, cols, status }) => {
+  try {
+    const machine = await Machine.findById(id);
+    if (!machine) {
+      return { status: false, message: "Automata nem található" };
+    }
+
+    const oldRows = machine.rows;
+    const oldCols = machine.cols;
+
+    machine.name = name;
+    machine.location = location;
+    machine.rows = rows;
+    machine.cols = cols;
+    machine.status = status;
+
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    if (rows > oldRows) {
+      for (let r = oldRows; r < rows; r++) {
+        for (let c = 1; c <= cols; c++) {
+          machine.slots.push({
+            slotCode: `${letters[r]}${c}`,
+            product: null,
+            quantity: 0,
+            capacity: 0,
+            price: 0,
+          });
+        }
+      }
+    }
+
+    if (cols > oldCols) {
+      for (let r = 0; r < oldRows; r++) {
+        for (let c = oldCols + 1; c <= cols; c++) {
+          machine.slots.push({
+            slotCode: `${letters[r]}${c}`,
+            product: null,
+            quantity: 0,
+            capacity: 0,
+            price: 0,
+          });
+        }
+      }
+    }
+
+    machine.fullness = calculateFullness(machine.slots);
+
+    const updatedMachine = await machine.save();
+
+    return { status: true, data: updatedMachine };
+  } catch (err) {
+    return {
+      status: false,
+      message: "Automata frissítése sikertelen: " + err.message,
+    };
+  }
+};
+
+// Automata törlése
+const deleteMachine = async (id) => {
+  try {
+    const deleted = await Machine.findByIdAndDelete(id);
+    if (!deleted) {
+      return { status: false, message: "Automata nem található" };
+    }
+    return { status: true, message: "Automata sikeresen törölve" };
+  } catch (err) {
+    return {
+      status: false,
+      message: "Automata törlése sikertelen: " + err.message,
+    };
+  }
+};
+
 module.exports = {
   getAllMachine,
   getMachineById,
   createMachine,
   updateSlot,
   refillMachine,
+  updateMachine,
+  deleteMachine,
 };

@@ -5,12 +5,16 @@ import NewMachineForm from "./NewMachineFormComponent";
 import MachineList from "./MachineListComponent";
 import VendingMachineMap from "./VendingMachineMapComponent";
 import { IconMap, IconSettings } from "@tabler/icons-react";
+import NotificationComponent from "../Notification/NotificationComponent";
+import { useNotification } from "../Notification/useNotification";
 
 function MachineDashboard() {
   const [machines, setMachines] = useState<MachineType[]>([]);
   const [editingMachine, setEditingMachine] = useState<MachineType | null>(
     null
   );
+  const { notification, showNotification, clearNotification } =
+    useNotification();
 
   // Átalakítás: MachineType -> VendingMachineMap gépformátum
   const mapMachines = machines.map((machine) => {
@@ -44,6 +48,27 @@ function MachineDashboard() {
     };
   });
 
+  // Handler for successful machine creation
+  const handleMachineCreated = () => {
+    showNotification(`Automata sikeresen létrehozva`, "success");
+  };
+
+  // Handler for successful machine update
+  const handleMachineUpdated = () => {
+    showNotification(`Automata sikeresen frissítve`, "success");
+  };
+
+  // Handler for successful machine deletion
+  const handleMachineDeleted = () => {
+    showNotification(`Automata sikeresen törölve`, "success");
+  };
+
+  // Handler for errors
+  const handleError = (operation: string) => {
+    console.error(`Error during ${operation}:`);
+    showNotification(`Hiba történt a művelet során: ${operation}`, "error");
+  };
+
   return (
     <Box
       style={{
@@ -52,6 +77,13 @@ function MachineDashboard() {
         minHeight: "100vh",
       }}
     >
+      {/* Notification component */}
+      <NotificationComponent
+        message={notification.message}
+        type={notification.type}
+        onClose={clearNotification}
+      />
+
       <Box
         style={{
           maxWidth: 1200,
@@ -127,6 +159,14 @@ function MachineDashboard() {
               setMachines={setMachines}
               editingMachine={editingMachine}
               clearEditingMachine={() => setEditingMachine(null)}
+              onSuccess={
+                editingMachine ? handleMachineUpdated : handleMachineCreated
+              }
+              onError={() =>
+                handleError(editingMachine ? "frissítés" : "létrehozás")
+              }
+              onDeleteSuccess={handleMachineDeleted}
+              onDeleteError={() => handleError("törlés")}
             />
 
             <MachineList

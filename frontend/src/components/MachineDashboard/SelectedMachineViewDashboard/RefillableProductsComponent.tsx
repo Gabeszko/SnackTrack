@@ -21,7 +21,8 @@ interface RefillableProductsProps {
   rows: number;
   cols: number;
   machineId: string;
-  onRefill?: () => void;
+  onRefill: () => void;
+  onRefillError: () => void;
 }
 
 const RefillableProducts = ({
@@ -30,6 +31,7 @@ const RefillableProducts = ({
   cols,
   machineId,
   onRefill,
+  onRefillError,
 }: RefillableProductsProps) => {
   const [loading, setLoading] = useState(false);
 
@@ -130,6 +132,7 @@ const RefillableProducts = ({
       }
     } catch (error) {
       console.error("Hiba a feltöltés rögzítésekor:", error);
+      onRefillError();
       if (axios.isAxiosError(error) && error.response) {
         alert(
           `Hiba: ${error.response.data.error || "Ismeretlen hiba történt"}`

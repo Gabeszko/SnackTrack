@@ -20,6 +20,8 @@ import { IconArrowLeft, IconAlertCircle } from "@tabler/icons-react";
 import SlotEditor from "./SlotEditorComponent";
 import RefillableProducts from "./RefillableProductsComponent";
 import MachineGrid from "./MachineGridComponent";
+import NotificationComponent from "../../Notification/NotificationComponent";
+import { useNotification } from "../../Notification/useNotification";
 
 const SelectedMachineView = () => {
   const navigate = useNavigate();
@@ -28,6 +30,8 @@ const SelectedMachineView = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedSlots, setSelectedSlots] = useState<Slot[]>([]);
+  const { notification, showNotification, clearNotification } =
+    useNotification();
 
   const fetchMachineData = useCallback(async () => {
     if (!id) return;
@@ -40,10 +44,11 @@ const SelectedMachineView = () => {
     } catch (err) {
       console.error("Nem sikerült betölteni az automatát:", err);
       setError("Nem sikerült betölteni az automatát");
+      showNotification("Nem sikerült betölteni az automata adatait", "error");
     } finally {
       setLoading(false);
     }
-  }, [id]);
+  }, [id, showNotification]);
 
   useEffect(() => {
     fetchMachineData();
@@ -66,10 +71,36 @@ const SelectedMachineView = () => {
     }
   };
 
+  /*
   // Mentés utáni frissítés
   const handleSaveSuccess = (): void => {
     fetchMachineData();
     setSelectedSlots([]); // Szerkesztés után ürítjük a kijelölést
+    showNotification("Automatapozíciók sikeresen mentve", "success");
+  };
+*/
+  // Slot szerkesztés sikeres
+  const handleSlotEditSuccess = (): void => {
+    fetchMachineData();
+    setSelectedSlots([]);
+    showNotification(`pozíció(k) sikeresen frissítve`, "success");
+  };
+
+  // Slot szerkesztés hiba
+  const handleSlotEditError = (): void => {
+    console.error("Hiba a pozíciók szerkesztése során");
+    showNotification("Hiba történt a pozíciók szerkesztése során", "error");
+  };
+
+  // Utántöltés sikeres
+  const handleRefillSuccess = (): void => {
+    showNotification("Termékek sikeresen utántöltve", "success");
+  };
+
+  // Utántöltés hiba
+  const handleRefillError = (): void => {
+    console.error("Hiba a termékek utántöltése során");
+    showNotification("Hiba történt a termékek utántöltése során", "error");
   };
 
   if (loading)
@@ -126,6 +157,13 @@ const SelectedMachineView = () => {
 
   return (
     <div className="bg-blue-400/20 px-15 pb-10">
+      {/* Notification component */}
+      <NotificationComponent
+        message={notification.message}
+        type={notification.type}
+        onClose={clearNotification}
+      />
+
       <div className="bg-white rounded-lg p-4">
         <Container size="xl" px="md">
           <Paper p="lg" mb="lg" withBorder shadow="sm" radius="md">
@@ -161,7 +199,8 @@ const SelectedMachineView = () => {
                   <SlotEditor
                     selectedSlots={selectedSlots}
                     machineId={machine._id!}
-                    onSaveSuccess={handleSaveSuccess}
+                    onSaveSuccess={handleSlotEditSuccess}
+                    onSaveError={handleSlotEditError}
                   />
 
                   <RefillableProducts
@@ -169,7 +208,8 @@ const SelectedMachineView = () => {
                     rows={rows as number}
                     cols={cols as number}
                     machineId={machine._id!}
-                    onRefill={fetchMachineData}
+                    onRefill={handleRefillSuccess}
+                    onRefillError={handleRefillError}
                   />
                 </Stack>
               </Grid.Col>

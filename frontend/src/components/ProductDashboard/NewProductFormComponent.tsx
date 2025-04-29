@@ -11,7 +11,7 @@ import {
   Select,
 } from "@mantine/core";
 import { IconDeviceFloppy, IconPlus, IconX } from "@tabler/icons-react";
-import { Product } from "./ProductDashboard";
+import { Product } from "./ProductDashboardComponent";
 
 interface NewProductFormProps {
   editingProduct: Product | null;

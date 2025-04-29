@@ -180,10 +180,7 @@ const MachineList: FunctionComponent<{
               </Box>
 
               <Group justify="center" mt="lg" gap="md">
-                <Link
-                  to={`/machine/${machine._id}`}
-                  style={{ textDecoration: "none" }}
-                >
+                <Link to={`${machine._id}`} style={{ textDecoration: "none" }}>
                   <Tooltip label="Megtekintés" withArrow position="top">
                     <ActionIcon
                       size="lg"
