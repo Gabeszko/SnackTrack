@@ -1,1345 +1,1107 @@
 [{
   "_id": {
-    "$oid": "6801924a8383efe55042d0c7"
+    "$oid": "6810d16cadbe86e1bec22901"
   },
-  "name": "ATÓMATAM",
-  "location": "47.4979, 19.0402",
-  "rows": 3,
-  "cols": 3,
-  "slots": [
-    {
-      "slotCode": "A1",
-      "product": {
-        "$oid": "680ce09441cbf7272a310b47"
-      },
-      "quantity": 10,
-      "_id": {
-        "$oid": "6801924a8383efe55042d0c8"
-      },
-      "capacity": 10,
-      "price": 650
-    },
-    {
-      "slotCode": "A2",
-      "product": {
-        "$oid": "680ce0ff41cbf7272a3110a4"
-      },
-      "quantity": 10,
-      "_id": {
-        "$oid": "6801924a8383efe55042d0c9"
-      },
-      "capacity": 10,
-      "price": 650
-    },
-    {
-      "slotCode": "A3",
-      "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
-      },
-      "quantity": 8,
-      "_id": {
-        "$oid": "6801924a8383efe55042d0ca"
-      },
-      "capacity": 10,
-      "price": 650
-    },
-    {
-      "slotCode": "B1",
-      "product": {
-        "$oid": "680ce14041cbf7272a3110a7"
-      },
-      "quantity": 12,
-      "_id": {
-        "$oid": "6801924a8383efe55042d0cb"
-      },
-      "capacity": 12,
-      "price": 800
-    },
-    {
-      "slotCode": "B2",
-      "product": {
-        "$oid": "680ce14041cbf7272a3110a7"
-      },
-      "quantity": 12,
-      "_id": {
-        "$oid": "6801924a8383efe55042d0cc"
-      },
-      "capacity": 12,
-      "price": 800
-    },
-    {
-      "slotCode": "B3",
-      "product": {
-        "$oid": "680ce09441cbf7272a310b47"
-      },
-      "quantity": 12,
-      "_id": {
-        "$oid": "6801924a8383efe55042d0cd"
-      },
-      "capacity": 12,
-      "price": 800
-    },
-    {
-      "slotCode": "C1",
-      "product": {
-        "$oid": "680ce16341cbf7272a3110ad"
-      },
-      "quantity": 12,
-      "_id": {
-        "$oid": "6801924a8383efe55042d0ce"
-      },
-      "capacity": 12,
-      "price": 450
-    },
-    {
-      "slotCode": "C2",
-      "product": {
-        "$oid": "680ce16341cbf7272a3110ad"
-      },
-      "quantity": 12,
-      "_id": {
-        "$oid": "6801924a8383efe55042d0cf"
-      },
-      "capacity": 12,
-      "price": 450
-    },
-    {
-      "slotCode": "C3",
-      "product": {
-        "$oid": "680ce16341cbf7272a3110ad"
-      },
-      "quantity": 12,
-      "_id": {
-        "$oid": "6801924a8383efe55042d0d0"
-      },
-      "capacity": 12,
-      "price": 450
-    }
-  ],
-  "__v": 0,
-  "status": "Active",
-  "fullness": 98
-},
-{
-  "_id": {
-    "$oid": "68091ceb1b55341a92354951"
-  },
-  "name": "Újabb mata",
+  "name": "SN2479Black",
   "location": "47.4979, 19.0002",
-  "rows": 6,
-  "cols": 4,
-  "slots": [
-    {
-      "slotCode": "A1",
-      "product": {
-        "$oid": "680ce07b41cbf7272a310b44"
-      },
-      "quantity": 10,
-      "capacity": 10,
-      "price": 400,
-      "_id": {
-        "$oid": "68091ceb1b55341a92354952"
-      }
-    },
-    {
-      "slotCode": "A2",
-      "product": {
-        "$oid": "680ce07b41cbf7272a310b44"
-      },
-      "quantity": 10,
-      "capacity": 10,
-      "price": 400,
-      "_id": {
-        "$oid": "68091ceb1b55341a92354953"
-      }
-    },
-    {
-      "slotCode": "A3",
-      "product": {
-        "$oid": "680ce07b41cbf7272a310b44"
-      },
-      "quantity": 10,
-      "capacity": 10,
-      "price": 400,
-      "_id": {
-        "$oid": "68091ceb1b55341a92354954"
-      }
-    },
-    {
-      "slotCode": "A4",
-      "product": {
-        "$oid": "680ce07b41cbf7272a310b44"
-      },
-      "quantity": 7,
-      "capacity": 10,
-      "price": 500,
-      "_id": {
-        "$oid": "68091ceb1b55341a92354955"
-      }
-    },
-    {
-      "slotCode": "B1",
-      "product": {
-        "$oid": "680ce07b41cbf7272a310b44"
-      },
-      "quantity": 10,
-      "capacity": 10,
-      "price": 400,
-      "_id": {
-        "$oid": "68091ceb1b55341a92354956"
-      }
-    },
-    {
-      "slotCode": "B2",
-      "product": {
-        "$oid": "680ce07b41cbf7272a310b44"
-      },
-      "quantity": 10,
-      "capacity": 10,
-      "price": 400,
-      "_id": {
-        "$oid": "68091ceb1b55341a92354957"
-      }
-    },
-    {
-      "slotCode": "B3",
-      "product": {
-        "$oid": "680ce07b41cbf7272a310b44"
-      },
-      "quantity": 10,
-      "capacity": 10,
-      "price": 400,
-      "_id": {
-        "$oid": "68091ceb1b55341a92354958"
-      }
-    },
-    {
-      "slotCode": "B4",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
-      "_id": {
-        "$oid": "68091ceb1b55341a92354959"
-      }
-    },
-    {
-      "slotCode": "C1",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
-      "_id": {
-        "$oid": "68091ceb1b55341a9235495a"
-      }
-    },
-    {
-      "slotCode": "C2",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
-      "_id": {
-        "$oid": "68091ceb1b55341a9235495b"
-      }
-    },
-    {
-      "slotCode": "C3",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
-      "_id": {
-        "$oid": "68091ceb1b55341a9235495c"
-      }
-    },
-    {
-      "slotCode": "C4",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
-      "_id": {
-        "$oid": "68091ceb1b55341a9235495d"
-      }
-    },
-    {
-      "slotCode": "D1",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
-      "_id": {
-        "$oid": "68091ceb1b55341a9235495e"
-      }
-    },
-    {
-      "slotCode": "D2",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
-      "_id": {
-        "$oid": "68091ceb1b55341a9235495f"
-      }
-    },
-    {
-      "slotCode": "D3",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
-      "_id": {
-        "$oid": "68091ceb1b55341a92354960"
-      }
-    },
-    {
-      "slotCode": "D4",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
-      "_id": {
-        "$oid": "68091ceb1b55341a92354961"
-      }
-    },
-    {
-      "slotCode": "E1",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
-      "_id": {
-        "$oid": "68091ceb1b55341a92354962"
-      }
-    },
-    {
-      "slotCode": "E2",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
-      "_id": {
-        "$oid": "68091ceb1b55341a92354963"
-      }
-    },
-    {
-      "slotCode": "E3",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
-      "_id": {
-        "$oid": "68091ceb1b55341a92354964"
-      }
-    },
-    {
-      "slotCode": "E4",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
-      "_id": {
-        "$oid": "68091ceb1b55341a92354965"
-      }
-    },
-    {
-      "slotCode": "F1",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
-      "_id": {
-        "$oid": "68091ceb1b55341a92354966"
-      }
-    },
-    {
-      "slotCode": "F2",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
-      "_id": {
-        "$oid": "68091ceb1b55341a92354967"
-      }
-    },
-    {
-      "slotCode": "F3",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
-      "_id": {
-        "$oid": "68091ceb1b55341a92354968"
-      }
-    },
-    {
-      "slotCode": "F4",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
-      "_id": {
-        "$oid": "68091ceb1b55341a92354969"
-      }
-    }
-  ],
-  "__v": 0,
-  "fullness": 96,
-  "status": "Offline"
-},
-{
-  "_id": {
-    "$oid": "680b6712289b46d9fcff43a6"
-  },
-  "name": "Szasszara",
-  "location": "47.4079, 19.0402",
-  "rows": 10,
-  "cols": 5,
-  "slots": [
-    {
-      "slotCode": "A1",
-      "product": {
-        "$oid": "680ce07b41cbf7272a310b44"
-      },
-      "quantity": 15,
-      "capacity": 15,
-      "price": 350,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43a7"
-      }
-    },
-    {
-      "slotCode": "A2",
-      "product": {
-        "$oid": "680ce07b41cbf7272a310b44"
-      },
-      "quantity": 15,
-      "capacity": 15,
-      "price": 350,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43a8"
-      }
-    },
-    {
-      "slotCode": "A3",
-      "product": {
-        "$oid": "680ce07b41cbf7272a310b44"
-      },
-      "quantity": 15,
-      "capacity": 15,
-      "price": 350,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43a9"
-      }
-    },
-    {
-      "slotCode": "A4",
-      "product": {
-        "$oid": "680ce07b41cbf7272a310b44"
-      },
-      "quantity": 15,
-      "capacity": 15,
-      "price": 350,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43aa"
-      }
-    },
-    {
-      "slotCode": "A5",
-      "product": {
-        "$oid": "680ce07b41cbf7272a310b44"
-      },
-      "quantity": 15,
-      "capacity": 15,
-      "price": 350,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43ab"
-      }
-    },
-    {
-      "slotCode": "B1",
-      "product": {
-        "$oid": "680ce07b41cbf7272a310b44"
-      },
-      "quantity": 15,
-      "capacity": 15,
-      "price": 350,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43ac"
-      }
-    },
-    {
-      "slotCode": "B2",
-      "product": {
-        "$oid": "680ce07b41cbf7272a310b44"
-      },
-      "quantity": 15,
-      "capacity": 15,
-      "price": 350,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43ad"
-      }
-    },
-    {
-      "slotCode": "B3",
-      "product": {
-        "$oid": "680ce07b41cbf7272a310b44"
-      },
-      "quantity": 15,
-      "capacity": 15,
-      "price": 350,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43ae"
-      }
-    },
-    {
-      "slotCode": "B4",
-      "product": {
-        "$oid": "680ce07b41cbf7272a310b44"
-      },
-      "quantity": 15,
-      "capacity": 15,
-      "price": 350,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43af"
-      }
-    },
-    {
-      "slotCode": "B5",
-      "product": {
-        "$oid": "680ce05c41cbf7272a310b3a"
-      },
-      "quantity": 10,
-      "capacity": 21,
-      "price": 400,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43b0"
-      }
-    },
-    {
-      "slotCode": "C1",
-      "product": {
-        "$oid": "680ce15641cbf7272a3110aa"
-      },
-      "quantity": 5,
-      "capacity": 9,
-      "price": 400,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43b1"
-      }
-    },
-    {
-      "slotCode": "C2",
-      "product": {
-        "$oid": "680ce15641cbf7272a3110aa"
-      },
-      "quantity": 5,
-      "capacity": 9,
-      "price": 400,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43b2"
-      }
-    },
-    {
-      "slotCode": "C3",
-      "product": {
-        "$oid": "680ce15641cbf7272a3110aa"
-      },
-      "quantity": 5,
-      "capacity": 9,
-      "price": 400,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43b3"
-      }
-    },
-    {
-      "slotCode": "C4",
-      "product": {
-        "$oid": "680ce15641cbf7272a3110aa"
-      },
-      "quantity": 5,
-      "capacity": 9,
-      "price": 400,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43b4"
-      }
-    },
-    {
-      "slotCode": "C5",
-      "product": {
-        "$oid": "680ce15641cbf7272a3110aa"
-      },
-      "quantity": 5,
-      "capacity": 9,
-      "price": 400,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43b5"
-      }
-    },
-    {
-      "slotCode": "D1",
-      "product": {
-        "$oid": "680ce15641cbf7272a3110aa"
-      },
-      "quantity": 5,
-      "capacity": 9,
-      "price": 400,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43b6"
-      }
-    },
-    {
-      "slotCode": "D2",
-      "product": {
-        "$oid": "680ce15641cbf7272a3110aa"
-      },
-      "quantity": 5,
-      "capacity": 9,
-      "price": 400,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43b7"
-      }
-    },
-    {
-      "slotCode": "D3",
-      "product": {
-        "$oid": "680ce15641cbf7272a3110aa"
-      },
-      "quantity": 5,
-      "capacity": 9,
-      "price": 400,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43b8"
-      }
-    },
-    {
-      "slotCode": "D4",
-      "product": {
-        "$oid": "680ce15641cbf7272a3110aa"
-      },
-      "quantity": 5,
-      "capacity": 9,
-      "price": 400,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43b9"
-      }
-    },
-    {
-      "slotCode": "D5",
-      "product": {
-        "$oid": "680ce15641cbf7272a3110aa"
-      },
-      "quantity": 5,
-      "capacity": 9,
-      "price": 400,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43ba"
-      }
-    },
-    {
-      "slotCode": "E1",
-      "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
-      },
-      "quantity": 10,
-      "capacity": 15,
-      "price": 550,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43bb"
-      }
-    },
-    {
-      "slotCode": "E2",
-      "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
-      },
-      "quantity": 10,
-      "capacity": 15,
-      "price": 550,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43bc"
-      }
-    },
-    {
-      "slotCode": "E3",
-      "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
-      },
-      "quantity": 10,
-      "capacity": 15,
-      "price": 550,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43bd"
-      }
-    },
-    {
-      "slotCode": "E4",
-      "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
-      },
-      "quantity": 10,
-      "capacity": 15,
-      "price": 550,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43be"
-      }
-    },
-    {
-      "slotCode": "E5",
-      "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
-      },
-      "quantity": 10,
-      "capacity": 15,
-      "price": 550,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43bf"
-      }
-    },
-    {
-      "slotCode": "F1",
-      "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
-      },
-      "quantity": 10,
-      "capacity": 15,
-      "price": 550,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43c0"
-      }
-    },
-    {
-      "slotCode": "F2",
-      "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
-      },
-      "quantity": 10,
-      "capacity": 15,
-      "price": 550,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43c1"
-      }
-    },
-    {
-      "slotCode": "F3",
-      "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
-      },
-      "quantity": 10,
-      "capacity": 15,
-      "price": 550,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43c2"
-      }
-    },
-    {
-      "slotCode": "F4",
-      "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
-      },
-      "quantity": 10,
-      "capacity": 15,
-      "price": 550,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43c3"
-      }
-    },
-    {
-      "slotCode": "F5",
-      "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
-      },
-      "quantity": 10,
-      "capacity": 15,
-      "price": 550,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43c4"
-      }
-    },
-    {
-      "slotCode": "G1",
-      "product": {
-        "$oid": "680ce16341cbf7272a3110ad"
-      },
-      "quantity": 12,
-      "capacity": 15,
-      "price": 600,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43c5"
-      }
-    },
-    {
-      "slotCode": "G2",
-      "product": {
-        "$oid": "680ce16341cbf7272a3110ad"
-      },
-      "quantity": 12,
-      "capacity": 15,
-      "price": 600,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43c6"
-      }
-    },
-    {
-      "slotCode": "G3",
-      "product": {
-        "$oid": "680ce16341cbf7272a3110ad"
-      },
-      "quantity": 12,
-      "capacity": 15,
-      "price": 600,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43c7"
-      }
-    },
-    {
-      "slotCode": "G4",
-      "product": {
-        "$oid": "680ce16341cbf7272a3110ad"
-      },
-      "quantity": 12,
-      "capacity": 15,
-      "price": 600,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43c8"
-      }
-    },
-    {
-      "slotCode": "G5",
-      "product": {
-        "$oid": "680ce16341cbf7272a3110ad"
-      },
-      "quantity": 12,
-      "capacity": 15,
-      "price": 600,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43c9"
-      }
-    },
-    {
-      "slotCode": "H1",
-      "product": {
-        "$oid": "680ce16341cbf7272a3110ad"
-      },
-      "quantity": 12,
-      "capacity": 15,
-      "price": 600,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43ca"
-      }
-    },
-    {
-      "slotCode": "H2",
-      "product": {
-        "$oid": "680ce16341cbf7272a3110ad"
-      },
-      "quantity": 12,
-      "capacity": 15,
-      "price": 600,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43cb"
-      }
-    },
-    {
-      "slotCode": "H3",
-      "product": {
-        "$oid": "680ce16341cbf7272a3110ad"
-      },
-      "quantity": 12,
-      "capacity": 15,
-      "price": 600,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43cc"
-      }
-    },
-    {
-      "slotCode": "H4",
-      "product": {
-        "$oid": "680ce16341cbf7272a3110ad"
-      },
-      "quantity": 12,
-      "capacity": 15,
-      "price": 600,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43cd"
-      }
-    },
-    {
-      "slotCode": "H5",
-      "product": {
-        "$oid": "680ce16341cbf7272a3110ad"
-      },
-      "quantity": 12,
-      "capacity": 15,
-      "price": 600,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43ce"
-      }
-    },
-    {
-      "slotCode": "I1",
-      "product": {
-        "$oid": "680ce0ff41cbf7272a3110a4"
-      },
-      "quantity": 10,
-      "capacity": 12,
-      "price": 500,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43cf"
-      }
-    },
-    {
-      "slotCode": "I2",
-      "product": {
-        "$oid": "680ce0ff41cbf7272a3110a4"
-      },
-      "quantity": 10,
-      "capacity": 12,
-      "price": 500,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43d0"
-      }
-    },
-    {
-      "slotCode": "I3",
-      "product": {
-        "$oid": "680ce0ff41cbf7272a3110a4"
-      },
-      "quantity": 10,
-      "capacity": 12,
-      "price": 500,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43d1"
-      }
-    },
-    {
-      "slotCode": "I4",
-      "product": {
-        "$oid": "680ce0ff41cbf7272a3110a4"
-      },
-      "quantity": 10,
-      "capacity": 12,
-      "price": 500,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43d2"
-      }
-    },
-    {
-      "slotCode": "I5",
-      "product": {
-        "$oid": "680ce0ff41cbf7272a3110a4"
-      },
-      "quantity": 10,
-      "capacity": 12,
-      "price": 500,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43d3"
-      }
-    },
-    {
-      "slotCode": "J1",
-      "product": {
-        "$oid": "680ce0ff41cbf7272a3110a4"
-      },
-      "quantity": 10,
-      "capacity": 12,
-      "price": 500,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43d4"
-      }
-    },
-    {
-      "slotCode": "J2",
-      "product": {
-        "$oid": "680ce0ff41cbf7272a3110a4"
-      },
-      "quantity": 10,
-      "capacity": 12,
-      "price": 500,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43d5"
-      }
-    },
-    {
-      "slotCode": "J3",
-      "product": {
-        "$oid": "680ce0ff41cbf7272a3110a4"
-      },
-      "quantity": 10,
-      "capacity": 12,
-      "price": 500,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43d6"
-      }
-    },
-    {
-      "slotCode": "J4",
-      "product": {
-        "$oid": "680ce0ff41cbf7272a3110a4"
-      },
-      "quantity": 10,
-      "capacity": 12,
-      "price": 500,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43d7"
-      }
-    },
-    {
-      "slotCode": "J5",
-      "product": {
-        "$oid": "680ce0ff41cbf7272a3110a4"
-      },
-      "quantity": 10,
-      "capacity": 12,
-      "price": 500,
-      "_id": {
-        "$oid": "680b6712289b46d9fcff43d8"
-      }
-    }
-  ],
-  "__v": 0,
-  "status": "Maintenance",
-  "fullness": 77
-},
-{
-  "_id": {
-    "$oid": "680d4dcb38dfcdd542550d31"
-  },
-  "name": "fwafwafawfawf",
-  "location": "47.0979, 19.0402",
   "rows": 5,
-  "cols": 6,
+  "cols": 7,
   "slots": [
     {
       "slotCode": "A1",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 650,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d32"
+        "$oid": "6810d16cadbe86e1bec22902"
       }
     },
     {
       "slotCode": "A2",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 650,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d33"
+        "$oid": "6810d16cadbe86e1bec22903"
       }
     },
     {
       "slotCode": "A3",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 650,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d34"
+        "$oid": "6810d16cadbe86e1bec22904"
       }
     },
     {
       "slotCode": "A4",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 650,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d35"
+        "$oid": "6810d16cadbe86e1bec22905"
       }
     },
     {
       "slotCode": "A5",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 650,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d36"
+        "$oid": "6810d16cadbe86e1bec22906"
       }
     },
     {
       "slotCode": "A6",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 650,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d37"
+        "$oid": "6810d16cadbe86e1bec22907"
+      }
+    },
+    {
+      "slotCode": "A7",
+      "product": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 650,
+      "_id": {
+        "$oid": "6810d16cadbe86e1bec22908"
       }
     },
     {
       "slotCode": "B1",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 650,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d38"
+        "$oid": "6810d16cadbe86e1bec22909"
       }
     },
     {
       "slotCode": "B2",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 650,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d39"
+        "$oid": "6810d16cadbe86e1bec2290a"
       }
     },
     {
       "slotCode": "B3",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 650,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d3a"
+        "$oid": "6810d16cadbe86e1bec2290b"
       }
     },
     {
       "slotCode": "B4",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 650,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d3b"
+        "$oid": "6810d16cadbe86e1bec2290c"
       }
     },
     {
       "slotCode": "B5",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 650,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d3c"
+        "$oid": "6810d16cadbe86e1bec2290d"
       }
     },
     {
       "slotCode": "B6",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 650,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d3d"
+        "$oid": "6810d16cadbe86e1bec2290e"
+      }
+    },
+    {
+      "slotCode": "B7",
+      "product": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 650,
+      "_id": {
+        "$oid": "6810d16cadbe86e1bec2290f"
       }
     },
     {
       "slotCode": "C1",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 700,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d3e"
+        "$oid": "6810d16cadbe86e1bec22910"
       }
     },
     {
       "slotCode": "C2",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 700,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d3f"
+        "$oid": "6810d16cadbe86e1bec22911"
       }
     },
     {
       "slotCode": "C3",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 700,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d40"
+        "$oid": "6810d16cadbe86e1bec22912"
       }
     },
     {
       "slotCode": "C4",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 700,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d41"
+        "$oid": "6810d16cadbe86e1bec22913"
       }
     },
     {
       "slotCode": "C5",
       "product": {
-        "$oid": "680ce09441cbf7272a310b47"
+        "$oid": "6810cfd1adbe86e1bec228cf"
       },
-      "quantity": 15,
-      "capacity": 20,
-      "price": 300,
+      "quantity": 12,
+      "capacity": 12,
+      "price": 700,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d42"
+        "$oid": "6810d16cadbe86e1bec22914"
       }
     },
     {
       "slotCode": "C6",
       "product": {
-        "$oid": "680ce09441cbf7272a310b47"
+        "$oid": "6810cfd1adbe86e1bec228cf"
       },
-      "quantity": 15,
-      "capacity": 20,
-      "price": 300,
+      "quantity": 12,
+      "capacity": 12,
+      "price": 700,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d43"
+        "$oid": "6810d16cadbe86e1bec22915"
+      }
+    },
+    {
+      "slotCode": "C7",
+      "product": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 700,
+      "_id": {
+        "$oid": "6810d16cadbe86e1bec22916"
       }
     },
     {
       "slotCode": "D1",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810d0d9adbe86e1bec228f0"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 500,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d44"
+        "$oid": "6810d16cadbe86e1bec22917"
       }
     },
     {
       "slotCode": "D2",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810d0d9adbe86e1bec228f0"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 500,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d45"
+        "$oid": "6810d16cadbe86e1bec22918"
       }
     },
     {
       "slotCode": "D3",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810d0d9adbe86e1bec228f0"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 500,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d46"
+        "$oid": "6810d16cadbe86e1bec22919"
       }
     },
     {
       "slotCode": "D4",
       "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
+        "$oid": "6810d0d9adbe86e1bec228f0"
       },
-      "quantity": 11,
-      "capacity": 20,
+      "quantity": 12,
+      "capacity": 12,
       "price": 500,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d47"
+        "$oid": "6810d16cadbe86e1bec2291a"
       }
     },
     {
       "slotCode": "D5",
       "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
+        "$oid": "6810d0d9adbe86e1bec228f0"
       },
-      "quantity": 11,
-      "capacity": 20,
+      "quantity": 12,
+      "capacity": 12,
       "price": 500,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d48"
+        "$oid": "6810d16cadbe86e1bec2291b"
       }
     },
     {
       "slotCode": "D6",
       "product": {
-        "$oid": "680ce09441cbf7272a310b47"
+        "$oid": "6810d0d9adbe86e1bec228f0"
       },
-      "quantity": 15,
-      "capacity": 20,
-      "price": 300,
+      "quantity": 12,
+      "capacity": 12,
+      "price": 500,
       "_id": {
-        "$oid": "680d4dcb38dfcdd542550d49"
+        "$oid": "6810d16cadbe86e1bec2291c"
+      }
+    },
+    {
+      "slotCode": "D7",
+      "product": {
+        "$oid": "6810d0d9adbe86e1bec228f0"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 500,
+      "_id": {
+        "$oid": "6810d16cadbe86e1bec2291d"
       }
     },
     {
       "slotCode": "E1",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 400,
       "_id": {
-        "$oid": "680d4dff38dfcdd542550fe5"
+        "$oid": "6810d16cadbe86e1bec2291e"
       }
     },
     {
       "slotCode": "E2",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 400,
       "_id": {
-        "$oid": "680d4dff38dfcdd542550fe6"
+        "$oid": "6810d16cadbe86e1bec2291f"
       }
     },
     {
       "slotCode": "E3",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
+      "product": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 400,
       "_id": {
-        "$oid": "680d4dff38dfcdd542550fe7"
+        "$oid": "6810d16cadbe86e1bec22920"
       }
     },
     {
       "slotCode": "E4",
       "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
+        "$oid": "6810d13aadbe86e1bec228f9"
       },
-      "quantity": 11,
-      "capacity": 20,
-      "price": 500,
+      "quantity": 12,
+      "capacity": 12,
+      "price": 400,
       "_id": {
-        "$oid": "680d4dff38dfcdd542550fe8"
+        "$oid": "6810d16cadbe86e1bec22921"
       }
     },
     {
       "slotCode": "E5",
       "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
+        "$oid": "6810d13aadbe86e1bec228f9"
       },
-      "quantity": 11,
-      "capacity": 20,
-      "price": 500,
+      "quantity": 12,
+      "capacity": 12,
+      "price": 400,
       "_id": {
-        "$oid": "680d4dff38dfcdd542550fe9"
+        "$oid": "6810d16cadbe86e1bec22922"
       }
     },
     {
       "slotCode": "E6",
       "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
+        "$oid": "6810d13aadbe86e1bec228f9"
       },
-      "quantity": 11,
-      "capacity": 20,
-      "price": 500,
+      "quantity": 12,
+      "capacity": 12,
+      "price": 400,
       "_id": {
-        "$oid": "680d4dff38dfcdd542550fea"
+        "$oid": "6810d16cadbe86e1bec22923"
+      }
+    },
+    {
+      "slotCode": "E7",
+      "product": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 400,
+      "_id": {
+        "$oid": "6810d16cadbe86e1bec22924"
       }
     }
   ],
-  "status": "Active",
-  "fullness": 63,
-  "__v": 1
+  "stat": "Active",
+  "fullness": 100,
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "680df30e516d07df8793b3a6"
+    "$oid": "6810d191adbe86e1bec22926"
   },
-  "name": "SN4928Black",
-  "location": "47.4909, 19.0402",
+  "name": "PK4352Yellow",
+  "location": "47.4929, 19.0402",
   "rows": 6,
   "cols": 9,
+  "slots": [
+    {
+      "slotCode": "A1",
+      "product": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 7,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22927"
+      }
+    },
+    {
+      "slotCode": "A2",
+      "product": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 7,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22928"
+      }
+    },
+    {
+      "slotCode": "A3",
+      "product": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 7,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22929"
+      }
+    },
+    {
+      "slotCode": "A4",
+      "product": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 7,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2292a"
+      }
+    },
+    {
+      "slotCode": "A5",
+      "product": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 7,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2292b"
+      }
+    },
+    {
+      "slotCode": "A6",
+      "product": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 7,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2292c"
+      }
+    },
+    {
+      "slotCode": "A7",
+      "product": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 7,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2292d"
+      }
+    },
+    {
+      "slotCode": "A8",
+      "product": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 7,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2292e"
+      }
+    },
+    {
+      "slotCode": "A9",
+      "product": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 7,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2292f"
+      }
+    },
+    {
+      "slotCode": "B1",
+      "product": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22930"
+      }
+    },
+    {
+      "slotCode": "B2",
+      "product": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22931"
+      }
+    },
+    {
+      "slotCode": "B3",
+      "product": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22932"
+      }
+    },
+    {
+      "slotCode": "B4",
+      "product": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22933"
+      }
+    },
+    {
+      "slotCode": "B5",
+      "product": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22934"
+      }
+    },
+    {
+      "slotCode": "B6",
+      "product": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22935"
+      }
+    },
+    {
+      "slotCode": "B7",
+      "product": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22936"
+      }
+    },
+    {
+      "slotCode": "B8",
+      "product": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22937"
+      }
+    },
+    {
+      "slotCode": "B9",
+      "product": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22938"
+      }
+    },
+    {
+      "slotCode": "C1",
+      "product": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 7,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22939"
+      }
+    },
+    {
+      "slotCode": "C2",
+      "product": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 7,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2293a"
+      }
+    },
+    {
+      "slotCode": "C3",
+      "product": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 7,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2293b"
+      }
+    },
+    {
+      "slotCode": "C4",
+      "product": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 7,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2293c"
+      }
+    },
+    {
+      "slotCode": "C5",
+      "product": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 7,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2293d"
+      }
+    },
+    {
+      "slotCode": "C6",
+      "product": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 7,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2293e"
+      }
+    },
+    {
+      "slotCode": "C7",
+      "product": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 7,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2293f"
+      }
+    },
+    {
+      "slotCode": "C8",
+      "product": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 7,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22940"
+      }
+    },
+    {
+      "slotCode": "C9",
+      "product": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 7,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22941"
+      }
+    },
+    {
+      "slotCode": "D1",
+      "product": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22942"
+      }
+    },
+    {
+      "slotCode": "D2",
+      "product": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22943"
+      }
+    },
+    {
+      "slotCode": "D3",
+      "product": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22944"
+      }
+    },
+    {
+      "slotCode": "D4",
+      "product": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22945"
+      }
+    },
+    {
+      "slotCode": "D5",
+      "product": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22946"
+      }
+    },
+    {
+      "slotCode": "D6",
+      "product": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22947"
+      }
+    },
+    {
+      "slotCode": "D7",
+      "product": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22948"
+      }
+    },
+    {
+      "slotCode": "D8",
+      "product": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22949"
+      }
+    },
+    {
+      "slotCode": "D9",
+      "product": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2294a"
+      }
+    },
+    {
+      "slotCode": "E1",
+      "product": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2294b"
+      }
+    },
+    {
+      "slotCode": "E2",
+      "product": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2294c"
+      }
+    },
+    {
+      "slotCode": "E3",
+      "product": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2294d"
+      }
+    },
+    {
+      "slotCode": "E4",
+      "product": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2294e"
+      }
+    },
+    {
+      "slotCode": "E5",
+      "product": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 6,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2294f"
+      }
+    },
+    {
+      "slotCode": "E6",
+      "product": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 6,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22950"
+      }
+    },
+    {
+      "slotCode": "E7",
+      "product": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 6,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22951"
+      }
+    },
+    {
+      "slotCode": "E8",
+      "product": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 6,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22952"
+      }
+    },
+    {
+      "slotCode": "E9",
+      "product": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 6,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22953"
+      }
+    },
+    {
+      "slotCode": "F1",
+      "product": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22954"
+      }
+    },
+    {
+      "slotCode": "F2",
+      "product": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22955"
+      }
+    },
+    {
+      "slotCode": "F3",
+      "product": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22956"
+      }
+    },
+    {
+      "slotCode": "F4",
+      "product": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 10,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22957"
+      }
+    },
+    {
+      "slotCode": "F5",
+      "product": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 3,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22958"
+      }
+    },
+    {
+      "slotCode": "F6",
+      "product": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 3,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec22959"
+      }
+    },
+    {
+      "slotCode": "F7",
+      "product": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 3,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2295a"
+      }
+    },
+    {
+      "slotCode": "F8",
+      "product": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 3,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2295b"
+      }
+    },
+    {
+      "slotCode": "F9",
+      "product": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 3,
+      "capacity": 10,
+      "price": 600,
+      "_id": {
+        "$oid": "6810d191adbe86e1bec2295c"
+      }
+    }
+  ],
+  "stat": "Maintenance",
+  "fullness": 80,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810d1a7adbe86e1bec2295e"
+  },
+  "name": "DF5342Pink",
+  "location": "",
+  "rows": 6,
+  "cols": 8,
   "slots": [
     {
       "slotCode": "A1",
@@ -1348,7 +1110,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3a7"
+        "$oid": "6810d1a7adbe86e1bec2295f"
       }
     },
     {
@@ -1358,7 +1120,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3a8"
+        "$oid": "6810d1a7adbe86e1bec22960"
       }
     },
     {
@@ -1368,7 +1130,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3a9"
+        "$oid": "6810d1a7adbe86e1bec22961"
       }
     },
     {
@@ -1378,7 +1140,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3aa"
+        "$oid": "6810d1a7adbe86e1bec22962"
       }
     },
     {
@@ -1388,7 +1150,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3ab"
+        "$oid": "6810d1a7adbe86e1bec22963"
       }
     },
     {
@@ -1398,7 +1160,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3ac"
+        "$oid": "6810d1a7adbe86e1bec22964"
       }
     },
     {
@@ -1408,7 +1170,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3ad"
+        "$oid": "6810d1a7adbe86e1bec22965"
       }
     },
     {
@@ -1418,17 +1180,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3ae"
-      }
-    },
-    {
-      "slotCode": "A9",
-      "product": null,
-      "quantity": 0,
-      "capacity": 0,
-      "price": 0,
-      "_id": {
-        "$oid": "680df30e516d07df8793b3af"
+        "$oid": "6810d1a7adbe86e1bec22966"
       }
     },
     {
@@ -1438,7 +1190,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3b0"
+        "$oid": "6810d1a7adbe86e1bec22967"
       }
     },
     {
@@ -1448,7 +1200,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3b1"
+        "$oid": "6810d1a7adbe86e1bec22968"
       }
     },
     {
@@ -1458,7 +1210,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3b2"
+        "$oid": "6810d1a7adbe86e1bec22969"
       }
     },
     {
@@ -1468,7 +1220,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3b3"
+        "$oid": "6810d1a7adbe86e1bec2296a"
       }
     },
     {
@@ -1478,7 +1230,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3b4"
+        "$oid": "6810d1a7adbe86e1bec2296b"
       }
     },
     {
@@ -1488,41 +1240,27 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3b5"
+        "$oid": "6810d1a7adbe86e1bec2296c"
       }
     },
     {
       "slotCode": "B7",
-      "product": {
-        "$oid": "680ce05c41cbf7272a310b3a"
-      },
-      "quantity": 20,
-      "capacity": 30,
-      "price": 400,
-      "_id": {
-        "$oid": "680df30e516d07df8793b3b6"
-      }
-    },
-    {
-      "slotCode": "B8",
-      "product": {
-        "$oid": "680ce05c41cbf7272a310b3a"
-      },
-      "quantity": 20,
-      "capacity": 30,
-      "price": 400,
-      "_id": {
-        "$oid": "680df30e516d07df8793b3b7"
-      }
-    },
-    {
-      "slotCode": "B9",
       "product": null,
       "quantity": 0,
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3b8"
+        "$oid": "6810d1a7adbe86e1bec2296d"
+      }
+    },
+    {
+      "slotCode": "B8",
+      "product": null,
+      "quantity": 0,
+      "capacity": 0,
+      "price": 0,
+      "_id": {
+        "$oid": "6810d1a7adbe86e1bec2296e"
       }
     },
     {
@@ -1532,7 +1270,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3b9"
+        "$oid": "6810d1a7adbe86e1bec2296f"
       }
     },
     {
@@ -1542,7 +1280,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3ba"
+        "$oid": "6810d1a7adbe86e1bec22970"
       }
     },
     {
@@ -1552,7 +1290,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3bb"
+        "$oid": "6810d1a7adbe86e1bec22971"
       }
     },
     {
@@ -1562,7 +1300,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3bc"
+        "$oid": "6810d1a7adbe86e1bec22972"
       }
     },
     {
@@ -1572,7 +1310,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3bd"
+        "$oid": "6810d1a7adbe86e1bec22973"
       }
     },
     {
@@ -1582,41 +1320,27 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3be"
+        "$oid": "6810d1a7adbe86e1bec22974"
       }
     },
     {
       "slotCode": "C7",
-      "product": {
-        "$oid": "680ce05c41cbf7272a310b3a"
-      },
-      "quantity": 20,
-      "capacity": 30,
-      "price": 400,
-      "_id": {
-        "$oid": "680df30e516d07df8793b3bf"
-      }
-    },
-    {
-      "slotCode": "C8",
-      "product": {
-        "$oid": "680ce05c41cbf7272a310b3a"
-      },
-      "quantity": 20,
-      "capacity": 30,
-      "price": 400,
-      "_id": {
-        "$oid": "680df30e516d07df8793b3c0"
-      }
-    },
-    {
-      "slotCode": "C9",
       "product": null,
       "quantity": 0,
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3c1"
+        "$oid": "6810d1a7adbe86e1bec22975"
+      }
+    },
+    {
+      "slotCode": "C8",
+      "product": null,
+      "quantity": 0,
+      "capacity": 0,
+      "price": 0,
+      "_id": {
+        "$oid": "6810d1a7adbe86e1bec22976"
       }
     },
     {
@@ -1626,7 +1350,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3c2"
+        "$oid": "6810d1a7adbe86e1bec22977"
       }
     },
     {
@@ -1636,7 +1360,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3c3"
+        "$oid": "6810d1a7adbe86e1bec22978"
       }
     },
     {
@@ -1646,7 +1370,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3c4"
+        "$oid": "6810d1a7adbe86e1bec22979"
       }
     },
     {
@@ -1656,7 +1380,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3c5"
+        "$oid": "6810d1a7adbe86e1bec2297a"
       }
     },
     {
@@ -1666,53 +1390,37 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3c6"
+        "$oid": "6810d1a7adbe86e1bec2297b"
       }
     },
     {
       "slotCode": "D6",
-      "product": {
-        "$oid": "680ce09441cbf7272a310b47"
-      },
-      "quantity": 12,
-      "capacity": 30,
-      "price": 400,
-      "_id": {
-        "$oid": "680df30e516d07df8793b3c7"
-      }
-    },
-    {
-      "slotCode": "D7",
-      "product": {
-        "$oid": "680ce09441cbf7272a310b47"
-      },
-      "quantity": 12,
-      "capacity": 30,
-      "price": 400,
-      "_id": {
-        "$oid": "680df30e516d07df8793b3c8"
-      }
-    },
-    {
-      "slotCode": "D8",
-      "product": {
-        "$oid": "680ce09441cbf7272a310b47"
-      },
-      "quantity": 12,
-      "capacity": 30,
-      "price": 400,
-      "_id": {
-        "$oid": "680df30e516d07df8793b3c9"
-      }
-    },
-    {
-      "slotCode": "D9",
       "product": null,
       "quantity": 0,
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3ca"
+        "$oid": "6810d1a7adbe86e1bec2297c"
+      }
+    },
+    {
+      "slotCode": "D7",
+      "product": null,
+      "quantity": 0,
+      "capacity": 0,
+      "price": 0,
+      "_id": {
+        "$oid": "6810d1a7adbe86e1bec2297d"
+      }
+    },
+    {
+      "slotCode": "D8",
+      "product": null,
+      "quantity": 0,
+      "capacity": 0,
+      "price": 0,
+      "_id": {
+        "$oid": "6810d1a7adbe86e1bec2297e"
       }
     },
     {
@@ -1722,7 +1430,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3cb"
+        "$oid": "6810d1a7adbe86e1bec2297f"
       }
     },
     {
@@ -1732,7 +1440,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3cc"
+        "$oid": "6810d1a7adbe86e1bec22980"
       }
     },
     {
@@ -1742,7 +1450,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3cd"
+        "$oid": "6810d1a7adbe86e1bec22981"
       }
     },
     {
@@ -1752,7 +1460,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3ce"
+        "$oid": "6810d1a7adbe86e1bec22982"
       }
     },
     {
@@ -1762,7 +1470,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3cf"
+        "$oid": "6810d1a7adbe86e1bec22983"
       }
     },
     {
@@ -1772,7 +1480,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3d0"
+        "$oid": "6810d1a7adbe86e1bec22984"
       }
     },
     {
@@ -1782,31 +1490,17 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3d1"
+        "$oid": "6810d1a7adbe86e1bec22985"
       }
     },
     {
       "slotCode": "E8",
-      "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
-      },
-      "quantity": 4,
-      "capacity": 10,
-      "price": 400,
+      "product": null,
+      "quantity": 0,
+      "capacity": 0,
+      "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3d2"
-      }
-    },
-    {
-      "slotCode": "E9",
-      "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
-      },
-      "quantity": 4,
-      "capacity": 10,
-      "price": 400,
-      "_id": {
-        "$oid": "680df30e516d07df8793b3d3"
+        "$oid": "6810d1a7adbe86e1bec22986"
       }
     },
     {
@@ -1816,7 +1510,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3d4"
+        "$oid": "6810d1a7adbe86e1bec22987"
       }
     },
     {
@@ -1826,7 +1520,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3d5"
+        "$oid": "6810d1a7adbe86e1bec22988"
       }
     },
     {
@@ -1836,7 +1530,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3d6"
+        "$oid": "6810d1a7adbe86e1bec22989"
       }
     },
     {
@@ -1846,7 +1540,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3d7"
+        "$oid": "6810d1a7adbe86e1bec2298a"
       }
     },
     {
@@ -1856,7 +1550,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3d8"
+        "$oid": "6810d1a7adbe86e1bec2298b"
       }
     },
     {
@@ -1866,7 +1560,7 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3d9"
+        "$oid": "6810d1a7adbe86e1bec2298c"
       }
     },
     {
@@ -1876,35 +1570,515 @@
       "capacity": 0,
       "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3da"
+        "$oid": "6810d1a7adbe86e1bec2298d"
       }
     },
     {
       "slotCode": "F8",
-      "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
-      },
-      "quantity": 4,
-      "capacity": 10,
-      "price": 400,
+      "product": null,
+      "quantity": 0,
+      "capacity": 0,
+      "price": 0,
       "_id": {
-        "$oid": "680df30e516d07df8793b3db"
-      }
-    },
-    {
-      "slotCode": "F9",
-      "product": {
-        "$oid": "680ce03e41cbf7272a310b33"
-      },
-      "quantity": 4,
-      "capacity": 10,
-      "price": 400,
-      "_id": {
-        "$oid": "680df30e516d07df8793b3dc"
+        "$oid": "6810d1a7adbe86e1bec2298e"
       }
     }
   ],
-  "status": "Offline",
-  "fullness": 53,
+  "stat": "Offline",
+  "fullness": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810d1d9adbe86e1bec22990"
+  },
+  "name": "LC9467Green",
+  "location": "47.3979, 19.0402",
+  "rows": 5,
+  "cols": 8,
+  "slots": [
+    {
+      "slotCode": "A1",
+      "product": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec22991"
+      }
+    },
+    {
+      "slotCode": "A2",
+      "product": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec22992"
+      }
+    },
+    {
+      "slotCode": "A3",
+      "product": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec22993"
+      }
+    },
+    {
+      "slotCode": "A4",
+      "product": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec22994"
+      }
+    },
+    {
+      "slotCode": "A5",
+      "product": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec22995"
+      }
+    },
+    {
+      "slotCode": "A6",
+      "product": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec22996"
+      }
+    },
+    {
+      "slotCode": "A7",
+      "product": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec22997"
+      }
+    },
+    {
+      "slotCode": "A8",
+      "product": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec22998"
+      }
+    },
+    {
+      "slotCode": "B1",
+      "product": {
+        "$oid": "6810cfebadbe86e1bec228d2"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec22999"
+      }
+    },
+    {
+      "slotCode": "B2",
+      "product": {
+        "$oid": "6810cfebadbe86e1bec228d2"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec2299a"
+      }
+    },
+    {
+      "slotCode": "B3",
+      "product": {
+        "$oid": "6810cfebadbe86e1bec228d2"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec2299b"
+      }
+    },
+    {
+      "slotCode": "B4",
+      "product": {
+        "$oid": "6810cfebadbe86e1bec228d2"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec2299c"
+      }
+    },
+    {
+      "slotCode": "B5",
+      "product": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec2299d"
+      }
+    },
+    {
+      "slotCode": "B6",
+      "product": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec2299e"
+      }
+    },
+    {
+      "slotCode": "B7",
+      "product": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec2299f"
+      }
+    },
+    {
+      "slotCode": "B8",
+      "product": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229a0"
+      }
+    },
+    {
+      "slotCode": "C1",
+      "product": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229a1"
+      }
+    },
+    {
+      "slotCode": "C2",
+      "product": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229a2"
+      }
+    },
+    {
+      "slotCode": "C3",
+      "product": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229a3"
+      }
+    },
+    {
+      "slotCode": "C4",
+      "product": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229a4"
+      }
+    },
+    {
+      "slotCode": "C5",
+      "product": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229a5"
+      }
+    },
+    {
+      "slotCode": "C6",
+      "product": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229a6"
+      }
+    },
+    {
+      "slotCode": "C7",
+      "product": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229a7"
+      }
+    },
+    {
+      "slotCode": "C8",
+      "product": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229a8"
+      }
+    },
+    {
+      "slotCode": "D1",
+      "product": {
+        "$oid": "6810d080adbe86e1bec228e6"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229a9"
+      }
+    },
+    {
+      "slotCode": "D2",
+      "product": {
+        "$oid": "6810d080adbe86e1bec228e6"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229aa"
+      }
+    },
+    {
+      "slotCode": "D3",
+      "product": {
+        "$oid": "6810d080adbe86e1bec228e6"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229ab"
+      }
+    },
+    {
+      "slotCode": "D4",
+      "product": {
+        "$oid": "6810d080adbe86e1bec228e6"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229ac"
+      }
+    },
+    {
+      "slotCode": "D5",
+      "product": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229ad"
+      }
+    },
+    {
+      "slotCode": "D6",
+      "product": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229ae"
+      }
+    },
+    {
+      "slotCode": "D7",
+      "product": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229af"
+      }
+    },
+    {
+      "slotCode": "D8",
+      "product": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229b0"
+      }
+    },
+    {
+      "slotCode": "E1",
+      "product": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229b1"
+      }
+    },
+    {
+      "slotCode": "E2",
+      "product": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229b2"
+      }
+    },
+    {
+      "slotCode": "E3",
+      "product": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229b3"
+      }
+    },
+    {
+      "slotCode": "E4",
+      "product": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229b4"
+      }
+    },
+    {
+      "slotCode": "E5",
+      "product": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229b5"
+      }
+    },
+    {
+      "slotCode": "E6",
+      "product": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229b6"
+      }
+    },
+    {
+      "slotCode": "E7",
+      "product": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229b7"
+      }
+    },
+    {
+      "slotCode": "E8",
+      "product": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 12,
+      "capacity": 12,
+      "price": 550,
+      "_id": {
+        "$oid": "6810d1d9adbe86e1bec229b8"
+      }
+    }
+  ],
+  "stat": "Active",
+  "fullness": 100,
   "__v": 0
 }]

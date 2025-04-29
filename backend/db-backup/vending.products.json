@@ -1,0 +1,187 @@
+[{
+  "_id": {
+    "$oid": "6810cfa6adbe86e1bec228c8"
+  },
+  "name": "coca cola zero",
+  "category": "Ital",
+  "price": 309,
+  "stock": 412,
+  "allocatedCapacity": 212,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810cfb3adbe86e1bec228cb"
+  },
+  "name": "coca cola citrom",
+  "category": "Ital",
+  "price": 309,
+  "stock": 429,
+  "allocatedCapacity": 132,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810cfd1adbe86e1bec228cf"
+  },
+  "name": "coca cola cherry",
+  "category": "Ital",
+  "price": 309,
+  "stock": 415,
+  "allocatedCapacity": 132,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810cfebadbe86e1bec228d2"
+  },
+  "name": "fuze team alma",
+  "category": "Ital",
+  "price": 335,
+  "stock": 464,
+  "allocatedCapacity": 48,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810d012adbe86e1bec228d6"
+  },
+  "name": "fuze tea dinnye",
+  "category": "Ital",
+  "price": 335,
+  "stock": 449,
+  "allocatedCapacity": 98,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810d028adbe86e1bec228d9"
+  },
+  "name": "fanta bodza",
+  "category": "Ital",
+  "price": 309,
+  "stock": 437,
+  "allocatedCapacity": 138,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810d048adbe86e1bec228dd"
+  },
+  "name": "fanta szőlő",
+  "category": "Ital",
+  "price": 309,
+  "stock": 453,
+  "allocatedCapacity": 90,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810d05dadbe86e1bec228e0"
+  },
+  "name": "nestea barack",
+  "category": "Ital",
+  "price": 219,
+  "stock": 584,
+  "allocatedCapacity": 48,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810d074adbe86e1bec228e3"
+  },
+  "name": "nestea citrom",
+  "category": "Ital",
+  "price": 219,
+  "stock": 600,
+  "allocatedCapacity": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810d080adbe86e1bec228e6"
+  },
+  "name": "nestea szilva",
+  "category": "Ital",
+  "price": 219,
+  "stock": 584,
+  "allocatedCapacity": 48,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810d09aadbe86e1bec228e9"
+  },
+  "name": "lipton citrom",
+  "category": "Ital",
+  "price": 276,
+  "stock": 480,
+  "allocatedCapacity": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810d0b5adbe86e1bec228ed"
+  },
+  "name": "lipton barack",
+  "category": "Ital",
+  "price": 276,
+  "stock": 480,
+  "allocatedCapacity": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810d0d9adbe86e1bec228f0"
+  },
+  "name": "pepsi max",
+  "category": "Ital",
+  "price": 195,
+  "stock": 699,
+  "allocatedCapacity": 84,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810d0f2adbe86e1bec228f3"
+  },
+  "name": "hell classic",
+  "category": "Ital",
+  "price": 345,
+  "stock": 213,
+  "allocatedCapacity": 90,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810d121adbe86e1bec228f6"
+  },
+  "name": "hell black cherry",
+  "category": "Ital",
+  "price": 345,
+  "stock": 213,
+  "allocatedCapacity": 90,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810d13aadbe86e1bec228f9"
+  },
+  "name": "mizse mentes",
+  "category": "Ital",
+  "price": 60,
+  "stock": 675,
+  "allocatedCapacity": 182,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810d144adbe86e1bec228fc"
+  },
+  "name": "mizse bubis",
+  "category": "Ital",
+  "price": 60,
+  "stock": 704,
+  "allocatedCapacity": 48,
+  "__v": 0
+}]
