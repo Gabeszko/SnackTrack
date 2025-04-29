@@ -195,7 +195,7 @@ const SlotEditor = ({
                 value={price}
                 onChange={(value) => setPrice(value as number)}
                 min={0}
-                max={10000}
+                max={9999}
                 disabled={!hasSelected || saving}
                 rightSection={
                   <Text size="xs" color="dimmed">
@@ -211,7 +211,7 @@ const SlotEditor = ({
                 value={capacity}
                 onChange={(value) => setCapacity(value as number)}
                 min={quantity}
-                max={100}
+                max={20}
                 disabled={!hasSelected || saving}
                 rightSection={
                   <Text size="xs" color="dimmed">

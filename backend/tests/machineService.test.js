@@ -27,6 +27,7 @@ describe("machineService.createMachine", () => {
       location: "Első emelet",
       rows: 3,
       cols: 3,
+      stat: "Offline",
     };
 
     const result = await machineService.createMachine(input);
@@ -37,6 +38,7 @@ describe("machineService.createMachine", () => {
     expect(result.data.location).toBe(input.location);
     expect(result.data.rows).toBe(input.rows);
     expect(result.data.cols).toBe(input.cols);
+    expect(result.data.stat).toBe(input.stat);
     expect(result.data.slots.length).toBe(9); // 3x3 slot
   });
 

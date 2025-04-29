@@ -12,11 +12,6 @@ interface UseNotificationReturn {
   clearNotification: () => void;
 }
 
-/**
- * Custom hook for managing notification state
- * @param defaultDuration Default time in ms before notification auto-dismisses
- * @returns Object containing notification state and control functions
- */
 export function useNotification(defaultDuration = 3000): UseNotificationReturn {
   const [notification, setNotification] = useState<NotificationState>({
     message: "",

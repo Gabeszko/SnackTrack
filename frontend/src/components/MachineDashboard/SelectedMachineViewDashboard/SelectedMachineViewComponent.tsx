@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 import { MachineType, Slot, COLORS } from "../../types";
 import {
   Grid,
@@ -33,7 +33,11 @@ const SelectedMachineView = () => {
   const { notification, showNotification, clearNotification } =
     useNotification();
 
-  const fetchMachineData = useCallback(async () => {
+  useEffect(() => {
+    fetchMachineData();
+  }, []);
+
+  const fetchMachineData = async () => {
     if (!id) return;
 
     setLoading(true);
@@ -48,11 +52,7 @@ const SelectedMachineView = () => {
     } finally {
       setLoading(false);
     }
-  }, [id, showNotification]);
-
-  useEffect(() => {
-    fetchMachineData();
-  }, [fetchMachineData]);
+  };
 
   // Slot kiválasztási kezelő
   const handleSlotClick = (slot: Slot | null): void => {
@@ -71,14 +71,6 @@ const SelectedMachineView = () => {
     }
   };
 
-  /*
-  // Mentés utáni frissítés
-  const handleSaveSuccess = (): void => {
-    fetchMachineData();
-    setSelectedSlots([]); // Szerkesztés után ürítjük a kijelölést
-    showNotification("Automatapozíciók sikeresen mentve", "success");
-  };
-*/
   // Slot szerkesztés sikeres
   const handleSlotEditSuccess = (): void => {
     fetchMachineData();
@@ -94,6 +86,8 @@ const SelectedMachineView = () => {
 
   // Utántöltés sikeres
   const handleRefillSuccess = (): void => {
+    fetchMachineData();
+    setSelectedSlots([]);
     showNotification("Termékek sikeresen utántöltve", "success");
   };
 

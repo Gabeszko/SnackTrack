@@ -24,13 +24,14 @@ const getMachineById = async (req, res) => {
 
 // Automata létrehozása
 const createMachine = async (req, res) => {
-  const { name, location, rows, cols } = req.body;
+  const { name, location, rows, cols, stat } = req.body;
 
   const result = await machineService.createMachine({
     name,
     location,
     rows,
     cols,
+    stat,
   });
 
   if (result.status) {
@@ -77,14 +78,14 @@ const refillMachine = async (req, res) => {
 // Automata szerkeztése
 const updateMachine = async (req, res) => {
   const { id } = req.params;
-  const { name, location, rows, cols, status } = req.body;
+  const { name, location, rows, cols, stat } = req.body;
 
   const result = await machineService.updateMachine(id, {
     name,
     location,
     rows,
     cols,
-    status,
+    stat,
   });
 
   if (result.status) {

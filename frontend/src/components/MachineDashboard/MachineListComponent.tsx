@@ -43,8 +43,8 @@ const MachineList: FunctionComponent<{
     fetchMachines();
   }, []);
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
+  const getStatusColor = (stat: string) => {
+    switch (stat) {
       case "Active":
         return COLORS.success;
       case "Maintenance":
@@ -56,8 +56,8 @@ const MachineList: FunctionComponent<{
     }
   };
 
-  const getStatusBgColor = (status: string) => {
-    switch (status) {
+  const getStatusBgColor = (stat: string) => {
+    switch (stat) {
       case "Active":
         return COLORS.successLight;
       case "Maintenance":
@@ -69,8 +69,8 @@ const MachineList: FunctionComponent<{
     }
   };
 
-  const getStatusText = (status: string) => {
-    switch (status) {
+  const getStatusText = (stat: string) => {
+    switch (stat) {
       case "Active":
         return "Online";
       case "Maintenance":
@@ -78,7 +78,7 @@ const MachineList: FunctionComponent<{
       case "Offline":
         return "Offline";
       default:
-        return status;
+        return stat;
     }
   };
 
@@ -127,7 +127,7 @@ const MachineList: FunctionComponent<{
               </Group>
               <Group justify="center">
                 <Badge
-                  color={getStatusColor(machine.status)}
+                  color={getStatusColor(machine.stat)}
                   variant="dot"
                   size="lg"
                   radius="sm"
@@ -135,13 +135,13 @@ const MachineList: FunctionComponent<{
                   py="xs"
                   styles={{
                     root: {
-                      backgroundColor: getStatusBgColor(machine.status),
-                      color: getStatusColor(machine.status),
+                      backgroundColor: getStatusBgColor(machine.stat),
+                      color: getStatusColor(machine.stat),
                       fontWeight: 600,
                     },
                   }}
                 >
-                  {getStatusText(machine.status)}
+                  {getStatusText(machine.stat)}
                 </Badge>
               </Group>
 

@@ -22,7 +22,7 @@ export interface MachineType {
   rows: number;
   cols: number;
   slots: Slot[];
-  status: "Active" | "Maintenance" | "Offline";
+  stat: "Active" | "Maintenance" | "Offline";
   fullness: number;
 }
 

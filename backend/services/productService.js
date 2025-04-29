@@ -16,7 +16,14 @@ const getAllProducts = async () => {
 // Product létrehozása
 const createProduct = async ({ name, category, price, stock }) => {
   try {
-    const newProduct = new Product({ name, category, price, stock });
+    allocatedCapacity = 0;
+    const newProduct = new Product({
+      name,
+      category,
+      price,
+      stock,
+      allocatedCapacity,
+    });
     const savedProduct = await newProduct.save();
     return { status: true, data: savedProduct };
   } catch (err) {

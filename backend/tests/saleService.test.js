@@ -78,8 +78,6 @@ describe("saleService", () => {
 
     const result = await saleService.getAllSales();
 
-    console.log(result); // ideiglenesen, hogy lásd a visszaadott választ!
-
     expect(result.status).toBe(true);
     expect(Array.isArray(result.data)).toBe(true);
     expect(result.data.length).toBeGreaterThan(0);

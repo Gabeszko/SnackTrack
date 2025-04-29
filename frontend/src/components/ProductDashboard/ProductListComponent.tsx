@@ -24,7 +24,7 @@ import {
   IconArrowUp,
   IconArrowDown,
 } from "@tabler/icons-react";
-import { Product } from "./ProductDashboardComponent";
+import { Product } from "../types";
 
 interface ProductListProps {
   products: Product[];

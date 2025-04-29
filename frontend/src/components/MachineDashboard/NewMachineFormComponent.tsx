@@ -6,7 +6,7 @@ import {
   Dispatch,
   SetStateAction,
 } from "react";
-import { MachineType, COLORS } from "../types";
+import { MachineType, Slot, COLORS } from "../types";
 import axios from "axios";
 import {
   Group,
@@ -51,8 +51,8 @@ const NewMachineForm: FunctionComponent<{
     location: "",
     rows: 6,
     cols: 9,
-    //    slots: [] as any,
-    status: "Offline",
+    slots: [] as Slot[],
+    stat: "Offline",
   });
 
   useEffect(() => {
@@ -62,8 +62,8 @@ const NewMachineForm: FunctionComponent<{
         location: editingMachine.location,
         rows: editingMachine.rows,
         cols: editingMachine.cols,
-        //        slots: editingMachine.slots || [],
-        status: editingMachine.status || "Offline",
+        slots: editingMachine.slots || [],
+        stat: editingMachine.stat || "Offline",
       });
     } else {
       setMachineForm({
@@ -71,8 +71,8 @@ const NewMachineForm: FunctionComponent<{
         location: "",
         rows: 6,
         cols: 9,
-        //        slots: [],
-        status: "Offline",
+        slots: [],
+        stat: "Offline",
       });
     }
   }, [editingMachine]);
@@ -116,8 +116,8 @@ const NewMachineForm: FunctionComponent<{
         location: "",
         rows: 6,
         cols: 9,
-        //        slots: [],
-        status: "Offline",
+        slots: [],
+        stat: "Offline",
       });
     } catch (error) {
       onError();
@@ -245,9 +245,9 @@ const NewMachineForm: FunctionComponent<{
                   <Select
                     label="Állapot"
                     placeholder="Válassz állapotot"
-                    value={machineForm.status}
+                    value={machineForm.stat}
                     onChange={(value) =>
-                      handleMachineChange("status", value || "Offline")
+                      handleMachineChange("stat", value || "Offline")
                     }
                     data={[
                       { value: "Active", label: "Aktív" },

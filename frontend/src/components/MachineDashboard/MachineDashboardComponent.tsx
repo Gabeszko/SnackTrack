@@ -24,7 +24,7 @@ function MachineDashboard() {
         id: machine._id,
         name: machine.name,
         location: [0, 0] as [number, number],
-        status: machine.status,
+        stat: machine.stat,
       };
     }
 
@@ -35,7 +35,7 @@ function MachineDashboard() {
         id: machine._id,
         name: machine.name,
         location: [0, 0] as [number, number],
-        status: machine.status,
+        stat: machine.stat,
       };
     }
 
@@ -44,7 +44,7 @@ function MachineDashboard() {
       id: machine._id,
       name: machine.name,
       location: [parts[0], parts[1]] as [number, number],
-      status: machine.status,
+      stat: machine.stat,
     };
   });
 

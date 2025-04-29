@@ -200,17 +200,33 @@ const RefillableProducts = ({
       <Divider my="md" />
 
       <Flex gap="md" justify="center">
-        <Tooltip label="Jelöld a gépet feltöltöttként">
-          <Button
-            leftSection={<IconClipboardCheck size={16} />}
-            variant="outline"
-            color="green"
-            onClick={handleMarkAsRefilled}
-            loading={loading}
-          >
-            Feltöltés!
-          </Button>
-        </Tooltip>
+        {missingSlots.length > 0 && (
+          <Tooltip label="Jelöld a gépet feltöltöttként">
+            <Button
+              leftSection={<IconClipboardCheck size={16} />}
+              variant="outline"
+              color="green"
+              onClick={handleMarkAsRefilled}
+              loading={loading}
+            >
+              Feltöltés!
+            </Button>
+          </Tooltip>
+        )}
+        {missingSlots.length === 0 && (
+          <Tooltip label="A gép feltöltve">
+            <Button
+              leftSection={<IconClipboardCheck size={16} />}
+              variant="outline"
+              color="gray"
+              onClick={handleMarkAsRefilled}
+              loading={loading}
+              disabled
+            >
+              Feltöltve!
+            </Button>
+          </Tooltip>
+        )}
       </Flex>
     </Paper>
   );

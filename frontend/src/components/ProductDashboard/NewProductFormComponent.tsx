@@ -11,7 +11,8 @@ import {
   Select,
 } from "@mantine/core";
 import { IconDeviceFloppy, IconPlus, IconX } from "@tabler/icons-react";
-import { Product } from "./ProductDashboardComponent";
+import { Product } from "../types";
+//import { Product } from "./ProductDashboardComponent";
 
 interface NewProductFormProps {
   editingProduct: Product | null;
@@ -25,6 +26,7 @@ function NewProductForm({
   onCancel,
 }: NewProductFormProps) {
   const [productForm, setProductForm] = useState<Product>({
+    _id: "",
     name: "",
     category: "",
     price: 0,
@@ -37,6 +39,7 @@ function NewProductForm({
       setProductForm(editingProduct);
     } else {
       setProductForm({
+        _id: "",
         name: "",
         category: "",
         price: 0,
@@ -58,6 +61,7 @@ function NewProductForm({
     e.preventDefault();
     onSubmit(productForm);
     setProductForm({
+      _id: "",
       name: "",
       category: "",
       price: 0,

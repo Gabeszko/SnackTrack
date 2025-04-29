@@ -33,9 +33,9 @@ const getMachineById = async (id) => {
 };
 
 // Automata létrehozása
-const createMachine = async ({ name, location, rows, cols }) => {
+const createMachine = async ({ name, location, rows, cols, stat }) => {
   try {
-    if (!name || !location || rows === undefined || cols === undefined) {
+    if (!name || rows === undefined || cols === undefined || !stat) {
       return {
         status: false,
         message: "Hiányzó kötelező mezők az automata létrehozásához.",
@@ -43,6 +43,7 @@ const createMachine = async ({ name, location, rows, cols }) => {
     }
 
     const slots = generateSlots(rows, cols);
+    const fullness = calculateFullness(slots);
 
     const newMachine = new Machine({
       name,
@@ -50,7 +51,8 @@ const createMachine = async ({ name, location, rows, cols }) => {
       rows,
       cols,
       slots,
-      fullness: calculateFullness(slots),
+      stat,
+      fullness,
     });
 
     const savedMachine = await newMachine.save();
@@ -154,7 +156,7 @@ const refillMachine = async (id) => {
 };
 
 // Automata adatainak szerkeztése
-const updateMachine = async (id, { name, location, rows, cols, status }) => {
+const updateMachine = async (id, { name, location, rows, cols, stat }) => {
   try {
     const machine = await Machine.findById(id);
     if (!machine) {
@@ -168,7 +170,7 @@ const updateMachine = async (id, { name, location, rows, cols, status }) => {
     machine.location = location;
     machine.rows = rows;
     machine.cols = cols;
-    machine.status = status;
+    machine.stat = stat;
 
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 

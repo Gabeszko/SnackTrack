@@ -18,7 +18,7 @@ const machineSchema = new mongoose.Schema({
   rows: Number,
   cols: Number,
   slots: [slotSchema],
-  status: {
+  stat: {
     type: String,
     enum: ["Active", "Maintenance", "Offline"],
     required: true,

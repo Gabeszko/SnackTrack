@@ -8,7 +8,7 @@ interface MachineType {
   id: string;
   name: string;
   location: [number, number]; // [latitude, longitude]
-  status: "Active" | "Maintenance" | "Offline";
+  stat: "Active" | "Maintenance" | "Offline";
 }
 
 interface VendingMachineMapProps {
@@ -32,11 +32,11 @@ const fixLeafletIcon = () => {
 };
 
 // Define custom marker icons for different machine statuses
-const createStatusIcon = (status: string) => {
+const createStatusIcon = (stat: string) => {
   // Set icon color based on status
   let iconColor = "#3b82f6"; // Default blue
 
-  switch (status) {
+  switch (stat) {
     case "Active":
       iconColor = COLORS.success;
       break;
@@ -175,25 +175,25 @@ const VendingMachineMap: React.FC<VendingMachineMapProps> = ({
           id: "1",
           name: "Budapest-001",
           location: [47.4979, 19.0402],
-          status: "Active",
+          stat: "Active",
         },
         {
           id: "2",
           name: "Debrecen-001",
           location: [47.5295, 21.6407],
-          status: "Active",
+          stat: "Active",
         },
         {
           id: "3",
           name: "Szeged-001",
           location: [46.253, 20.1414],
-          status: "Maintenance",
+          stat: "Maintenance",
         },
         {
           id: "4",
           name: "Pécs-001",
           location: [46.0727, 18.2324],
-          status: "Offline",
+          stat: "Offline",
         },
       ]);
     }
@@ -223,8 +223,8 @@ const VendingMachineMap: React.FC<VendingMachineMapProps> = ({
   const displayMachines = machines.length > 0 ? machines : sampleMachines;
 
   // Function to get status name in Hungarian
-  const getStatusName = (status: string) => {
-    switch (status) {
+  const getStatusName = (stat: string) => {
+    switch (stat) {
       case "Active":
         return "Aktív";
       case "Maintenance":
@@ -232,13 +232,13 @@ const VendingMachineMap: React.FC<VendingMachineMapProps> = ({
       case "Offline":
         return "Offline";
       default:
-        return status;
+        return stat;
     }
   };
 
   // Function to get status color
-  const getStatusColor = (status: string) => {
-    switch (status) {
+  const getStatusColor = (stat: string) => {
+    switch (stat) {
       case "Active":
         return COLORS.success;
       case "Maintenance":
@@ -326,7 +326,7 @@ const VendingMachineMap: React.FC<VendingMachineMapProps> = ({
                 <Marker
                   key={machine.id}
                   position={machine.location}
-                  icon={createStatusIcon(machine.status)}
+                  icon={createStatusIcon(machine.stat)}
                   eventHandlers={{
                     click: (e) => {
                       // Prevent default behavior if needed
@@ -344,7 +344,7 @@ const VendingMachineMap: React.FC<VendingMachineMapProps> = ({
                       <h3
                         style={{
                           borderBottom: `2px solid ${getStatusColor(
-                            machine.status
+                            machine.stat
                           )}`,
                           paddingBottom: "5px",
                           marginTop: 0,
@@ -367,7 +367,7 @@ const VendingMachineMap: React.FC<VendingMachineMapProps> = ({
                           </strong>
                           <span
                             style={{
-                              backgroundColor: getStatusColor(machine.status),
+                              backgroundColor: getStatusColor(machine.stat),
                               color: "white",
                               padding: "2px 8px",
                               borderRadius: "4px",
@@ -375,7 +375,7 @@ const VendingMachineMap: React.FC<VendingMachineMapProps> = ({
                               fontWeight: "bold",
                             }}
                           >
-                            {getStatusName(machine.status)}
+                            {getStatusName(machine.stat)}
                           </span>
                         </div>
 

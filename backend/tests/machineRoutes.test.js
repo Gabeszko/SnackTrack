@@ -23,6 +23,7 @@ describe("Machine API Integration Tests", () => {
       location: "Földszint",
       rows: 2,
       cols: 2,
+      stat: "Offline",
     };
 
     const response = await request(app)
@@ -35,6 +36,7 @@ describe("Machine API Integration Tests", () => {
     expect(response.body.location).toBe(machineData.location);
     expect(response.body.rows).toBe(machineData.rows);
     expect(response.body.cols).toBe(machineData.cols);
+    expect(response.body.stat).toBe(machineData.stat);
     expect(response.body.slots.length).toBe(4); // 2x2 slot
   });
 
