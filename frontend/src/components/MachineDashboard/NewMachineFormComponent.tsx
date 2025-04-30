@@ -20,7 +20,6 @@ import {
   Paper,
   Stack,
   Grid,
-  ActionIcon,
 } from "@mantine/core";
 import {
   IconDeviceFloppy,
@@ -147,16 +146,6 @@ const NewMachineForm: FunctionComponent<{
               ? "Automata szerkesztése"
               : "Új automata hozzáadása"}
           </Title>
-          {editingMachine && (
-            <ActionIcon
-              variant="subtle"
-              color="gray"
-              onClick={clearEditingMachine}
-              size="lg"
-            >
-              <IconX size={20} />
-            </ActionIcon>
-          )}
         </Group>
 
         <form onSubmit={handleMachineSubmit}>

@@ -12,7 +12,7 @@
       "product": {
         "$oid": "6810cfa6adbe86e1bec228c8"
       },
-      "quantity": 12,
+      "quantity": 8,
       "capacity": 12,
       "price": 650,
       "_id": {
@@ -24,7 +24,7 @@
       "product": {
         "$oid": "6810cfa6adbe86e1bec228c8"
       },
-      "quantity": 12,
+      "quantity": 8,
       "capacity": 12,
       "price": 650,
       "_id": {
@@ -36,7 +36,7 @@
       "product": {
         "$oid": "6810cfa6adbe86e1bec228c8"
       },
-      "quantity": 12,
+      "quantity": 8,
       "capacity": 12,
       "price": 650,
       "_id": {
@@ -48,7 +48,7 @@
       "product": {
         "$oid": "6810cfa6adbe86e1bec228c8"
       },
-      "quantity": 12,
+      "quantity": 8,
       "capacity": 12,
       "price": 650,
       "_id": {
@@ -60,7 +60,7 @@
       "product": {
         "$oid": "6810cfa6adbe86e1bec228c8"
       },
-      "quantity": 12,
+      "quantity": 8,
       "capacity": 12,
       "price": 650,
       "_id": {
@@ -72,7 +72,7 @@
       "product": {
         "$oid": "6810cfa6adbe86e1bec228c8"
       },
-      "quantity": 12,
+      "quantity": 8,
       "capacity": 12,
       "price": 650,
       "_id": {
@@ -84,7 +84,7 @@
       "product": {
         "$oid": "6810cfa6adbe86e1bec228c8"
       },
-      "quantity": 12,
+      "quantity": 8,
       "capacity": 12,
       "price": 650,
       "_id": {
@@ -180,7 +180,7 @@
       "product": {
         "$oid": "6810cfd1adbe86e1bec228cf"
       },
-      "quantity": 12,
+      "quantity": 6,
       "capacity": 12,
       "price": 700,
       "_id": {
@@ -192,7 +192,7 @@
       "product": {
         "$oid": "6810cfd1adbe86e1bec228cf"
       },
-      "quantity": 12,
+      "quantity": 6,
       "capacity": 12,
       "price": 700,
       "_id": {
@@ -204,7 +204,7 @@
       "product": {
         "$oid": "6810cfd1adbe86e1bec228cf"
       },
-      "quantity": 12,
+      "quantity": 6,
       "capacity": 12,
       "price": 700,
       "_id": {
@@ -216,7 +216,7 @@
       "product": {
         "$oid": "6810cfd1adbe86e1bec228cf"
       },
-      "quantity": 12,
+      "quantity": 6,
       "capacity": 12,
       "price": 700,
       "_id": {
@@ -228,7 +228,7 @@
       "product": {
         "$oid": "6810cfd1adbe86e1bec228cf"
       },
-      "quantity": 12,
+      "quantity": 6,
       "capacity": 12,
       "price": 700,
       "_id": {
@@ -240,7 +240,7 @@
       "product": {
         "$oid": "6810cfd1adbe86e1bec228cf"
       },
-      "quantity": 12,
+      "quantity": 6,
       "capacity": 12,
       "price": 700,
       "_id": {
@@ -252,7 +252,7 @@
       "product": {
         "$oid": "6810cfd1adbe86e1bec228cf"
       },
-      "quantity": 12,
+      "quantity": 6,
       "capacity": 12,
       "price": 700,
       "_id": {
@@ -348,7 +348,7 @@
       "product": {
         "$oid": "6810d13aadbe86e1bec228f9"
       },
-      "quantity": 12,
+      "quantity": 10,
       "capacity": 12,
       "price": 400,
       "_id": {
@@ -360,7 +360,7 @@
       "product": {
         "$oid": "6810d13aadbe86e1bec228f9"
       },
-      "quantity": 12,
+      "quantity": 10,
       "capacity": 12,
       "price": 400,
       "_id": {
@@ -372,7 +372,7 @@
       "product": {
         "$oid": "6810d13aadbe86e1bec228f9"
       },
-      "quantity": 12,
+      "quantity": 10,
       "capacity": 12,
       "price": 400,
       "_id": {
@@ -384,7 +384,7 @@
       "product": {
         "$oid": "6810d13aadbe86e1bec228f9"
       },
-      "quantity": 12,
+      "quantity": 10,
       "capacity": 12,
       "price": 400,
       "_id": {
@@ -396,7 +396,7 @@
       "product": {
         "$oid": "6810d13aadbe86e1bec228f9"
       },
-      "quantity": 12,
+      "quantity": 10,
       "capacity": 12,
       "price": 400,
       "_id": {
@@ -408,7 +408,7 @@
       "product": {
         "$oid": "6810d13aadbe86e1bec228f9"
       },
-      "quantity": 12,
+      "quantity": 10,
       "capacity": 12,
       "price": 400,
       "_id": {
@@ -420,7 +420,7 @@
       "product": {
         "$oid": "6810d13aadbe86e1bec228f9"
       },
-      "quantity": 12,
+      "quantity": 10,
       "capacity": 12,
       "price": 400,
       "_id": {
@@ -429,7 +429,7 @@
     }
   ],
   "stat": "Active",
-  "fullness": 100,
+  "fullness": 80,
   "__v": 0
 },
 {
@@ -446,7 +446,7 @@
       "product": {
         "$oid": "6810d121adbe86e1bec228f6"
       },
-      "quantity": 7,
+      "quantity": 8,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -458,7 +458,7 @@
       "product": {
         "$oid": "6810d121adbe86e1bec228f6"
       },
-      "quantity": 7,
+      "quantity": 8,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -470,7 +470,7 @@
       "product": {
         "$oid": "6810d121adbe86e1bec228f6"
       },
-      "quantity": 7,
+      "quantity": 8,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -482,7 +482,7 @@
       "product": {
         "$oid": "6810d121adbe86e1bec228f6"
       },
-      "quantity": 7,
+      "quantity": 8,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -494,7 +494,7 @@
       "product": {
         "$oid": "6810d121adbe86e1bec228f6"
       },
-      "quantity": 7,
+      "quantity": 8,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -506,7 +506,7 @@
       "product": {
         "$oid": "6810d121adbe86e1bec228f6"
       },
-      "quantity": 7,
+      "quantity": 8,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -518,7 +518,7 @@
       "product": {
         "$oid": "6810d121adbe86e1bec228f6"
       },
-      "quantity": 7,
+      "quantity": 8,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -530,7 +530,7 @@
       "product": {
         "$oid": "6810d121adbe86e1bec228f6"
       },
-      "quantity": 7,
+      "quantity": 8,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -542,7 +542,7 @@
       "product": {
         "$oid": "6810d121adbe86e1bec228f6"
       },
-      "quantity": 7,
+      "quantity": 8,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -554,7 +554,7 @@
       "product": {
         "$oid": "6810d0f2adbe86e1bec228f3"
       },
-      "quantity": 10,
+      "quantity": 5,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -566,7 +566,7 @@
       "product": {
         "$oid": "6810d0f2adbe86e1bec228f3"
       },
-      "quantity": 10,
+      "quantity": 5,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -578,7 +578,7 @@
       "product": {
         "$oid": "6810d0f2adbe86e1bec228f3"
       },
-      "quantity": 10,
+      "quantity": 5,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -590,7 +590,7 @@
       "product": {
         "$oid": "6810d0f2adbe86e1bec228f3"
       },
-      "quantity": 10,
+      "quantity": 5,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -602,7 +602,7 @@
       "product": {
         "$oid": "6810d0f2adbe86e1bec228f3"
       },
-      "quantity": 10,
+      "quantity": 5,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -614,7 +614,7 @@
       "product": {
         "$oid": "6810d0f2adbe86e1bec228f3"
       },
-      "quantity": 10,
+      "quantity": 5,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -626,7 +626,7 @@
       "product": {
         "$oid": "6810d0f2adbe86e1bec228f3"
       },
-      "quantity": 10,
+      "quantity": 5,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -638,7 +638,7 @@
       "product": {
         "$oid": "6810d0f2adbe86e1bec228f3"
       },
-      "quantity": 10,
+      "quantity": 5,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -650,7 +650,7 @@
       "product": {
         "$oid": "6810d0f2adbe86e1bec228f3"
       },
-      "quantity": 10,
+      "quantity": 5,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -662,7 +662,7 @@
       "product": {
         "$oid": "6810d048adbe86e1bec228dd"
       },
-      "quantity": 7,
+      "quantity": 6,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -674,7 +674,7 @@
       "product": {
         "$oid": "6810d048adbe86e1bec228dd"
       },
-      "quantity": 7,
+      "quantity": 6,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -686,7 +686,7 @@
       "product": {
         "$oid": "6810d048adbe86e1bec228dd"
       },
-      "quantity": 7,
+      "quantity": 6,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -698,7 +698,7 @@
       "product": {
         "$oid": "6810d048adbe86e1bec228dd"
       },
-      "quantity": 7,
+      "quantity": 6,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -710,7 +710,7 @@
       "product": {
         "$oid": "6810d048adbe86e1bec228dd"
       },
-      "quantity": 7,
+      "quantity": 6,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -722,7 +722,7 @@
       "product": {
         "$oid": "6810d048adbe86e1bec228dd"
       },
-      "quantity": 7,
+      "quantity": 6,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -734,7 +734,7 @@
       "product": {
         "$oid": "6810d048adbe86e1bec228dd"
       },
-      "quantity": 7,
+      "quantity": 6,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -746,7 +746,7 @@
       "product": {
         "$oid": "6810d048adbe86e1bec228dd"
       },
-      "quantity": 7,
+      "quantity": 6,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -758,7 +758,7 @@
       "product": {
         "$oid": "6810d048adbe86e1bec228dd"
       },
-      "quantity": 7,
+      "quantity": 6,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -770,7 +770,7 @@
       "product": {
         "$oid": "6810d028adbe86e1bec228d9"
       },
-      "quantity": 10,
+      "quantity": 2,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -782,7 +782,7 @@
       "product": {
         "$oid": "6810d028adbe86e1bec228d9"
       },
-      "quantity": 10,
+      "quantity": 2,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -794,7 +794,7 @@
       "product": {
         "$oid": "6810d028adbe86e1bec228d9"
       },
-      "quantity": 10,
+      "quantity": 2,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -806,7 +806,7 @@
       "product": {
         "$oid": "6810d028adbe86e1bec228d9"
       },
-      "quantity": 10,
+      "quantity": 2,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -818,7 +818,7 @@
       "product": {
         "$oid": "6810d028adbe86e1bec228d9"
       },
-      "quantity": 10,
+      "quantity": 2,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -830,7 +830,7 @@
       "product": {
         "$oid": "6810d028adbe86e1bec228d9"
       },
-      "quantity": 10,
+      "quantity": 2,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -842,7 +842,7 @@
       "product": {
         "$oid": "6810d028adbe86e1bec228d9"
       },
-      "quantity": 10,
+      "quantity": 2,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -854,7 +854,7 @@
       "product": {
         "$oid": "6810d028adbe86e1bec228d9"
       },
-      "quantity": 10,
+      "quantity": 2,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -866,7 +866,7 @@
       "product": {
         "$oid": "6810d028adbe86e1bec228d9"
       },
-      "quantity": 10,
+      "quantity": 2,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -926,7 +926,7 @@
       "product": {
         "$oid": "6810d012adbe86e1bec228d6"
       },
-      "quantity": 6,
+      "quantity": 5,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -938,7 +938,7 @@
       "product": {
         "$oid": "6810d012adbe86e1bec228d6"
       },
-      "quantity": 6,
+      "quantity": 5,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -950,7 +950,7 @@
       "product": {
         "$oid": "6810d012adbe86e1bec228d6"
       },
-      "quantity": 6,
+      "quantity": 5,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -962,7 +962,7 @@
       "product": {
         "$oid": "6810d012adbe86e1bec228d6"
       },
-      "quantity": 6,
+      "quantity": 5,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -974,7 +974,7 @@
       "product": {
         "$oid": "6810d012adbe86e1bec228d6"
       },
-      "quantity": 6,
+      "quantity": 5,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -1034,7 +1034,7 @@
       "product": {
         "$oid": "6810d13aadbe86e1bec228f9"
       },
-      "quantity": 3,
+      "quantity": 4,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -1046,7 +1046,7 @@
       "product": {
         "$oid": "6810d13aadbe86e1bec228f9"
       },
-      "quantity": 3,
+      "quantity": 4,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -1058,7 +1058,7 @@
       "product": {
         "$oid": "6810d13aadbe86e1bec228f9"
       },
-      "quantity": 3,
+      "quantity": 4,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -1070,7 +1070,7 @@
       "product": {
         "$oid": "6810d13aadbe86e1bec228f9"
       },
-      "quantity": 3,
+      "quantity": 4,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -1082,7 +1082,7 @@
       "product": {
         "$oid": "6810d13aadbe86e1bec228f9"
       },
-      "quantity": 3,
+      "quantity": 4,
       "capacity": 10,
       "price": 600,
       "_id": {
@@ -1091,7 +1091,7 @@
     }
   ],
   "stat": "Maintenance",
-  "fullness": 80,
+  "fullness": 58,
   "__v": 0
 },
 {
@@ -1600,7 +1600,7 @@
     {
       "slotCode": "A1",
       "product": {
-        "$oid": "6810cfb3adbe86e1bec228cb"
+        "$oid": "6810cfa6adbe86e1bec228c8"
       },
       "quantity": 12,
       "capacity": 12,
@@ -1612,7 +1612,7 @@
     {
       "slotCode": "A2",
       "product": {
-        "$oid": "6810cfb3adbe86e1bec228cb"
+        "$oid": "6810cfa6adbe86e1bec228c8"
       },
       "quantity": 12,
       "capacity": 12,
@@ -1624,7 +1624,7 @@
     {
       "slotCode": "A3",
       "product": {
-        "$oid": "6810cfb3adbe86e1bec228cb"
+        "$oid": "6810cfa6adbe86e1bec228c8"
       },
       "quantity": 12,
       "capacity": 12,
@@ -1636,7 +1636,7 @@
     {
       "slotCode": "A4",
       "product": {
-        "$oid": "6810cfb3adbe86e1bec228cb"
+        "$oid": "6810cfa6adbe86e1bec228c8"
       },
       "quantity": 12,
       "capacity": 12,
@@ -1696,7 +1696,7 @@
     {
       "slotCode": "B1",
       "product": {
-        "$oid": "6810cfebadbe86e1bec228d2"
+        "$oid": "6810cfd1adbe86e1bec228cf"
       },
       "quantity": 12,
       "capacity": 12,
@@ -1708,7 +1708,7 @@
     {
       "slotCode": "B2",
       "product": {
-        "$oid": "6810cfebadbe86e1bec228d2"
+        "$oid": "6810cfd1adbe86e1bec228cf"
       },
       "quantity": 12,
       "capacity": 12,
@@ -1720,7 +1720,7 @@
     {
       "slotCode": "B3",
       "product": {
-        "$oid": "6810cfebadbe86e1bec228d2"
+        "$oid": "6810cfd1adbe86e1bec228cf"
       },
       "quantity": 12,
       "capacity": 12,
@@ -1732,7 +1732,7 @@
     {
       "slotCode": "B4",
       "product": {
-        "$oid": "6810cfebadbe86e1bec228d2"
+        "$oid": "6810cfd1adbe86e1bec228cf"
       },
       "quantity": 12,
       "capacity": 12,
@@ -1792,7 +1792,7 @@
     {
       "slotCode": "C1",
       "product": {
-        "$oid": "6810d028adbe86e1bec228d9"
+        "$oid": "6810d012adbe86e1bec228d6"
       },
       "quantity": 12,
       "capacity": 12,
@@ -1804,7 +1804,7 @@
     {
       "slotCode": "C2",
       "product": {
-        "$oid": "6810d028adbe86e1bec228d9"
+        "$oid": "6810d012adbe86e1bec228d6"
       },
       "quantity": 12,
       "capacity": 12,
@@ -1816,7 +1816,7 @@
     {
       "slotCode": "C3",
       "product": {
-        "$oid": "6810d028adbe86e1bec228d9"
+        "$oid": "6810d012adbe86e1bec228d6"
       },
       "quantity": 12,
       "capacity": 12,
@@ -1828,7 +1828,7 @@
     {
       "slotCode": "C4",
       "product": {
-        "$oid": "6810d028adbe86e1bec228d9"
+        "$oid": "6810d012adbe86e1bec228d6"
       },
       "quantity": 12,
       "capacity": 12,
@@ -1888,7 +1888,7 @@
     {
       "slotCode": "D1",
       "product": {
-        "$oid": "6810d080adbe86e1bec228e6"
+        "$oid": "6810d05dadbe86e1bec228e0"
       },
       "quantity": 12,
       "capacity": 12,
@@ -1900,7 +1900,7 @@
     {
       "slotCode": "D2",
       "product": {
-        "$oid": "6810d080adbe86e1bec228e6"
+        "$oid": "6810d05dadbe86e1bec228e0"
       },
       "quantity": 12,
       "capacity": 12,
@@ -1912,7 +1912,7 @@
     {
       "slotCode": "D3",
       "product": {
-        "$oid": "6810d080adbe86e1bec228e6"
+        "$oid": "6810d05dadbe86e1bec228e0"
       },
       "quantity": 12,
       "capacity": 12,
@@ -1924,7 +1924,7 @@
     {
       "slotCode": "D4",
       "product": {
-        "$oid": "6810d080adbe86e1bec228e6"
+        "$oid": "6810d05dadbe86e1bec228e0"
       },
       "quantity": 12,
       "capacity": 12,
@@ -1984,7 +1984,7 @@
     {
       "slotCode": "E1",
       "product": {
-        "$oid": "6810d13aadbe86e1bec228f9"
+        "$oid": "6810d144adbe86e1bec228fc"
       },
       "quantity": 12,
       "capacity": 12,
@@ -1996,7 +1996,7 @@
     {
       "slotCode": "E2",
       "product": {
-        "$oid": "6810d13aadbe86e1bec228f9"
+        "$oid": "6810d144adbe86e1bec228fc"
       },
       "quantity": 12,
       "capacity": 12,
@@ -2008,7 +2008,7 @@
     {
       "slotCode": "E3",
       "product": {
-        "$oid": "6810d13aadbe86e1bec228f9"
+        "$oid": "6810d144adbe86e1bec228fc"
       },
       "quantity": 12,
       "capacity": 12,
@@ -2020,7 +2020,7 @@
     {
       "slotCode": "E4",
       "product": {
-        "$oid": "6810d13aadbe86e1bec228f9"
+        "$oid": "6810d144adbe86e1bec228fc"
       },
       "quantity": 12,
       "capacity": 12,

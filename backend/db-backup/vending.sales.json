@@ -1334,7 +1334,7 @@
   "machineId": {
     "$oid": "6810d191adbe86e1bec22926"
   },
-  "date": "2025-04-28T13:31:09.527Z",
+  "date": "2025-04-27T13:31:09.527Z",
   "products": [
     {
       "productId": {
@@ -1887,7 +1887,7 @@
   "machineId": {
     "$oid": "6810d1d9adbe86e1bec22990"
   },
-  "date": "2025-04-28T13:29:44.215Z",
+  "date": "2025-04-27T13:29:44.215Z",
   "products": [
     {
       "productId": {
@@ -2300,7 +2300,7 @@
   "machineId": {
     "$oid": "6810d16cadbe86e1bec22901"
   },
-  "date": "2025-04-28T13:21:44.461Z",
+  "date": "2025-04-27T13:21:44.461Z",
   "products": [
     {
       "productId": {
@@ -2654,5 +2654,3389 @@
     }
   ],
   "allProfit": 91350,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68123fef3027e228ede2a39c"
+  },
+  "machineId": {
+    "$oid": "6810d16cadbe86e1bec22901"
+  },
+  "date": "2025-04-30T15:21:19.451Z",
+  "products": [
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 5,
+      "productProfit": 3250,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a39d"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 5,
+      "productProfit": 3250,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a39e"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 5,
+      "productProfit": 3250,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a39f"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 5,
+      "productProfit": 3250,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a0"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 5,
+      "productProfit": 3250,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a1"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 5,
+      "productProfit": 3250,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a2"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 5,
+      "productProfit": 3250,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a3"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 6,
+      "productProfit": 3900,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 6,
+      "productProfit": 3900,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a5"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 6,
+      "productProfit": 3900,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 6,
+      "productProfit": 3900,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a7"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 6,
+      "productProfit": 3900,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a8"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 6,
+      "productProfit": 3900,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a9"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 6,
+      "productProfit": 3900,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3aa"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 8,
+      "productProfit": 5600,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3ab"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 8,
+      "productProfit": 5600,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3ac"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 8,
+      "productProfit": 5600,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3ad"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 8,
+      "productProfit": 5600,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3ae"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 8,
+      "productProfit": 5600,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3af"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 8,
+      "productProfit": 5600,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b0"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 8,
+      "productProfit": 5600,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b1"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0d9adbe86e1bec228f0"
+      },
+      "quantity": 2,
+      "productProfit": 1000,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b2"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0d9adbe86e1bec228f0"
+      },
+      "quantity": 2,
+      "productProfit": 1000,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b3"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0d9adbe86e1bec228f0"
+      },
+      "quantity": 2,
+      "productProfit": 1000,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0d9adbe86e1bec228f0"
+      },
+      "quantity": 2,
+      "productProfit": 1000,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b5"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0d9adbe86e1bec228f0"
+      },
+      "quantity": 2,
+      "productProfit": 1000,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0d9adbe86e1bec228f0"
+      },
+      "quantity": 2,
+      "productProfit": 1000,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b7"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0d9adbe86e1bec228f0"
+      },
+      "quantity": 2,
+      "productProfit": 1000,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b8"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 3,
+      "productProfit": 1200,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b9"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 3,
+      "productProfit": 1200,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3ba"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 3,
+      "productProfit": 1200,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3bb"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 3,
+      "productProfit": 1200,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3bc"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 3,
+      "productProfit": 1200,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3bd"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 3,
+      "productProfit": 1200,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3be"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 3,
+      "productProfit": 1200,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3bf"
+      }
+    }
+  ],
+  "allProfit": 104650,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681240173027e228ede2aeb3"
+  },
+  "machineId": {
+    "$oid": "6810d191adbe86e1bec22926"
+  },
+  "date": "2025-04-30T15:21:59.030Z",
+  "products": [
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeb4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeb5"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeb6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeb7"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeb8"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeb9"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeba"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aebb"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aebc"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aebd"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aebe"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aebf"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aec0"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aec1"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aec2"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aec3"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aec4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aec5"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aec6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aec7"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aec8"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aec9"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeca"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aecb"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aecc"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aecd"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aece"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aecf"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed0"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed1"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed2"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed3"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed5"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed7"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 4,
+      "productProfit": 2400,
+      "_id": {
+        "$oid": "681240173027e228ede2aed8"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 4,
+      "productProfit": 2400,
+      "_id": {
+        "$oid": "681240173027e228ede2aed9"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 4,
+      "productProfit": 2400,
+      "_id": {
+        "$oid": "681240173027e228ede2aeda"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 4,
+      "productProfit": 2400,
+      "_id": {
+        "$oid": "681240173027e228ede2aedb"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 4,
+      "productProfit": 2400,
+      "_id": {
+        "$oid": "681240173027e228ede2aedc"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aedd"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aede"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aedf"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aee0"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aee1"
+      }
+    }
+  ],
+  "allProfit": 141000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6812407e3027e228ede2d9db"
+  },
+  "machineId": {
+    "$oid": "6810d1d9adbe86e1bec22990"
+  },
+  "date": "2025-04-30T15:23:42.734Z",
+  "products": [
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9dc"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9dd"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9de"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9df"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e0"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e1"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e2"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e3"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e5"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e7"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e8"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e9"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9ea"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9eb"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9ec"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9ed"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9ee"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9ef"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f0"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f1"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f2"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f3"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f5"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f7"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f8"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f9"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9fa"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9fb"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9fc"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9fd"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9fe"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9ff"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2da00"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2da01"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2da02"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2da03"
+      }
+    }
+  ],
+  "allProfit": 96800,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681240e1e3466c6e6f88f9b9"
+  },
+  "machineId": {
+    "$oid": "6810d16cadbe86e1bec22901"
+  },
+  "date": "2025-04-28T15:21:19.451Z",
+  "products": [
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 5,
+      "productProfit": 3250,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a39d"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 5,
+      "productProfit": 3250,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a39e"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 5,
+      "productProfit": 3250,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a39f"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 5,
+      "productProfit": 3250,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a0"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 5,
+      "productProfit": 3250,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a1"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 5,
+      "productProfit": 3250,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a2"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 5,
+      "productProfit": 3250,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a3"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 6,
+      "productProfit": 3900,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 6,
+      "productProfit": 3900,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a5"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 6,
+      "productProfit": 3900,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 6,
+      "productProfit": 3900,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a7"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 6,
+      "productProfit": 3900,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a8"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 6,
+      "productProfit": 3900,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3a9"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfb3adbe86e1bec228cb"
+      },
+      "quantity": 6,
+      "productProfit": 3900,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3aa"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 8,
+      "productProfit": 5600,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3ab"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 8,
+      "productProfit": 5600,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3ac"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 8,
+      "productProfit": 5600,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3ad"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 8,
+      "productProfit": 5600,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3ae"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 8,
+      "productProfit": 5600,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3af"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 8,
+      "productProfit": 5600,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b0"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 8,
+      "productProfit": 5600,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b1"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0d9adbe86e1bec228f0"
+      },
+      "quantity": 2,
+      "productProfit": 1000,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b2"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0d9adbe86e1bec228f0"
+      },
+      "quantity": 2,
+      "productProfit": 1000,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b3"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0d9adbe86e1bec228f0"
+      },
+      "quantity": 2,
+      "productProfit": 1000,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0d9adbe86e1bec228f0"
+      },
+      "quantity": 2,
+      "productProfit": 1000,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b5"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0d9adbe86e1bec228f0"
+      },
+      "quantity": 2,
+      "productProfit": 1000,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0d9adbe86e1bec228f0"
+      },
+      "quantity": 2,
+      "productProfit": 1000,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b7"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0d9adbe86e1bec228f0"
+      },
+      "quantity": 2,
+      "productProfit": 1000,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b8"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 3,
+      "productProfit": 1200,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3b9"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 3,
+      "productProfit": 1200,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3ba"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 3,
+      "productProfit": 1200,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3bb"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 3,
+      "productProfit": 1200,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3bc"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 3,
+      "productProfit": 1200,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3bd"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 3,
+      "productProfit": 1200,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3be"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 3,
+      "productProfit": 1200,
+      "_id": {
+        "$oid": "68123fef3027e228ede2a3bf"
+      }
+    }
+  ],
+  "allProfit": 104650,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68124102e3466c6e6f88f9ba"
+  },
+  "machineId": {
+    "$oid": "6810d191adbe86e1bec22926"
+  },
+  "date": "2025-04-28T15:21:59.030Z",
+  "products": [
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeb4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeb5"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeb6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeb7"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeb8"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeb9"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeba"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aebb"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aebc"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aebd"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aebe"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aebf"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aec0"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aec1"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aec2"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aec3"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aec4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aec5"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aec6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aec7"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aec8"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aec9"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeca"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aecb"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aecc"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aecd"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aece"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aecf"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed0"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed1"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed2"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed3"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed5"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed7"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 4,
+      "productProfit": 2400,
+      "_id": {
+        "$oid": "681240173027e228ede2aed8"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 4,
+      "productProfit": 2400,
+      "_id": {
+        "$oid": "681240173027e228ede2aed9"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 4,
+      "productProfit": 2400,
+      "_id": {
+        "$oid": "681240173027e228ede2aeda"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 4,
+      "productProfit": 2400,
+      "_id": {
+        "$oid": "681240173027e228ede2aedb"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 4,
+      "productProfit": 2400,
+      "_id": {
+        "$oid": "681240173027e228ede2aedc"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aedd"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aede"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aedf"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aee0"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aee1"
+      }
+    }
+  ],
+  "allProfit": 141000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68124111e3466c6e6f88f9bb"
+  },
+  "machineId": {
+    "$oid": "6810d1d9adbe86e1bec22990"
+  },
+  "date": "2025-04-28T15:23:42.734Z",
+  "products": [
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9dc"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9dd"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9de"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9df"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e0"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e1"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e2"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e3"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e5"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e7"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e8"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e9"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9ea"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9eb"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9ec"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9ed"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9ee"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9ef"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f0"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f1"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f2"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f3"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f5"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f7"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f8"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f9"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9fa"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9fb"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9fc"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9fd"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9fe"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9ff"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2da00"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2da01"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2da02"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2da03"
+      }
+    }
+  ],
+  "allProfit": 96800,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6812413ce3466c6e6f88f9bc"
+  },
+  "machineId": {
+    "$oid": "6810d1d9adbe86e1bec22990"
+  },
+  "date": "2025-04-27T15:23:42.734Z",
+  "products": [
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9dc"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9dd"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9de"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9df"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e0"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e1"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e2"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfa6adbe86e1bec228c8"
+      },
+      "quantity": 4,
+      "productProfit": 2200,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e3"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e5"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e7"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e8"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9e9"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9ea"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810cfd1adbe86e1bec228cf"
+      },
+      "quantity": 3,
+      "productProfit": 1650,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9eb"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9ec"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9ed"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9ee"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9ef"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f0"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f1"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f2"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 5,
+      "productProfit": 2750,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f3"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f5"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f7"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f8"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9f9"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9fa"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d05dadbe86e1bec228e0"
+      },
+      "quantity": 8,
+      "productProfit": 4400,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9fb"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9fc"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9fd"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9fe"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2d9ff"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2da00"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2da01"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2da02"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d144adbe86e1bec228fc"
+      },
+      "quantity": 2,
+      "productProfit": 1100,
+      "_id": {
+        "$oid": "6812407e3027e228ede2da03"
+      }
+    }
+  ],
+  "allProfit": 96800,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68124147e3466c6e6f88f9bd"
+  },
+  "machineId": {
+    "$oid": "6810d191adbe86e1bec22926"
+  },
+  "date": "2025-04-29T15:21:59.030Z",
+  "products": [
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeb4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeb5"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeb6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeb7"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeb8"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeb9"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeba"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aebb"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d121adbe86e1bec228f6"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aebc"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aebd"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aebe"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aebf"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aec0"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aec1"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aec2"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aec3"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aec4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d0f2adbe86e1bec228f3"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aec5"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aec6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aec7"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aec8"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aec9"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aeca"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aecb"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aecc"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aecd"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d048adbe86e1bec228dd"
+      },
+      "quantity": 3,
+      "productProfit": 1800,
+      "_id": {
+        "$oid": "681240173027e228ede2aece"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aecf"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed0"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed1"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed2"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed3"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed4"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed5"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed6"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d028adbe86e1bec228d9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aed7"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 4,
+      "productProfit": 2400,
+      "_id": {
+        "$oid": "681240173027e228ede2aed8"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 4,
+      "productProfit": 2400,
+      "_id": {
+        "$oid": "681240173027e228ede2aed9"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 4,
+      "productProfit": 2400,
+      "_id": {
+        "$oid": "681240173027e228ede2aeda"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 4,
+      "productProfit": 2400,
+      "_id": {
+        "$oid": "681240173027e228ede2aedb"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d012adbe86e1bec228d6"
+      },
+      "quantity": 4,
+      "productProfit": 2400,
+      "_id": {
+        "$oid": "681240173027e228ede2aedc"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aedd"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aede"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aedf"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aee0"
+      }
+    },
+    {
+      "productId": {
+        "$oid": "6810d13aadbe86e1bec228f9"
+      },
+      "quantity": 7,
+      "productProfit": 4200,
+      "_id": {
+        "$oid": "681240173027e228ede2aee1"
+      }
+    }
+  ],
+  "allProfit": 141000,
   "__v": 0
 }]
