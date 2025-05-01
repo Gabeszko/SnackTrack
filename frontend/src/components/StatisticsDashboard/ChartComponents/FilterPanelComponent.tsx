@@ -1,6 +1,6 @@
 // src/components/statistics/StatisticsFilterPanel.tsx
 import { Group, Select, Tabs, Text } from "@mantine/core";
-import { IconCoffee, IconDeviceAnalytics } from "@tabler/icons-react";
+import { IconBox, IconBuildingWarehouse } from "@tabler/icons-react";
 
 type StatisticsFilterPanelProps = {
   activeTab: string | null;
@@ -26,12 +26,12 @@ export const FilterPanel = ({
   return (
     <Tabs value={activeTab} onChange={setActiveTab} color="blue" radius="md">
       <Tabs.List>
-        <Tabs.Tab value="machines" leftSection={<IconCoffee size={16} />}>
+        <Tabs.Tab value="machines" leftSection={<IconBox size={16} />}>
           Automata statisztikák
         </Tabs.Tab>
         <Tabs.Tab
           value="products"
-          leftSection={<IconDeviceAnalytics size={16} />}
+          leftSection={<IconBuildingWarehouse size={16} />}
         >
           Termék statisztikák
         </Tabs.Tab>

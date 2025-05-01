@@ -1,4 +1,8 @@
-import { IconBox, IconCash, IconChartBar } from "@tabler/icons-react";
+import {
+  IconBox,
+  IconBuildingWarehouse,
+  IconChartBar,
+} from "@tabler/icons-react";
 import { useNavigate } from "react-router-dom";
 
 const menuItems = [
@@ -10,7 +14,7 @@ const menuItems = [
   },
   {
     title: "Termékek",
-    icon: <IconCash size={48} />,
+    icon: <IconBuildingWarehouse size={48} />,
     color: "grape",
     path: "/products",
   },

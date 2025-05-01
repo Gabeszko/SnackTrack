@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { FormattedSale } from "../types";
 import { Button, Grid, Title } from "@mantine/core";
-import { IconDownload } from "@tabler/icons-react";
 import { LineChartComponent } from "./ChartComponents/LineChartComponent";
 import { PieChartComponent } from "./ChartComponents/PieChartComponent";
 import { SummaryCards } from "./ChartComponents/SummaryCardComponent";
@@ -11,6 +10,7 @@ import { FilterPanel } from "./ChartComponents/FilterPanelComponent";
 import { NoDataAlert } from "./AlertComponents/NoDataAlert";
 import { LoadingState } from "./AlertComponents/LoadingState";
 import { ErrorAlert } from "./AlertComponents/ErrorAlert";
+import { IconDownload } from "@tabler/icons-react";
 import {
   LineElement,
   ArcElement,
